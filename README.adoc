@@ -2,10 +2,10 @@
 
 A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 
-.Example of title slide
+[role="thumb"]
 image::screenshots/title.png[Example of title slide., 100%]
 
-.Example of slide
+[role="thumb"]
 image::screenshots/slide.png[Example of slide., 100%]
 
 == Usage in an existing reveal.js project
