@@ -1,6 +1,6 @@
 = Stereopticon
 
-A reveal.js theme slightly inspired by LaTeX/Beamer.
+A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 
 // TODO add screenshots
 
@@ -21,4 +21,4 @@ In a dev environment, to test the theme:
 - Run `ruby -run -e httpd . -p 5000 -b 127.0.0.1` to start a web server.
 - Open `http://localhost:5000/demo.html`, which points to our compiled theme, and admire the result.
 
-Optional: if working in a VSCode environment, use the https://github.com/wk-j/vscode-save-and-run[Save and Run] extension to automatically run `compile.sh` after each SCSS file change.
+_Optional: if working in a VSCode environment, use the https://github.com/wk-j/vscode-save-and-run[Save and Run] extension to automatically run `compile.sh` after each SCSS file change._
