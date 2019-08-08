@@ -78,11 +78,15 @@
     // Title slide
     section.title {
         background-color: $primary;
-        padding-top:0px;
+        padding-top: 0px;
         vertical-align: middle;
         text-align: center;
-        &, h1, h3 { color: $text-light; };
-        height: 100%
+        &,
+        h1,
+        h3 {
+            color: $text-light;
+        }
+        height: 100%;
     }
 }
 
@@ -106,7 +110,7 @@ li {
 }
 .reveal pre,
 code {
-    font-size: 1em;
+    font-size: 0.9em;
     text-align: left;
     font-family: $font-fixed;
     color: $secondary;
@@ -130,4 +134,45 @@ blockquote {
     & > p {
         margin: 0;
     }
+}
+
+
+
+// Unordered lists
+
+.reveal ol {
+    list-style: none;
+    counter-reset: mycounter;
+}
+
+.reveal ol >  li {
+    position: relative;
+    padding-left: 0px;
+}
+
+.reveal ol > li:before {
+    content: counter(mycounter);
+    counter-increment: mycounter;
+    position: absolute;
+    top: 1em;
+    left: -50px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: $light;
+    background: $primary;
+    text-align: center;
+    font-size: 18px;
+    font-weight: $font-weight-strong;
+}
+
+// Ordered nested lists
+.reveal ol .reveal li .reveal ul {
+    list-style-type: circle;
+    margin: 0
+}
+
+// Items
+.reveal li {
+  margin: 0
 }
