@@ -2,8 +2,11 @@
 
 A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 
-image::screenshots/title.png[Example of title slide., 800]
-image::screenshots/slide.png[Example of slide., 800]
+.Example of title slide
+image::screenshots/title.png[Example of title slide., 100%]
+
+.Example of slide
+image::screenshots/slide.png[Example of slide., 100%]
 
 == Usage in an existing reveal.js project
 
