@@ -2,7 +2,8 @@
 
 A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 
-// TODO add screenshots
+image::screenshots/title.png[Example of title slide.]
+image::screenshots/slide.png[Example of slide.]
 
 == Usage in an existing reveal.js project
 
