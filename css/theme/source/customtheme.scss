@@ -51,9 +51,10 @@
     font-weight: normal;
 }
 
-
 .reveal .slides {
     top: 0px;
+
+    // Regular slides
     section:not([class^="stack"]) {
         background-color: white;
         padding-left: $margin-left;
@@ -72,6 +73,16 @@
         padding-bottom: 0px;
         height: calc(100% - (#{$title-bar-height} / 2));
         width: calc(100% - (#{$margin-left} + #{$margin-right}));
+    }
+
+    // Title slide
+    section.title {
+        background-color: $primary;
+        padding-top:0px;
+        vertical-align: middle;
+        text-align: center;
+        &, h1, h3 { color: $text-light; };
+        height: 100%
     }
 }
 
