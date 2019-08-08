@@ -7,8 +7,8 @@ A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 == Usage in an existing reveal.js project
 
 - Copy the `css` and `lib` folders inside a `revealjs` installation folder, and say *yes* when asking to merge the folders.
-- Go in the `revealjs` folder and run: `npm run build -- css-themes`, which will produce `revealjs/css/theme/customtheme.css`.
-- Now this `revealjs` folder has a new theme called `customtheme` which can be used as any other theme.
+- Go in the `revealjs` folder and run: `npm install && npm run build -- css-themes`, which will produce `revealjs/css/theme/stereopticon.css`.
+- Now this `revealjs` folder has a new theme called `stereopticon` which can be used as any other theme.
 
 == Development and testing
 
@@ -16,7 +16,7 @@ In a dev environment, to test the theme:
 
 - Run `compile.sh` that will:
     * clone reveal.js,
-    * create symbolic links, in order to add our custom theme to the cloned reveal.js,
+    * create symbolic links, in order to add stereopticon to the cloned reveal.js,
     * compile all reveal.js themes (including ours).
 - Run `ruby -run -e httpd . -p 5000 -b 127.0.0.1` to start a web server.
 - Open `http://localhost:5000/demo.html`, which points to our compiled theme, and admire the result.
