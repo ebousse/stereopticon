@@ -1,0 +1,38 @@
+/////////// OVERRIDE REVEAL.JS VARIABLES
+
+@import "./customtheme-colors.scss";
+
+// Override theme settings (see ../template/settings.scss)
+//$backgroundColor: white;
+
+$mainColor: $primary;
+// $headingColor: #fff;
+
+$mainFontSize: 2.8em;
+$mainFont: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
+$headingFont: "Yanone Kaffeesatz", "Source Sans Pro", Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingFontWeight: normal;
+$linkColor: $secondary;
+$linkColorHover: lighten($linkColor, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
+
+$heading1Size: 2.5em;
+$heading2Size: 2em; //1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1em;
+
+//////////// MY STUFF
+
+$font-weight: 300;
+$font-weight-strong: 400;
+
+$font: "Open Sans";
+$font-title: "Yanone Kaffeesatz";
+$font-fixed: "Ubuntu Mono";
+
+$title-bar-height: 125px;
+$margin-left: 2em;
+$margin-right: 2em;

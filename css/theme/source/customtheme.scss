@@ -3,55 +3,32 @@
 @import "../template/settings";
 // ---------------------------------------------
 
-// Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-
-// Override theme settings (see ../template/settings.scss)
-$backgroundColor: black;
-
-$mainColor: #fff;
-$headingColor: #fff;
-
-$mainFontSize: 42px;
-$mainFont: "Source Sans Pro", Helvetica, sans-serif;
-$headingFont: "Source Sans Pro", Helvetica, sans-serif;
-$headingTextShadow: none;
-$headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
-$headingFontWeight: 600;
-$linkColor: #42affa;
-$linkColorHover: lighten($linkColor, 15%);
-$selectionBackgroundColor: lighten($linkColor, 25%);
-
-$heading1Size: 2.5em;
-$heading2Size: 1.6em;
-$heading3Size: 1.3em;
-$heading4Size: 1em;
-
-section.has-light-background {
-    &,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: #222;
-    }
-}
+// My custom stuff (overides some reveal settings)
+@import "./customtheme-colors.scss";
+@import "./customtheme-fonts.scss";
+@import "./customtheme-variables.scss";
 
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
 
-h2 {
-    background-color: palegreen;
-    color: whitesmoke;
+.reveal {
+    font-weight: $font-weight;
+}
+
+.reveal strong,
+.reveal b {
+    color: $color-strong;
+    font-weight: $font-weight-strong;
+}
+
+.reveal h2 {
+    background-color: $primary;
+    color: $text-light;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     right: 0;
-    font-size: 40px;
     padding: 0.5em;
     padding-bottom: 10px;
     text-align: left;
@@ -62,24 +39,87 @@ h2 {
     //font-family: $font-title;
 }
 
-.reveal .slides {
+.reveal h3 {
+    color: $color-h3;
+    margin: 35px 0 0 0;
+}
 
-    
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+    font-family: $font-title;
+    font-weight: normal;
+}
+
+$title-bar-height: 125px;
+$margin-left: 2em;
+$margin-right: 2em;
+
+.reveal .slides {
+    top: 0px;
     section:not([class^="stack"]) {
-        
-        background-color: darkcyan;
+        background-color: white;
+        padding-left: $margin-left;
+        padding-right: $margin-right;
 
         // Vertical center alignment of slide content
         // Only works if revealjs is configured with «display: 'flex'»
         justify-content: center;
         flex-direction: column;
-        padding-top: 62px; // half of the h2 bar height
+        padding-top: calc(#{$title-bar-height} / 2); // half of the h2 bar height
 
         // Left alignment of slide content
         text-align: left;
 
         // Make sure "section" is the complete slide
         padding-bottom: 0px;
-        height: 100%;
+        height: calc(100% - (#{$title-bar-height} / 2));
+        width: calc(100% - (#{$margin-left} + #{$margin-right}));
+    }
+}
+
+// Unordered lists
+.reveal ul {
+    list-style-type: square;
+
+    ul {
+        list-style-type: circle;
+    }
+}
+
+h2 {
+    color: $color-h2;
+}
+h3 {
+    color: $color-h3;
+}
+li {
+    margin-bottom: 0.25em;
+}
+.reveal pre,
+code {
+    font-size: 1em;
+    text-align: left;
+    font-family: $font-fixed;
+    color: $secondary;
+    background: $code-background;
+}
+a,
+a:visited,
+a:hover,
+a:active {
+    color: $text-dark;
+}
+img {
+    vertical-align: inherit;
+}
+blockquote {
+    border-left: 8px solid;
+    padding-left: 0.5em;
+    color: $tertiary;
+    text-align: left;
+    margin: 1em 0;
+    & > p {
+        margin: 0;
     }
 }
