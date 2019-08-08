@@ -1,0 +1,14 @@
+{
+  "saveAndRun": {
+    "commands": [
+      {
+        "match": ".*",
+        "cmd": "bash ./compile.sh",
+        "useShortcut": false,
+        "silent": false
+      },
+    ]
+  },
+
+  "scssFormatter.tabWidth": 4
+}
