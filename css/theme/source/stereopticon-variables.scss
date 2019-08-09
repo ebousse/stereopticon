@@ -1,4 +1,4 @@
-///// Colors
+///// My Colors
 
 // From http://www.colourlovers.com/palette/376594/Chicanery
 
@@ -7,28 +7,45 @@ $secondary: #3c9949;
 $tertiary: #5fb86b;
 
 $light: #fff;
-$dark: #333;
+$dark: $primary;
 
-$text-dark: $primary;
-$text-light: $light;
+$text-on-light: $primary;
+$text-on-dark: $light;
 
 $code-background: #f8f8f8;
 
-$color-strong: $secondary;
-$color-h2: $secondary;
-$color-h3: $primary;
+$colored-on-light: $secondary;
+$colored-on-dark: $tertiary;
+
+// $color-strong: $secondary;
+// $color-h3: $primary;
 
 $block-color: #d9e0eb;
+
+$linkColor-on-dark: $tertiary;
+$linkColorHover-on-dark: lighten($linkColor-on-dark, 15%);
+$selectionBackgroundColor-on-dark: lighten($linkColor-on-dark, 15%);
+
+//////////// MY OTHER STUFF
+
+$font-weight: 300;
+$font-weight-strong: 400;
+
+// $font: "Open Sans";
+// $font-title: "Yanone Kaffeesatz";
+// $font-fixed: "Ubuntu Mono";
+
+$title-bar-offset: 160px; // a bit random…
+$margin-left: 2em;
+$margin-right: 2em;
 
 
 
 /////////// OVERRIDE REVEAL.JS VARIABLES (see ../template/settings.scss)
 
-// Override theme settings
-
-$mainColor: $primary;
+$mainColor: $text-on-light;
 // $backgroundColor: white;
-// $headingColor: #fff;
+// $headingColor: #fff; 
 
 $mainFontSize: 2.8em;
 $mainFont: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
@@ -37,7 +54,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: normal;
-$linkColor: $secondary;
+$linkColor: $colored-on-light;
 $linkColorHover: lighten($linkColor, 15%);
 $selectionBackgroundColor: lighten($linkColor, 25%);
 
@@ -45,23 +62,3 @@ $heading1Size: 2.5em;
 $heading2Size: 2em; //1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1em;
-
-//////////// MY STUFF
-
-
-
-$linkColorLight: $tertiary;
-$linkColorHoverLight: lighten($linkColorLight, 15%);
-$selectionBackgroundColorLight: lighten($linkColorLight, 15%);
-
-$font-weight: 300;
-$font-weight-strong: 400;
-
-$font: "Open Sans";
-$font-title: "Yanone Kaffeesatz";
-$font-fixed: "Ubuntu Mono";
-
-$title-bar-offset: 160px; // a bit random…
-$margin-left: 2em;
-$margin-right: 2em;
-
