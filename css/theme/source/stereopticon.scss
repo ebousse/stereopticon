@@ -4,7 +4,6 @@
 // ---------------------------------------------
 
 // My custom stuff (overides some reveal settings)
-@import "./stereopticon-colors.scss";
 @import "./stereopticon-fonts.scss";
 @import "./stereopticon-variables.scss";
 
@@ -14,176 +13,191 @@
 
 .reveal {
     font-weight: $font-weight;
-}
+    font-size: $mainFontSize;
 
-.reveal strong,
-.reveal b {
-    color: $color-strong;
-    font-weight: $font-weight-strong;
-}
-
-.reveal section:not([class^="impact"]) h2 {
-    background-color: $primary;
-    color: $text-light;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0.5em;
-    padding-bottom: 10px;
-    text-align: left;
-    z-index: 1;
-    p {
-        margin: 0;
-    }
     strong,
-    a {
-        color: $tertiary;
+    b {
+        color: $color-strong;
+        font-weight: $font-weight-strong;
     }
-    //font-family: $font-title;
-}
 
-.reveal h3 {
-    color: $color-h3;
-    margin: 35px 0 0 0;
-}
+    .slides {
+        top: 0px;
 
-.reveal h1,
-.reveal h2,
-.reveal h3 {
-    font-family: $font-title;
-    font-weight: normal;
-}
+        // For all slides (regular, title, impact)
+        section:not([class^="stack"]) {
+            // Vertical center alignment of slide content
+            // Only works if revealjs is configured with «display: 'flex'»
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 0px;
+        }
 
-.reveal .slides {
-    top: 0px;
+        // Regular slides
+        section:not([class^="stack"]):not(.impact):not(.title) {
+            background-color: white;
+            padding-left: $margin-left;
+            padding-right: $margin-right;
 
-    // Regular slides
-    section:not([class^="stack"]) {
-        background-color: white;
-        padding-left: $margin-left;
-        padding-right: $margin-right;
+            padding-top: $title-bar-offset; // half of the h2 bar height
 
-        // Vertical center alignment of slide content
-        // Only works if revealjs is configured with «display: 'flex'»
-        justify-content: center;
-        flex-direction: column;
-        padding-top: $title-bar-offset; // half of the h2 bar height
+            // Left alignment of slide content
+            text-align: left;
 
-        // Left alignment of slide content
+            // Make sure "section" is the complete slide
+
+            height: calc(100% - (#{$title-bar-offset}));
+            width: calc(100% - (#{$margin-left} + #{$margin-right}));
+
+            h2 {
+                background-color: $primary;
+                color: $text-light;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 0.5em;
+                padding-bottom: 10px;
+                text-align: left;
+                z-index: 1;
+                p {
+                    margin: 0;
+                }
+                strong,
+                a {
+                    color: $tertiary;
+                }
+            }
+            h3 {
+                color: $color-h3;
+                margin: 35px 0 0 0;
+            }
+        }
+
+        // Title and impact slides (dark background, so we adapt everything)
+        section.title,
+        section.impact {
+            background-color: $primary;
+            height: 100%;
+            padding-top: 0px;
+            vertical-align: middle;
+            text-align: center;
+            &,
+            h1,
+            h3 {
+                color: $text-light;
+            }
+            strong,
+            b {
+                color: $tertiary;
+            }
+
+            code {
+                background: $primary;
+                color: $tertiary;
+            }
+
+            a {
+                color: $linkColorLight;
+            }
+
+            a:hover {
+                color: $linkColorHoverLight;
+            }
+
+            ::selection {
+                background: $selectionBackgroundColorLight;
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: $font-title;
+        font-weight: normal;
+    }
+
+    h3 {
+        color: $color-h3;
+    }
+
+    pre,
+    code {
+        font-size: 0.9em;
+        //     text-align: left;
+        //     font-family: $font-fixed;
+        //     color: $secondary;
+        //     background: $code-background;
+    }
+
+    blockquote {
+        border-left: 6px solid;
+        color: $secondary;
         text-align: left;
-
-        // Make sure "section" is the complete slide
-        padding-bottom: 0px;
-        height: calc(100% - (#{$title-bar-offset}));
-        width: calc(100% - (#{$margin-left} + #{$margin-right}));
-    }
-
-    // Title and impact slides
-    section.title,
-    section.impact {
-        background-color: $primary;
-        padding-top: 0px;
-        vertical-align: middle;
-        text-align: center;
-        &,
-        h1,
-        h3 {
-            color: $text-light;
-        }
-        strong,
-        b {
-            color: $tertiary;
-        }
-        height: 100%;
-
-        code {
-            background: $primary;
-            color: $tertiary;
+        & > p {
+            margin: 0;
         }
 
-        a {
-            color: $tertiary;
+        //line-height: 1em;
+
+        &::before,
+        &::after {
+            //font-size: 2em;
+            //vertical-align: -.2em;
+            font-weight: $font-weight-strong;
+            //font-size: 1.1em
+        }
+
+        &::before {
+            content: "«";
+        }
+
+        &::after {
+            content: "»";
         }
     }
-}
-
-// Unordered lists
-.reveal ul {
-    list-style-type: square;
 
     ul {
-        list-style-type: circle;
+        list-style-type: square;
     }
-}
 
-h2 {
-    color: $color-h2;
-}
-h3 {
-    color: $color-h3;
-}
-li {
-    margin-bottom: 0.25em;
-}
-.reveal pre,
-code {
-    font-size: 0.9em;
-    text-align: left;
-    font-family: $font-fixed;
-    color: $secondary;
-    background: $code-background;
-}
+    ol {
+        list-style: none;
+        counter-reset: mycounter;
+    }
 
-img {
-    vertical-align: inherit;
-}
-blockquote {
-    border-left: 8px solid;
-    padding-left: 0.5em;
-    color: $tertiary;
-    text-align: left;
-    margin: 1em 0;
-    & > p {
+    ul,
+    ol {
+        ul {
+            list-style-type: circle;
+        }
+    }
+
+
+    li {
+        margin-bottom: 0.25em;
         margin: 0;
     }
-}
 
-// Unordered lists
+    ol > li {
+        position: relative;
+        padding-left: 0px;
+    }
 
-.reveal ol {
-    list-style: none;
-    counter-reset: mycounter;
-}
-
-.reveal ol > li {
-    position: relative;
-    padding-left: 0px;
-}
-
-.reveal ol > li:before {
-    content: counter(mycounter);
-    counter-increment: mycounter;
-    position: absolute;
-    top: 1em;
-    left: -50px;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    color: $light;
-    background: $primary;
-    text-align: center;
-    font-size: 18px;
-    font-weight: $font-weight-strong;
-}
-
-// Ordered nested lists
-.reveal ol .reveal li .reveal ul {
-    list-style-type: circle;
-    margin: 0;
-}
-
-// Items
-.reveal li {
-    margin: 0;
-}
+    ol > li:before {
+        content: counter(mycounter);
+        counter-increment: mycounter;
+        position: absolute;
+        top: 1em;
+        left: -50px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        color: $light;
+        background: $primary;
+        text-align: center;
+        font-size: 18px;
+        font-weight: $font-weight-strong;
+    }
+} // end .reveal

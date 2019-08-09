@@ -1,11 +1,33 @@
-/////////// OVERRIDE REVEAL.JS VARIABLES
+///// Colors
 
-@import "./stereopticon-colors.scss";
+// From http://www.colourlovers.com/palette/376594/Chicanery
 
-// Override theme settings (see ../template/settings.scss)
-//$backgroundColor: white;
+$primary: #1c232e;
+$secondary: #3c9949;
+$tertiary: #5fb86b;
+
+$light: #fff;
+$dark: #333;
+
+$text-dark: $primary;
+$text-light: $light;
+
+$code-background: #f8f8f8;
+
+$color-strong: $secondary;
+$color-h2: $secondary;
+$color-h3: $primary;
+
+$block-color: #d9e0eb;
+
+
+
+/////////// OVERRIDE REVEAL.JS VARIABLES (see ../template/settings.scss)
+
+// Override theme settings
 
 $mainColor: $primary;
+// $backgroundColor: white;
 // $headingColor: #fff;
 
 $mainFontSize: 2.8em;
@@ -26,6 +48,12 @@ $heading4Size: 1em;
 
 //////////// MY STUFF
 
+
+
+$linkColorLight: $tertiary;
+$linkColorHoverLight: lighten($linkColorLight, 15%);
+$selectionBackgroundColorLight: lighten($linkColorLight, 15%);
+
 $font-weight: 300;
 $font-weight-strong: 400;
 
@@ -36,3 +64,4 @@ $font-fixed: "Ubuntu Mono";
 $title-bar-offset: 160px; // a bit random…
 $margin-left: 2em;
 $margin-right: 2em;
+
