@@ -8,7 +8,7 @@ image::screenshots/title.png[Example of title slide., 100%]
 [role="thumb"]
 image::screenshots/slide.png[Example of slide., 100%]
 
-== Usage in an existing reveal.js project
+== Compilation and usage in an existing reveal.js project
 
 - Copy the `css` and `lib` folders inside a `revealjs` installation folder, and say *yes* when asking to merge the folders.
 - Go in the `revealjs` folder and run: `npm install && npm run build -- css-themes`, which will produce `revealjs/css/theme/stereopticon.css`.
@@ -22,11 +22,11 @@ width: 1920,
 height: 1080,
 ----
 
-The option `margin: 0` is not mandatory but can be used if one prefers to remove the dark gray frame around slides.
+The option `margin: 0` is not mandatory but can be used to remove the dark gray frame around slides.
 
 == Development and testing
 
-In a dev environment, to test the theme:
+To dev and test the theme:
 
 - Run `compile.sh` that will:
     * clone reveal.js,
