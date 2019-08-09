@@ -86,6 +86,9 @@
         h3 {
             color: $text-light;
         }
+        strong, b {
+            color: $tertiary;
+        }
         height: 100%;
     }
 }
