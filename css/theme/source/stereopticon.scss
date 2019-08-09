@@ -22,7 +22,7 @@
     font-weight: $font-weight-strong;
 }
 
-.reveal h2 {
+.reveal section:not([class^="impact"]) h2 {
     background-color: $primary;
     color: $text-light;
     position: absolute;
@@ -35,6 +35,10 @@
     z-index: 1;
     p {
         margin: 0;
+    }
+    strong,
+    a {
+        color: $tertiary;
     }
     //font-family: $font-title;
 }
@@ -75,8 +79,9 @@
         width: calc(100% - (#{$margin-left} + #{$margin-right}));
     }
 
-    // Title slide
-    section.title {
+    // Title and impact slides
+    section.title,
+    section.impact {
         background-color: $primary;
         padding-top: 0px;
         vertical-align: middle;
@@ -86,10 +91,20 @@
         h3 {
             color: $text-light;
         }
-        strong, b {
+        strong,
+        b {
             color: $tertiary;
         }
         height: 100%;
+
+        code {
+            background: $primary;
+            color: $tertiary;
+        }
+
+        a {
+            color: $tertiary;
+        }
     }
 }
 
@@ -134,8 +149,6 @@ blockquote {
     }
 }
 
-
-
 // Unordered lists
 
 .reveal ol {
@@ -143,7 +156,7 @@ blockquote {
     counter-reset: mycounter;
 }
 
-.reveal ol >  li {
+.reveal ol > li {
     position: relative;
     padding-left: 0px;
 }
@@ -167,11 +180,10 @@ blockquote {
 // Ordered nested lists
 .reveal ol .reveal li .reveal ul {
     list-style-type: circle;
-    margin: 0
+    margin: 0;
 }
 
 // Items
 .reveal li {
-  margin: 0
+    margin: 0;
 }
-
