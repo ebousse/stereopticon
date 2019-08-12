@@ -12,7 +12,7 @@ pages:
    - mkdir public
    - mv demo.html public
    - cp -rv reveal.js public
-   - rm -rf public/reveal.js/.git public/reveal.js/node_modules
+   - rm -rf public/reveal.js/.git public/reveal.js/node_modules public/reveal.js/css/theme/source
 
   artifacts:
     paths:
