@@ -10,11 +10,14 @@ image::screenshots/title.png[Example of title slide., 100%]
 [role="thumb"]
 image::screenshots/slide.png[Example of slide., 100%]
 
-== Compilation and usage in an existing reveal.js project
+== Download and installation
 
-- Copy the `css` and `lib` folders inside a `revealjs` installation folder, and say *yes* when asking to merge the folders.
-- Go in the `revealjs` folder and run: `npm install && npm run build -- css-themes`, which will produce `revealjs/css/theme/stereopticon.css`.
-- Now this `revealjs` folder has a new theme called `stereopticon` which can be used as any other theme.
+The Gitlab CI compies the SCSS files into a single CSS file after each commit. The latest build is https://gitlab.univ-nantes.fr/bousse-e/stereopticon/-/jobs/artifacts/master/download?job=keep
+[available here].
+
+Simply unzip this file in a reveal.js installation folder, and say *yes* when asking to merge the folders. You can now use a new theme called `stereopticon`.
+
+== Requirements
 
 For the theme to work correctly, the following reveal.js options *must* be set:
 ----
@@ -26,15 +29,30 @@ height: 1080,
 
 The option `margin: 0` is not mandatory but can be used to remove the dark gray frame around slides.
 
+== Compilation
+
+The theme is written in SCSS, and can be compiled into CSS using the confirmation that already exists for compiling the official reveal.js themes.
+
+Instructions:
+
+- Clone this repository.
+- Download reveal.js or use an existing reveal.js installation folder.
+- Copy the `css` and `lib` folders of the stereopticon repository inside the reveal.js installation folder, and say *yes* when asking to merge the folders.
+- Go in the reveal.js folder and run: `npm install && npm run build -- css-themes`, which will produce `revealjs/css/theme/stereopticon.css`.
+- Now this reveal.js folder has a new theme called `stereopticon` which can be used as any other theme.
+
+
 == Development and testing
 
 To dev and test the theme:
 
 - Run `compile.sh` that will:
     * clone reveal.js,
-    * create symbolic links, in order to add stereopticon to the cloned reveal.js,
+    * add symbolic links into the cloned reveal.js pointing to the stereopticon files,
     * compile all reveal.js themes (including ours).
 - Start a web server with `python -m SimpleHTTPServer 8080` or `ruby -run -e httpd . -p 8080 -b 127.0.0.1` or even better with https://github.com/tapio/live-server  to have live-reload each time files are modified.
-- Open `http://localhost:8080/demo.html`, which points to our compiled theme, and admire the result.
+- Open `http://localhost:8080/demo.html` which should show the stereopticon demo.
+- Work on stereopticon files and see the results in the demo.
+- When happy with the changes, commit!
 
 _Optional: if working in a VSCode environment, use the https://github.com/wk-j/vscode-save-and-run[Save and Run] extension to automatically run `compile.sh` after each SCSS file change. Combined with https://github.com/tapio/live-server[live server] this is amazing._

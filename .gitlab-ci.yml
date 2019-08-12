@@ -29,10 +29,9 @@ pages:
 keep:
   stage: deploy
   script:
-   - mkdir -p stereopticon/css/theme
-   - mkdir -p stereopticon/lib/font
-   - cp -v  reveal.js/css/theme/stereopticon.css stereopticon/css/theme
-   - cp -rv lib/font/* stereopticon/lib/font
+   - mkdir -p keep/css/theme
+   - cp -v  reveal.js/css/theme/stereopticon.css keep/css/theme
   artifacts:
     paths:
-      - stereopticon
+      - lib
+      - keep/css
