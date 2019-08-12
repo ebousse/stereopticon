@@ -8,14 +8,15 @@ cache:
 
 stages:
   - build
-  - pages
-  - keep
+  - deploy
   
 build:
+  stage: build
   script:
    - bash ./compile.sh
 
 pages:
+  stage: deploy
   script:
    - mkdir public
    - cp demo.html public
@@ -26,6 +27,7 @@ pages:
       - public
       
 keep:
+  stage: deploy
   script:
    - mkdir -p stereopticon/css/theme
    - mkdir -p stereopticon/lib/font
