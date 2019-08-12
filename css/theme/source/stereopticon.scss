@@ -6,6 +6,7 @@
 // My custom stuff (overides some reveal settings)
 @import "./stereopticon-fonts.scss";
 @import "./stereopticon-variables.scss";
+@import "./stereopticon-helpers.scss";
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -131,30 +132,6 @@
     pre:empty,
     code:not(.hljs) {
         font-size: 1.1em;
-    }
-
-    .columns {
-        display: flex;
-    }
-
-    @for $i from 1 through 12 {
-        .col-#{$i} {
-            width: 100% / 12 * $i;
-        }
-    }
-
-    @for $i from 1 through 200 {
-        .vspace-#{$i}::before {
-            content: "";
-            display: block;
-            padding-bottom: calc(#{$i}px);
-        }
-    }
-
-    .block {
-        background-color: $block-color;
-        padding: 0.5cm;
-        margin-right: 2cm;
     }
 
     ::selection {
