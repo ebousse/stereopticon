@@ -27,13 +27,13 @@
 
 .reveal .slides section.title {
     .subtitle {
+        margin-top: 20px;
         font-size: 1.3em;
     }
     .subtitle,
     .subtitle > * {
         font-family: $headingFont;
-        margin-top: 30px;
-        // color: $colored-on-dark;
+        color: $text-on-dark;
     }
 
     .speaker,
@@ -41,16 +41,20 @@
         text-decoration: underline dashed// $colored-on-dark;
     }
 
+    .author {
+        margin-top: 50px;
+    }
+
     .author,
     .author > * {
         font-weight: $font-weight-strong;
         font-family: $mainFont;
         color: $colored-on-dark;
-        margin-top: 15px;
     }
 
     .institution,
     .institution > * {
         font-size: 90%;
+        color: $text-on-dark;
     }
 }
