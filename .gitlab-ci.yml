@@ -11,8 +11,8 @@ pages:
    - bash ./compile.sh
    - mkdir public
    - mv demo.html public
-   - cp -rv reveal.js public
-   - rm -rf public/reveal.js/.git public/reveal.js/node_modules public/reveal.js/css/theme/source
+   - cp -rvL reveal.js public
+   - rm -rf public/reveal.js/.git public/reveal.js/node_modules
 
   artifacts:
     paths:
