@@ -10,6 +10,11 @@ cache:
 pages:
   script:
    - bash ./compile.sh
+   - mkdir public
+   - mv demo.html public
+   - cp -Rv reveal.js public
+   - rm -rf reveal.js/.git
+
   artifacts:
     paths:
-      - .
+      - public
