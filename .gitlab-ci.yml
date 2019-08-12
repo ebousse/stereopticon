@@ -31,7 +31,7 @@ keep:
   script:
    - cp -v  reveal.js/css/theme/stereopticon.css css/theme
   artifacts:
-    - name: "stereopticon-$CI_COMMIT_SHORT_SHA"
+    name: "stereopticon-$CI_COMMIT_SHORT_SHA"
     paths:
       - lib
       - css/theme/stereopticon.css
