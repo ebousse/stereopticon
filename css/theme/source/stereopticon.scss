@@ -123,10 +123,10 @@
 
     pre,
     code {
-        font-size: 0.9em;
+        font-size: 1.1em;
         //     text-align: left;
-        //     font-family: $font-fixed;
-        //     color: $colored-on-light;
+        //font-family: $font-fixed;
+             color: $colored-on-light;
         //     background: $code-background;
     }
 
@@ -173,7 +173,6 @@
         }
     }
 
-
     li {
         margin-bottom: 0.25em;
         margin: 0;
@@ -198,5 +197,15 @@
         text-align: center;
         font-size: 18px;
         font-weight: $font-weight-strong;
+    }
+
+    .columns {
+        display: flex
+    }
+
+    @for $i from 1 through 12 {
+        .col-#{$i} {
+            width: 100% / 12 * $i;
+        }
     }
 } // end .reveal
