@@ -60,9 +60,6 @@
                 padding-bottom: 10px;
                 text-align: left;
                 z-index: 1;
-                p {
-                    margin: 0;
-                }
                 strong,
                 a {
                     color: $colored-on-light;
@@ -70,7 +67,7 @@
             }
             h3 {
                 color: $text-on-light;
-                margin: 35px 0 0 0;
+                //margin: 0 0 0 0;
             }
         }
 
@@ -82,11 +79,16 @@
             padding-top: 0px;
             vertical-align: middle;
             text-align: center;
-            &,
+
             h1,
-            h3 {
+            h2,
+            h3,
+            p,
+            ul,
+            ol {
                 color: $text-on-dark;
             }
+
             strong,
             b {
                 color: $colored-on-dark;
@@ -117,17 +119,44 @@
         font-weight: normal;
     }
 
-    h3 {
+    h3,
+    p,
+    ul,
+    ol {
+        margin-bottom: 0;
         color: $text-on-light;
     }
 
-    pre,
-    code {
+    p,
+    ul,
+    ol,
+    .columns,
+    .block {
+        margin-top: $blockMargin;
+    }
+
+    h3,
+    p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h3 {
+        margin-top: calc(#{$blockMargin} + 20px);
+    }
+
+    // When something is the first element, no upper margin
+    // except for tables for some reason?
+    h2 + *:not(table),
+    *:not(table):first-child {
+        margin-top: 0;
+    }
+
+    // Selectors designed to not interfere with hljs
+    pre:empty,
+    code:not(.hljs) {
         font-size: 1.1em;
-        //     text-align: left;
-        //font-family: $font-fixed;
-             color: $colored-on-light;
-        //     background: $code-background;
+        color: $colored-on-light;
     }
 
     blockquote {
@@ -138,14 +167,9 @@
             margin: 0;
         }
 
-        //line-height: 1em;
-
         &::before,
         &::after {
-            //font-size: 2em;
-            //vertical-align: -.2em;
             font-weight: $font-weight-strong;
-            //font-size: 1.1em
         }
 
         &::before {
@@ -157,20 +181,28 @@
         }
     }
 
+    // Regular lists are squares
     ul {
         list-style-type: square;
+    }
+
+    ul,
+    ol {
+        // No top margin when a list is inside a list
+        ul,
+        ol {
+            margin-top: 0;
+        }
+
+        // Sublists have circles
+        ul {
+            list-style-type: circle;
+        }
     }
 
     ol {
         list-style: none;
         counter-reset: mycounter;
-    }
-
-    ul,
-    ol {
-        ul {
-            list-style-type: circle;
-        }
     }
 
     li {
@@ -183,6 +215,7 @@
         padding-left: 0px;
     }
 
+    // Numbered lists are squares with numbers
     ol > li:before {
         content: counter(mycounter);
         counter-increment: mycounter;
@@ -200,7 +233,7 @@
     }
 
     .columns {
-        display: flex
+        display: flex;
     }
 
     @for $i from 1 through 12 {
@@ -217,5 +250,14 @@
         }
     }
 
+    .block {
+        background-color: $block-color;
+        padding: 0.5cm;
+        margin-right: 2cm;
+    }
 
+    // .blocklong {
+    //     background-color: $block-color;
+    //     padding: 0.5cm;
+    // }
 } // end .reveal
