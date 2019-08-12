@@ -12,8 +12,7 @@ pages:
    - bash ./compile.sh
    - mkdir public
    - mv demo.html public
-   - cp -Rv reveal.js public
-   - rm -rf reveal.js/.git
+   - rsync -rv --exclude=node_modules --exclude=.git reveal.js public
 
   artifacts:
     paths:
