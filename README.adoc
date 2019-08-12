@@ -2,6 +2,8 @@
 
 A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 
+Demo available https://bousse-e.univ-nantes.io/stereopticon/demo.html[here].
+
 [role="thumb"]
 image::screenshots/title.png[Example of title slide., 100%]
 
