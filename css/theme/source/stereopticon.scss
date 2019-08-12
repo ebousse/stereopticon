@@ -17,100 +17,7 @@
 
     strong,
     b {
-        color: $colored-on-light;
         font-weight: $font-weight-strong;
-    }
-
-    .slides {
-        top: 0px;
-
-        // For all slides (regular, title, impact)
-        section:not([class^="stack"]) {
-            // Vertical center alignment of slide content
-            // Only works if revealjs is configured with «display: 'flex'»
-            justify-content: center;
-            flex-direction: column;
-            padding-bottom: 0px;
-        }
-
-        // Regular slides
-        section:not([class^="stack"]):not(.impact):not(.title) {
-            background-color: $light;
-            padding-left: $margin-left;
-            padding-right: $margin-right;
-
-            padding-top: $title-bar-offset; // half of the h2 bar height
-
-            // Left alignment of slide content
-            text-align: left;
-
-            // Make sure "section" is the complete slide
-
-            height: calc(100% - (#{$title-bar-offset}));
-            width: calc(100% - (#{$margin-left} + #{$margin-right}));
-
-            h2 {
-                background-color: $dark;
-                color: $text-on-dark;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                padding: 0.5em;
-                padding-bottom: 10px;
-                text-align: left;
-                z-index: 1;
-                strong,
-                a {
-                    color: $colored-on-light;
-                }
-            }
-            h3 {
-                color: $text-on-light;
-                //margin: 0 0 0 0;
-            }
-        }
-
-        // Title and impact slides (dark background, so we adapt everything)
-        section.title,
-        section.impact {
-            background-color: $dark;
-            height: 100%;
-            padding-top: 0px;
-            vertical-align: middle;
-            text-align: center;
-
-            h1,
-            h2,
-            h3,
-            p,
-            ul,
-            ol {
-                color: $text-on-dark;
-            }
-
-            strong,
-            b {
-                color: $colored-on-dark;
-            }
-
-            code {
-                background: $dark;
-                color: $colored-on-dark;
-            }
-
-            a {
-                color: $linkColor-on-dark;
-            }
-
-            a:hover {
-                color: $linkColorHover-on-dark;
-            }
-
-            ::selection {
-                background: $selectionBackgroundColor-on-dark;
-            }
-        }
     }
 
     h1,
@@ -124,7 +31,6 @@
     ul,
     ol {
         margin-bottom: 0;
-        color: $text-on-light;
     }
 
     p,
@@ -146,22 +52,14 @@
     }
 
     // When something is the first element, no upper margin
-    // except for tables for some reason?
+    // except for tables, with the current implem
     h2 + *:not(table),
     *:not(table):first-child {
         margin-top: 0;
     }
 
-    // Selectors designed to not interfere with hljs
-    pre:empty,
-    code:not(.hljs) {
-        font-size: 1.1em;
-        color: $colored-on-light;
-    }
-
     blockquote {
         border-left: 6px solid;
-        color: $colored-on-light;
         text-align: left;
         & > p {
             margin: 0;
@@ -225,11 +123,14 @@
         width: 25px;
         height: 25px;
         line-height: 25px;
-        color: $text-on-dark;
-        background: $dark;
         text-align: center;
         font-size: 18px;
         font-weight: $font-weight-strong;
+    }
+
+    pre:empty,
+    code:not(.hljs) {
+        font-size: 1.1em;
     }
 
     .columns {
@@ -256,8 +157,127 @@
         margin-right: 2cm;
     }
 
-    // .blocklong {
-    //     background-color: $block-color;
-    //     padding: 0.5cm;
-    // }
+    ::selection {
+        background: $text-on-light2;
+        color: $light;
+    }
+
+    /*
+     * Now we define things based on the type of slide (regular or impact, mostly)
+     * For instance, everything color-related is defined in this part.
+     */
+    .slides {
+        top: 0px;
+
+        // For all slides (regular, title, impact)
+        section:not([class^="stack"]) {
+            // Vertical center alignment of slide content
+            // Only works if revealjs is configured with «display: 'flex'»
+            justify-content: center;
+            flex-direction: column;
+            padding-bottom: 0px;
+        }
+
+        // Regular slides
+        section:not([class^="stack"]):not(.impact):not(.title) {
+            background-color: $light;
+            padding-left: $margin-left;
+            padding-right: $margin-right;
+
+            padding-top: $title-bar-offset; // half of the h2 bar height
+
+            // Left alignment of slide content
+            text-align: left;
+
+            // Make sure "section" is the complete slide
+
+            height: calc(100% - (#{$title-bar-offset}));
+            width: calc(100% - (#{$margin-left} + #{$margin-right}));
+
+            h2 {
+                background-color: $dark;
+                color: $text-on-dark;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                padding: 0.5em;
+                padding-bottom: 20px;
+                text-align: left;
+                z-index: 1;
+            }
+
+            b,
+            strong {
+                color: $colored-on-light;
+            }
+
+            // (selectors designed to not interfere with hljs)
+            pre:empty,
+            code:not(.hljs) {
+                color: $text-on-light2;
+            }
+
+            a {
+                color: $colored-on-light2;
+            }
+
+            a:hover {
+                color: lighten($colored-on-light2, 10%);
+            }
+
+            h3,
+            p,
+            ul,
+            ol,
+            blockquote {
+                color: $text-on-light;
+            }
+
+            // Items of ordered lists are numbers in squares,
+            // hence we invert colors
+            ol > li:before {
+                color: $text-on-dark;
+                background: $dark;
+            }
+        }
+
+        // Title and impact slides (dark background, so we adapt everything)
+        section.title,
+        section.impact {
+            background-color: $dark;
+            height: 100%;
+            padding-top: 0px;
+            vertical-align: middle;
+            text-align: center;
+
+            h1,
+            h2,
+            h3,
+            p,
+            ul,
+            ol {
+                color: $text-on-dark;
+            }
+
+            strong,
+            b,
+            a,
+            pre,
+            code {
+                color: $colored-on-dark;
+            }
+
+            a:hover {
+                color: lighten($colored-on-dark, 15%);
+            }
+
+            // Items of ordered lists are numbers in squares,
+            // hence we invert colors
+            ol > li:before {
+                color: $text-on-light;
+                background: $light;
+            }
+        }
+    }
 } // end .reveal
