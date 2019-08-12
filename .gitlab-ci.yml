@@ -4,9 +4,12 @@ image: node:11
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
-  - node_modules/
-  - reveal.js/
+  - node_modules
+  - reveal.js
 
-test_async:
+pages:
   script:
    - bash ./compile.sh
+  artifacts:
+    paths:
+      - .
