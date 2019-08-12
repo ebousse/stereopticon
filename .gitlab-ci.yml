@@ -1,0 +1,12 @@
+image: node:11
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  paths:
+  - node_modules/
+  - reveal.js/
+
+test_async:
+  script:
+   - bash ./compile.sh
