@@ -4,17 +4,18 @@
 
 // Palette (From http://www.colourlovers.com/palette/376594/Chicanery)
 $primary: #1c232e;
-$secondary: #3c9949;
+//$secondary: #3c9949;
+$secondary: #008748;
 $tertiary: #5fb86b;
 $other: #03484c;
-$other2: #008748;
+//$other2: #008748;
 
 // Light background colors
 $light: #fff;
 $text-on-light: $primary;
 $text-on-light2: $other;
+$colored-on-light2: $secondary;
 $colored-on-light: $secondary;
-$colored-on-light2: $other2;
 
 // Dark background colors
 $dark: $primary;
