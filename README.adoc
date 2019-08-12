@@ -30,7 +30,7 @@ The option `margin: 0` is not mandatory but can be used to remove the dark gray 
 
 == Compilation
 
-The theme is written in SCSS, and can be compiled into CSS using the confirmation that already exists for compiling the official reveal.js themes.
+The theme is written in SCSS, and can be compiled into CSS using the setup that already exists for compiling the official reveal.js themes.
 
 Instructions:
 
