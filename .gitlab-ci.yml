@@ -6,14 +6,33 @@ cache:
   paths:
   - reveal.js
 
-pages:
+stages:
+  - build
+  - deploy
+  
+build:
+  stage: build
   script:
    - bash ./compile.sh
+
+pages:
+  stage: deploy
+  script:
    - mkdir public
-   - mv demo.html public
+   - cp demo.html public
    - cp -rvL reveal.js public
    - rm -rf public/reveal.js/.git public/reveal.js/node_modules
-
   artifacts:
     paths:
       - public
+      
+keep:
+  stage: deploy
+  script:
+   - mkdir -p stereopticon/css/theme
+   - mkdir -p stereopticon/lib/font
+   - cp -rv reveal.js/css/theme/stereopticon* stereopticon/css/theme
+   - cp -rv lib/font/* stereopticon/lib/font
+  artifacts:
+    paths:
+      - stereopticon
