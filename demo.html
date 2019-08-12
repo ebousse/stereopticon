@@ -181,11 +181,9 @@ function Example() {
 			</section>
 
 			<section>
-				<h2>Clever Quotes</h2>
+				<h2>Block quote</h2>
 				<p>
-					These guys come in two forms, inline: <q
-						cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">The
-						nice thing about standards is that there are so many to choose from</q> and block:
+					A block quote can be declared with <code>blockquote</code>.
 				</p>
 				<blockquote
 					cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
@@ -193,6 +191,74 @@ function Example() {
 					typewriters would
 					reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
 				</blockquote>
+			</section>
+
+			<section>
+				<h2>Columns</h2>
+
+				<ul>
+					<li>
+						<p>Some <strong>utility CSS classes</strong> are provided, such as <code>col-X</code> (with X a
+							number between 1 and 12) to declare a column that uses X/12th of the available width.</p>
+					</li>
+					<li>
+						<p>
+							Columns must be declared within a container that has the <code>columns</code> class.
+						</p>
+					</li>
+
+					<li>
+						Example with three columns (each a <code>col-4</code>):
+					</li>
+				</ul>
+
+
+				<div class="columns">
+					<div class="col-4">
+						<p>First column</p>
+						<ul>
+							<li>
+								an item
+							</li>
+							<li>
+								an item
+							</li>
+							<li>
+								an item
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-4">
+							<p>Second column</p>
+							<ol>
+								<li>
+									an item
+								</li>
+								<li>
+									an item
+								</li>
+								<li>
+									an item
+								</li>
+							</ol>
+					</div>
+
+					<div class="col-4">
+							<p>Third column</p>
+							<ul>
+								<li>
+									an item
+								</li>
+								<li>
+									an item
+								</li>
+								<li>
+									an item
+								</li>
+							</ul>
+					</div>
+				</div>
 			</section>
 
 		</div>
