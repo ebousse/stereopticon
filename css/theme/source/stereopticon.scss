@@ -208,4 +208,14 @@
             width: 100% / 12 * $i;
         }
     }
+
+    @for $i from 1 through 200 {
+        .vspace-#{$i}::before {
+            content: "";
+            display: block;
+            padding-bottom: calc(#{$i}px);
+        }
+    }
+
+
 } // end .reveal
