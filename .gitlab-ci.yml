@@ -14,9 +14,14 @@ build:
   stage: build
   script:
    - bash ./compile.sh
+   - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
+   - cp -rv src/css .
+   - cp -rv src/lib .
   artifacts:
+    name: "stereopticon-$CI_COMMIT_SHORT_SHA"
     paths:
-      - reveal.js/css/theme/stereopticon.css
+      - lib
+      - css/theme/stereopticon.css
 
 pages:
   dependencies: 
@@ -26,21 +31,9 @@ pages:
    - mkdir public
    - cp -rv demo public
    - cp -rvL reveal.js public
+   - cp -f css/theme/stereopticon.css public/reveal.js/css/theme
+   - cp -f lib/font/* public/reveal.js/lib/font
    - rm -rf public/reveal.js/.git public/reveal.js/node_modules
   artifacts:
     paths:
       - public
-      
-keep:
-  dependencies: 
-    - build
-  stage: deploy
-  script:
-   - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
-   - cp -rv src/css .
-   - cp -rv src/lib .
-  artifacts:
-    name: "stereopticon-$CI_COMMIT_SHORT_SHA"
-    paths:
-      - lib
-      - css/theme/stereopticon.css
