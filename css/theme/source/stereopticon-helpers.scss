@@ -7,13 +7,18 @@
 
         // Fix for asciidoc generation
         .content {
-            display: flex
+            display: flex;
         }
 
         @for $i from 1 through 12 {
             .col-#{$i} {
                 width: 100% / 12 * $i;
                 margin: auto;
+
+                // Fix for asciidoc generation
+                .content {
+                    display: block;
+                }
             }
         }
     }
