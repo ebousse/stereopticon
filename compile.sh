@@ -12,9 +12,8 @@ then
     npm install
 fi
 
-
 cd "${STARTFOLDER}"/reveal.js
-ln -fs "${PWD}"/../css/theme/source/* ./css/theme/source/ # add our theme to reveal.js
-ln -fs "${PWD}"/../lib/font/* ./lib/font/ # add our fonts
+ln -fs "${PWD}"/../src/css/theme/source/* ./css/theme/source/ # add our theme to reveal.js
+ln -fs "${PWD}"/../src/lib/font/* ./lib/font/ # add our fonts
 npm run build -- css-themes # build all reveal.js themes, including ours
 cd "${STARTFOLDER}"

@@ -32,12 +32,12 @@ The option `margin: 0` is not mandatory but can be used to remove the dark gray 
 
 The theme is written in SCSS, and can be compiled into CSS using the setup that already exists for compiling the official reveal.js themes.
 
-Instructions:
+*Instructions:*
 
 - Clone this repository.
 - Download reveal.js or use an existing reveal.js installation folder.
-- Copy the `css` and `lib` folders of the stereopticon repository inside the reveal.js installation folder, and say *yes* when asking to merge the folders.
-- Go in the reveal.js folder and run: `npm install && npm run build -- css-themes`, which will produce `revealjs/css/theme/stereopticon.css`.
+- Copy the `src/css` and `src/lib` folders of the stereopticon repository inside the reveal.js installation folder, and say *yes* when asking to merge the folders.
+- Go in the reveal.js folder and run: `npm install && npm run build -- css-themes`, which will produce `reveal.js/css/theme/stereopticon.css`.
 - Now this reveal.js folder has a new theme called `stereopticon` which can be used as any other theme.
 
 

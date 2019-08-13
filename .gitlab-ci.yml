@@ -19,7 +19,7 @@ pages:
   stage: deploy
   script:
    - mkdir public
-   - cp demo.html public
+   - cp -rv demo public
    - cp -rvL reveal.js public
    - rm -rf public/reveal.js/.git public/reveal.js/node_modules
   artifacts:
@@ -29,7 +29,9 @@ pages:
 keep:
   stage: deploy
   script:
-   - cp -v  reveal.js/css/theme/stereopticon.css css/theme
+   - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
+   - cp -rv src/css .
+   - cp -rv src/lib .
   artifacts:
     name: "stereopticon-$CI_COMMIT_SHORT_SHA"
     paths:
