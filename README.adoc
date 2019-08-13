@@ -12,7 +12,7 @@ image::screenshots/slide.png[Example of slide., 100%]
 
 == Download and installation
 
-The Gitlab CI compies the SCSS files into a single CSS file after each commit. The latest build is https://gitlab.univ-nantes.fr/bousse-e/stereopticon/-/jobs/artifacts/master/download?job=keep[available here].
+The Gitlab CI compies the SCSS files into a single CSS file after each commit. The latest build is https://gitlab.univ-nantes.fr/bousse-e/stereopticon/-/jobs/artifacts/master/download?job=build[available here].
 
 Simply unzip this file in a reveal.js installation folder, and say *yes* when asking to merge the folders. You can now use a new theme called `stereopticon`.
 
