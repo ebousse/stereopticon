@@ -2,7 +2,7 @@
 
 A *reveal.js theme* slightly inspired by LaTeX/Beamer.
 
-Demo available https://bousse-e.univ-nantes.io/stereopticon/demo.html[here].
+Demo available https://bousse-e.univ-nantes.io/stereopticon/demo[here].
 
 [role="thumb"]
 image::screenshots/title.png[Example of title slide., 100%]
@@ -50,7 +50,7 @@ To dev and test the theme:
     * add symbolic links into the cloned reveal.js pointing to the stereopticon files,
     * compile all reveal.js themes (including ours).
 - Start a web server with `python -m SimpleHTTPServer 8080` or `ruby -run -e httpd . -p 8080 -b 127.0.0.1` or even better with https://github.com/tapio/live-server  to have live-reload each time files are modified.
-- Open `http://localhost:8080/demo.html` which should show the stereopticon demo.
+- Open `http://localhost:8080/demo` which should show the stereopticon demo.
 - Work on stereopticon files and see the results in the demo.
 - When happy with the changes, commit!
 
