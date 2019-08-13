@@ -4,6 +4,12 @@
     // Columns
     .columns {
         display: flex;
+
+        // Fix for asciidoc generation
+        .content {
+            display: flex
+        }
+
         @for $i from 1 through 12 {
             .col-#{$i} {
                 width: 100% / 12 * $i;
