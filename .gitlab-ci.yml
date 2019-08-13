@@ -16,6 +16,8 @@ build:
    - bash ./compile.sh
 
 pages:
+  dependencies: 
+    - build
   stage: deploy
   script:
    - mkdir public
@@ -27,6 +29,8 @@ pages:
       - public
       
 keep:
+  dependencies: 
+    - build
   stage: deploy
   script:
    - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
