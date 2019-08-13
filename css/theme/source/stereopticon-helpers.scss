@@ -1,60 +1,65 @@
 @import "./stereopticon-variables.scss";
 
-.columns {
-    display: flex;
-}
-
-@for $i from 1 through 12 {
-    .col-#{$i} {
-        width: 100% / 12 * $i;
-    }
-}
-
-@for $i from 1 through 200 {
-    .vspace-#{$i}::before {
-        content: "";
-        display: block;
-        padding-bottom: calc(#{$i}px);
-    }
-}
-
-// Only used in regular slides
-.block {
-    background-color: $block-color;
-    padding: 0.5cm;
-    margin-right: 2cm;
-}
-
-.reveal .slides section.title {
-    .subtitle {
-        margin-top: 20px;
-        font-size: 1.3em;
-    }
-    .subtitle,
-    .subtitle > * {
-        font-family: $headingFont;
-        color: $text-on-dark;
+.reveal {
+    // Columns
+    .columns {
+        display: flex;
+        @for $i from 1 through 12 {
+            .col-#{$i} {
+                width: 100% / 12 * $i;
+                margin: auto;
+            }
+        }
     }
 
-    .speaker,
-    .speaker > * {
-        text-decoration: underline dashed// $colored-on-dark;
+    // Vertical spacing
+    @for $i from 1 through 200 {
+        .vspace-#{$i}::before {
+            content: "";
+            display: block;
+            padding-bottom: calc(#{$i}px);
+        }
     }
 
-    .author {
-        margin-top: 50px;
+    // Blocks (only used in regular slides)
+    .block {
+        background-color: $block-color;
+        padding: 0.5cm;
+        margin-right: 2cm;
     }
 
-    .author,
-    .author > * {
-        font-weight: $font-weight-strong;
-        font-family: $mainFont;
-        color: $colored-on-dark;
-    }
+    // Title slide helpers
+    .slides section.title {
+        .subtitle {
+            margin-top: 20px;
+            font-size: 1.3em;
+        }
+        .subtitle,
+        .subtitle > * {
+            font-family: $headingFont;
+            color: $text-on-dark;
+        }
 
-    .institution,
-    .institution > * {
-        font-size: 90%;
-        color: $text-on-dark;
+        .speaker,
+        .speaker > * {
+            text-decoration: underline dashed// $colored-on-dark;
+        }
+
+        .author {
+            margin-top: 50px;
+        }
+
+        .author,
+        .author > * {
+            font-weight: $font-weight-strong;
+            font-family: $mainFont;
+            color: $colored-on-dark;
+        }
+
+        .institution,
+        .institution > * {
+            font-size: 90%;
+            color: $text-on-dark;
+        }
     }
 }
