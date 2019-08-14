@@ -30,7 +30,7 @@
 
 == Elements that cannot be supported
 
-(because asciidoc-revealjs do not support them)
+(because asciidoc-revealjs does not support them)
 
 - page breaks
 - tables orientation
