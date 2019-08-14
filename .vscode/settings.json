@@ -2,8 +2,14 @@
   "saveAndRun": {
     "commands": [
       {
-        "match": ".*",
+        "match": "\\.scss$|demo/index.hmtml",
         "cmd": "bash ./compile.sh",
+        "useShortcut": false,
+        "silent": false
+      },
+      {
+        "match": "asciidoc-tests/index.adoc",
+        "cmd": "bash ./asciidoc-tests/compile.sh",
         "useShortcut": false,
         "silent": false
       },

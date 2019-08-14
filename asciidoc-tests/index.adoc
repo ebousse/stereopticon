@@ -19,7 +19,7 @@ Text in the title slide.
 
 == Heading and paragraphs
 
-=== This is a level 2 heading
+==== This is an asciidoc level 3 heading
 
 One paragraph.
 
@@ -27,12 +27,12 @@ Two paragraphs.
 
 == Line Breaks
 
-=== Plus sign
+==== Plus sign
 
 Rubies are red, +
 Topazes are blue.
 
-=== Hardbreaks option
+==== Hardbreaks option
 
 [%hardbreaks]
 Ruby is red.
@@ -42,11 +42,6 @@ Java is black.
 
 [.lead]
 This is a lead paragraph.
-
-
-
-
-
 
 
 == Horizontal Rules
@@ -94,14 +89,14 @@ link:protocol.json[Open the JSON file]
 
 == Images
 
-=== Alone
+==== Alone
 
 [#img-sunset] 
 .A mountain sunset 
 [link=https://www.flickr.com/photos/javh/5448336655] 
 image::sunset.jpg[Sunset,300,200]
 
-=== Inline
+==== Inline
 
 Click image:icons/play.png[Play, title="Play"] to get the party started.
 
@@ -110,9 +105,6 @@ Click image:icons/play.png[Play, title="Play"] to get the party started.
 You can find image:https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg[Linux,25,35] everywhere these days.
 
 == Putting Images in Their Place (1)
-
-
-
 
 A block image pulled to the right and centered within the block
 
@@ -124,7 +116,7 @@ image::tiger.png[Tiger,200,200,float="right",align="center"]
 
 An inline image pulled to the right of the paragraph text
 
-image:linux.png[Linux,150,150,float="right"]
+image:linux.svg[Linux,150,150,float="right"]
 You can find Linux everywhere these days!
 
 
@@ -132,12 +124,12 @@ You can find Linux everywhere these days!
 
 Block image macro using positioning roles
 
-=== Alone
+==== Alone
 
 [.right.text-center]
 image::tiger.png[Tiger,200,200]
 
-=== Inline
+==== Inline
 
 image:sunset.jpg[Sunset,150,150,role="right"] What a beautiful sunset!
 
@@ -153,21 +145,23 @@ image:logo.png[role="related thumb right"] Here's text that will wrap around the
 --
 [.left]
 .Image A
-image::a.png[A,240,180]
+image::tiger.png[A,240,180]
 
 [.left]
 .Image B
-image::b.png[B,240,180]
+image::sunset.jpg[B,240,180]
 --
 
 Text below images.
 
 
-== Sizing images
+== Sizing images (1)
 
-image::flower.jpg[Flower,640,480]
+image::flower.png[Flower,640,480]
 
-image::flower.jpg[Flower,50%]
+== Sizing images (2)
+
+image::flower.png[Flower,50%]
 
 
 == Taming SVGs
@@ -295,14 +289,14 @@ print("one")
 
 == Checklist
 
-== Non-interactive
+==== Non-interactive
 
 * [*] checked
 * [x] also checked
 * [ ] not checked
 *     normal list item
 
-== Interactive
+==== Interactive
 
 [%interactive]
 * [*] checked
@@ -394,10 +388,15 @@ Monitor:: Displays information in visual form using text and graphics.
 
 == Description list (2)
 
+Horizontal:
+
 [horizontal]
 CPU:: The brain of the computer.
 Hard drive:: Permanent storage for operating system and/or user files.
 RAM:: Temporarily stores information the CPU uses during operation.
+
+With lists:
+
 
 Dairy::
 * Milk
@@ -408,26 +407,23 @@ Produce::
 * Bananas
 
 
-== Hybrid complex list
+== Hybrid complex list (1)
+
 
 Operating Systems::
   Linux:::
-    . Fedora
-      * Desktop
     . Ubuntu
       * Desktop
       * Server
   BSD:::
     . FreeBSD
     . NetBSD
-
 Cloud Providers::
   PaaS:::
     . OpenShift
     . CloudBees
   IaaS:::
     . Amazon EC2
-    . Rackspace
 
 == Question and Answer Style List
 
@@ -442,7 +438,7 @@ What is the answer to the Ultimate Question?:: 42
 
 == Simple table
 
-|=== 
+|==== 
 
 | Cell in column 1, row 1 | Cell in column 2, row 1  
 
@@ -450,7 +446,7 @@ What is the answer to the Ultimate Question?:: 42
 
 | Cell in column 1, row 3 | Cell in column 2, row 3
 
-|=== 
+|==== 
 
 
 == Number of columns
@@ -467,7 +463,7 @@ What is the answer to the Ultimate Question?:: 42
 
 == Column Formatting (1)
 
- table with horizontal, center alignment applied to all columns
+table with horizontal, center alignment applied to all columns
 
 [cols="3*^"]
 |===
@@ -500,7 +496,7 @@ table with horizontal, center alignment applied to last column
 
 == Column Formatting (3)
 
- table with vertical, middle alignment applied to all columns
+table with vertical, middle alignment applied to all columns
 
 [cols="3*.^"]
 |===
@@ -516,7 +512,7 @@ table with horizontal, center alignment applied to last column
 
 == Column Formatting (4)
 
- table with a different vertical alignment for each column
+table with a different vertical alignment for each column
 
 [cols=".<,.^,.>"]
 |===
@@ -766,7 +762,7 @@ epic sonnet.
 |Cell in column 2, row 2
 |===
 
-== Foorter Row
+== Footer Row
 
 [options="footer"]
 |===
@@ -1108,7 +1104,7 @@ Example of a list with a title:
 
 == Admonition
 
-=== Multi-lines
+==== Multi-lines
 
 [IMPORTANT] 
 .title
@@ -1116,7 +1112,7 @@ Example of a list with a title:
 This is an important admonition
 ====
 
-=== Single line
+==== Single line
 
 CAUTION: caution
 
@@ -1128,13 +1124,14 @@ WARNING: warining
 // A single-line comment.
 
 ////
-This is a comment not shown in the output, but should be shown in the speakers notes (maybe?)
+Multi line
+comment
 ////
 
 
 == Example
 
-=== Multi-lines
+==== Multi-lines
 
 ====
 This is an example
@@ -1143,7 +1140,7 @@ This is an example inside an example
 ======
 ====
 
-=== Single line
+==== Single line
 
 [example]
 This is an example
@@ -1154,66 +1151,71 @@ This is an example
 This is fenced content
 ```
 
-== Listing
+== Listing / Source
 
-=== Multi-lines
+==== Multi-lines
 
 ----
 This is a listing
 ----
 
-=== Single line
+==== Single line
 
 [listing]
-This is a listing
+This is a listing block
+
+[source]
+This is a source block
+
 
 
 == Literal
 
-=== Multi-lines
+==== Multi-lines
 
 ....
 This is a literal block
 ....
 
-=== Single line
+==== Single line
 
 [literal]
 This is a literal block
 
 == Open
 
-=== Multi-lines
+==== Multi-lines
 
 --
 This is an open anonymous block
 --
 
-=== Single line
+==== Single line
 
-[anynameworks]
+[anything]
 This is an open anonymous block
 
 
 
-== Passthrough
+== Passthrough / Stem
 
-=== Multi-lines
+==== Multi-lines
 
 ++++
 This is a passthrough block
 ++++
 
-=== Single line
+==== Single line
 
 [pass]
 This is a passthrough block
 
-
+[stem]
+This is a stem block.
 
 == Quote (1)
 
-=== Multi-lines
+==== Multi-lines
 
 .Gettysburg Address 
 [quote, Abraham Lincoln, Address delivered at the dedication of the Cemetery at Gettysburg]     
@@ -1226,7 +1228,7 @@ that nation, or any nation so conceived and so dedicated,
 can long endure. ...
 ____
 
-=== Single line
+==== Single line
 
 [quote]
 Never do today what you can put off `'til tomorrow.
@@ -1251,7 +1253,7 @@ But nothing can be changed until it is faced.
 == Sidebar
 
 
-=== Multi-lines
+==== Multi-lines
 
 .AsciiDoc history 
 **** 
@@ -1260,44 +1262,16 @@ It was designed from the start to be a shorthand syntax
 for producing professional documents like DocBook and LaTeX.
 ****
 
-=== Single line
+==== Single line
 
 [sidebar]
 sidebar block
 
 
-== Source
-
-=== Multi-lines
-
-----
-This is a source block
-----
-
-=== Single line
-
-[source]
-This is a source block
-
-
-== Stem
-
-=== Multi-lines
-
-++++
-This is a stem block
-++++
-
-=== Single line
-
-[stem]
-This is a stem block.
-
-// TODO table
 
 == Verse
 
-=== Multi-lines
+==== Multi-lines
 
 [verse, Carl Sandburg, Fog]
 ____
@@ -1310,7 +1284,7 @@ on silent haunches
 and then moves on.
 ____
 
-=== Single line
+==== Single line
 
 [verse, Carl Sandburg, two lines from the poem Fog]
 The fog comes
