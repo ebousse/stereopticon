@@ -1,6 +1,8 @@
 = Asciidoc elements yet to really support
 
 - [ ] make real use of title page generation
+    * would require this issue solved for having multiple authors: https://github.com/asciidoctor/asciidoctor-reveal.js/issues/122
+    * also how to handle institutions?
 - [ ] lead style
 - [ ] horizontal rules
 - [ ] captions and block titles
