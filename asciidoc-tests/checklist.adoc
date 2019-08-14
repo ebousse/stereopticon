@@ -1,0 +1,34 @@
+= Asciidoc elements yet to really support
+
+- [ ] make real use of title page generation
+- [ ] lead style
+- [ ] horizontal rules
+- [ ] captions and block titles
+- [ ] positionning roles
+- [ ] framing / wrapping of text around images
+- [ ] floats control
+- [ ] svg options (eg. interactive)
+- [ ] marking
+- [ ] checklists
+- [ ] ordered lists starting not at 1
+- [ ] ordered lists numbering styles
+- [ ] description lists
+- [ ] Q&A
+- [ ] tables column formatting
+- [ ] tables header
+- [ ] tables verse style
+- [ ] tables frames
+- [ ] tables grids
+- [ ] tables striping
+- [ ] admonitions
+- [ ] examples
+- [ ] quote
+- [ ] sidebar
+- [ ] verse
+
+== Elements that cannot be supported
+
+(because asciidoc-revealjs do not support them)
+
+- page breaks
+- tables orientation
