@@ -227,11 +227,19 @@
                 color: $colored-on-light;
             }
 
-            pre:not(.highlight) {
+            // Code blocks
+            pre {
                 background: $block-color;
+                code:not(.hljs) {
+                    color: $text-on-light;
+                }
+            }
+
+            pre:not(.highlight) {
                 padding: 5px;
             }
 
+            // Code inline text
             code:not(.hljs) {
                 color: $text-on-light2;
             }
