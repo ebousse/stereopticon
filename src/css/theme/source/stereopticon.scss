@@ -110,6 +110,7 @@
         pre {
             @extend %citations;
             box-shadow: 0px 0px;
+            font-size: $mainFontSize;
         }
 
         .attribution {
@@ -170,9 +171,9 @@
         font-weight: $font-weight-strong;
     }
 
-    pre,
+    pre:not(.content),
     code:not(.hljs) {
-        font-size: $mainFontSize;
+        font-size: $smallerFontSize;
         box-shadow: 0px 0px;
     }
 
@@ -240,7 +241,7 @@
             }
 
             // Code blocks
-            pre {
+            pre:not(.content) {
                 background: $block-color;
                 code:not(.hljs) {
                     color: $text-on-light;
