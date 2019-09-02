@@ -61,20 +61,30 @@
     }
 
     // Share style between quotes and verses
+
+    %citationArea {
+        width: 90%;
+        margin: $blockMargin auto;
+    }
+
     %citations {
+        @extend %citationArea;
         border-left: 5px solid;
         padding-left: 20px;
         text-align: left;
-        font-size: 1em;
+        font-family: $mainFont;
         & > p {
             margin: 0;
         }
     }
 
+    %attributions {
+        @extend %citationArea;
+        font-size: $smallerFontSize;
+    }
+
     blockquote {
         @extend %citations;
-        width: 90%;
-        margin: $blockMargin auto;
         padding-left: 50px;
 
         &::before {
@@ -82,49 +92,30 @@
             position: absolute;
             left: 7px;
             line-height: 40px;
-            font-size: 1.4em;
+            font-size: $biggerFontSize;
             font-weight: $font-weight-strong;
         }
     }
 
     .quoteblock {
         .attribution {
-            width: 90%;
-            font-size: .85em;
-            margin: $blockMargin auto;
+            @extend %attributions;
             text-align: right;
         }
     }
 
     // Asciidoc verse block
     .verseblock {
+        // Override default "pre" style in case of adoc verse
         pre {
-            // Override default "pre" style in case of adoc verse
             @extend %citations;
-
-            display: block;
-            position: relative;
-            width: 90%;
-            margin: $blockMargin auto;
-
-            text-align: left;
-
-            font-family: $mainFont;
-            line-height: 1.2em;
-
-            word-wrap: break-word;
-
             box-shadow: 0px 0px;
         }
 
         .attribution {
-            width: 90%;
-            margin: $blockMargin auto;
-            font-size: .85em;
+            @extend %attributions;
         }
     }
-
-    
 
     // Regular lists are squares
     ul {
@@ -175,9 +166,9 @@
         font-weight: $font-weight-strong;
     }
 
-    pre:empty,
+    pre,
     code:not(.hljs) {
-        font-size: 1.1em;
+        font-size: $mainFontSize;
     }
 
     ::selection {
