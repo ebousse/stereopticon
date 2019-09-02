@@ -69,23 +69,31 @@
         & > p {
             margin: 0;
         }
-
-        &::before,
-        &::after {
-            font-weight: $font-weight-strong;
-        }
-
-        &::before {
-            content: "« ";
-        }
-
-        &::after {
-            content: " »";
-        }
     }
 
     blockquote {
         @extend %citations;
+        width: 90%;
+        margin: $blockMargin auto;
+        padding-left: 50px;
+
+        &::before {
+            content: "«";
+            position: absolute;
+            left: 7px;
+            line-height: 40px;
+            font-size: 1.4em;
+            font-weight: $font-weight-strong;
+        }
+    }
+
+    .quoteblock {
+        .attribution {
+            width: 90%;
+            font-size: .85em;
+            margin: $blockMargin auto;
+            text-align: right;
+        }
     }
 
     // Asciidoc verse block
@@ -108,11 +116,15 @@
 
             box-shadow: 0px 0px;
         }
+
         .attribution {
             width: 90%;
             margin: $blockMargin auto;
+            font-size: .85em;
         }
     }
+
+    
 
     // Regular lists are squares
     ul {
