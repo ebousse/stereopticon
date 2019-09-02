@@ -148,8 +148,11 @@
 
 
     ol > li {
+        list-style-type: none;
         position: relative;
         padding-left: 0px;
+        //margin-bottom: 10px;
+        
     }
 
     // Numbered lists are squares with numbers
@@ -158,12 +161,12 @@
         content: counter(mycounter);
         counter-increment: mycounter;
         position: absolute;
-        top: 15px;
+        top: 13px;
         left: -50px;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         text-align: center;
-        font-size: 22px;
+        font-size: 25px;
         font-weight: $font-weight-strong;
     }
 
@@ -171,6 +174,14 @@
     code:not(.hljs) {
         font-size: $mainFontSize;
         box-shadow: 0px 0px;
+    }
+
+    // Adoc code callouts (ie. refs to elements in the code)
+    code.hljs {
+        b {
+            font-family: $mainFont;
+            font-weight: $font-weight-strong;
+        }
     }
 
     ::selection {
@@ -243,6 +254,16 @@
             // Code inline text
             code:not(.hljs) {
                 color: $text-on-light2;
+            }
+
+            // Code callouts in adoc
+            code.hljs {
+                b {
+                    color: $colored-on-dark;
+                    .hljs-number {
+                        color: $colored-on-dark;
+                    }
+                }
             }
 
             a {
