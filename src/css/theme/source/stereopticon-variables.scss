@@ -32,8 +32,8 @@ $block-color: #d9e0eb;
 $font-weight: 300;
 $font-weight-strong: 400;
 $title-bar-offset: 160px; // to take into account vspace of h2 in regular slides (a bit random…)
-$margin-left: 2em;
-$margin-right: 2em;
+$margin-left: 89px;
+$margin-right: 89px;
 
 /************
  * Overriden reveal.js variables(see ../template/settings.scss)
@@ -43,7 +43,9 @@ $mainColor: $text-on-light;
 // $backgroundColor: white;
 // $headingColor: #fff;
 
-$mainFontSize: 2.8em;
+$mainFontSize: 44.8px;
+$smallerFontSize: calc(#{$mainFontSize} * 0.8);
+$biggerFontSize: calc(#{$mainFontSize} * 1.2);
 $mainFont: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
 $headingFont: "Yanone Kaffeesatz", "Source Sans Pro", Helvetica, sans-serif;
 $headingTextShadow: none;
@@ -54,9 +56,8 @@ $linkColor: $colored-on-light; // just to change color the UI
 // $linkColorHover: lighten($linkColor, 15%);
 // $selectionBackgroundColor: lighten($linkColor, 80%);
 
-$heading1Size: 2.5em;
-$heading2Size: 2em; //1.6em;
-$heading3Size: 1.3em;
-$heading4Size: 1em;
+$heading1Size: 112px;
+$heading2Size: 89.6px;
+$heading3Size: 58.2333px;
 
 $codeFont: "Ubuntu Mono";
