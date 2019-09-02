@@ -169,6 +169,7 @@
     pre,
     code:not(.hljs) {
         font-size: $mainFontSize;
+        box-shadow: 0px 0px;
     }
 
     ::selection {
@@ -226,8 +227,11 @@
                 color: $colored-on-light;
             }
 
-            // (selectors designed to not interfere with hljs)
-            pre:empty,
+            pre:not(.highlight) {
+                background: $block-color;
+                padding: 5px;
+            }
+
             code:not(.hljs) {
                 color: $text-on-light2;
             }

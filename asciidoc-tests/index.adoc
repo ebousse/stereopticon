@@ -7,6 +7,7 @@
 :revealjs_height: 1080
 :revealjs_history: true
 :revealjs_margin: 0.04
+:source-highlighter: highlightjs
 
 = Title of the presentation: subtitle of the presentation
 Author1 <author1@domain.org>; Author2 <author2@domain.org>
@@ -497,23 +498,49 @@ This is an example
 This is fenced content
 ```
 
-== Listing / Source
+== Listing / Source / Code
 
 ==== Multi-lines
 
 ----
-This is a listing
+This is a listing with highlighting
+that can go over multiple lines
+and without any specific programming language specified
 ----
 
 ==== Single line
 
 [listing]
-This is a listing block
+This is a listing block (ie. without highlighting)
 
 [source]
-This is a source block
+This is a source block (ie. with highlighting)
 
 
+== Code block with callouts
+
+[source,ruby]
+----
+require 'sinatra' // <1>
+
+get '/hi' do // <2>
+  "Hello World!" // <3>
+end
+----
+<1> Library import
+<2> URL mapping
+<3> HTTP response body
+
+== Code block with non-selectable callouts
+
+----
+line of code  // <1>
+line of code  # <2>
+line of code  ;; <3>
+----
+<1> A callout behind a line comment for C-style languages.
+<2> A callout behind a line comment for Ruby, Python, Perl, etc.
+<3> A callout behind a line comment for Clojure.
 
 == Literal
 
