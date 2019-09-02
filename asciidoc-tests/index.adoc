@@ -1269,9 +1269,7 @@ sidebar block
 
 
 
-== Verse
-
-==== Multi-lines
+== Verse (1)
 
 [verse, Carl Sandburg, Fog]
 ____
@@ -1284,7 +1282,7 @@ on silent haunches
 and then moves on.
 ____
 
-==== Single line
+== Verse (2)
 
 [verse, Carl Sandburg, two lines from the poem Fog]
 The fog comes
