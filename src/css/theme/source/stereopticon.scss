@@ -116,6 +116,11 @@
             @extend %attributions;
         }
     }
+ 
+    li {
+        margin-bottom: 0.25em;
+        margin: 0;
+    }
 
     // Regular lists are squares
     ul {
@@ -141,10 +146,6 @@
         counter-reset: mycounter;
     }
 
-    li {
-        margin-bottom: 0.25em;
-        margin: 0;
-    }
 
     ol > li {
         position: relative;
@@ -153,16 +154,16 @@
 
     // Numbered lists are squares with numbers
     ol > li:before {
+        //line-height: 28px; //required?
         content: counter(mycounter);
         counter-increment: mycounter;
         position: absolute;
-        top: 1em;
+        top: 15px;
         left: -50px;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
+        width: 30px;
+        height: 30px;
         text-align: center;
-        font-size: 18px;
+        font-size: 22px;
         font-weight: $font-weight-strong;
     }
 
