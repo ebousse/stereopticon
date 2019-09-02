@@ -1240,15 +1240,21 @@ Never do today what you can put off `'til tomorrow.
 and as necessary in the political world as storms in the physical."
 -- Thomas Jefferson, Papers of Thomas Jefferson: Volume 11
 
+
+> I hold it that a little rebellion now and then is a good thing,
+> and as necessary in the political world as storms in the physical.
+> -- Thomas Jefferson, Papers of Thomas Jefferson: Volume 11
+
+== Quote (3)
+
+==== Air quotes (not supported)
+
 [, James Baldwin]
 ""
 Not everything that is faced can be changed.
 But nothing can be changed until it is faced.
 ""
 
-> I hold it that a little rebellion now and then is a good thing,
-> and as necessary in the political world as storms in the physical.
-> -- Thomas Jefferson, Papers of Thomas Jefferson: Volume 11
 
 == Sidebar
 
