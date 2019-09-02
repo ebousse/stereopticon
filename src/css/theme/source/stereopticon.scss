@@ -60,9 +60,12 @@
         margin-top: 0;
     }
 
-    blockquote {
-        border-left: 6px solid;
+    // Share style between quotes and verses
+    %citations {
+        border-left: 5px solid;
+        padding-left: 20px;
         text-align: left;
+        font-size: 1em;
         & > p {
             margin: 0;
         }
@@ -73,11 +76,41 @@
         }
 
         &::before {
-            content: "«";
+            content: "« ";
         }
 
         &::after {
-            content: "»";
+            content: " »";
+        }
+    }
+
+    blockquote {
+        @extend %citations;
+    }
+
+    // Asciidoc verse block
+    .verseblock {
+        pre {
+            // Override default "pre" style in case of adoc verse
+            @extend %citations;
+
+            display: block;
+            position: relative;
+            width: 90%;
+            margin: $blockMargin auto;
+
+            text-align: left;
+
+            font-family: $mainFont;
+            line-height: 1.2em;
+
+            word-wrap: break-word;
+
+            box-shadow: 0px 0px;
+        }
+        .attribution {
+            width: 90%;
+            margin: $blockMargin auto;
         }
     }
 
