@@ -24,9 +24,9 @@
 - [ ] tables striping
 - [ ] admonitions
 - [ ] examples
-- [ ] quote
 - [ ] sidebar
-- [ ] verse
+- [x] quote
+- [x] verse
 
 == Elements that cannot be supported
 
