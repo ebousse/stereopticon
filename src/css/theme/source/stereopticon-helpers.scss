@@ -4,6 +4,7 @@
     // Columns
     .columns {
         display: flex;
+        width: 100%;
 
         // Fix for asciidoc generation
         .content {
