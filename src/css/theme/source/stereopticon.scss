@@ -35,6 +35,12 @@
         margin-bottom: 0;
     }
 
+    h3,
+    p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     p,
     ul,
     ol,
@@ -44,17 +50,14 @@
         margin-top: $blockMargin;
     }
 
-    h3,
-    p {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
     // When something is the first element, no upper margin
     // except for tables, with the current implem
     h2 + *:not(table),
     *:not(table):first-child {
         margin-top: 0;
+        & > h3 {
+            margin-top: 0;
+        }
     }
 
     h3 {
@@ -66,12 +69,10 @@
     }
 
     // Share style between quotes and verses
-
     %citationArea {
         width: 90%;
         margin: $blockMargin auto;
     }
-
     %citations {
         @extend %citationArea;
         border-left: 5px solid;
@@ -82,7 +83,6 @@
             margin: 0;
         }
     }
-
     %attributions {
         @extend %citationArea;
         font-size: $smallerFontSize;
