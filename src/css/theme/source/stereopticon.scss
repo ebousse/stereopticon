@@ -38,6 +38,7 @@
     p,
     ul,
     ol,
+    div,
     .columns,
     .block {
         margin-top: $blockMargin;
@@ -49,15 +50,19 @@
         margin-right: 0;
     }
 
-    h3 {
-        margin-top: calc(#{$blockMargin} + 20px);
-    }
-
     // When something is the first element, no upper margin
     // except for tables, with the current implem
     h2 + *:not(table),
     *:not(table):first-child {
         margin-top: 0;
+    }
+
+    h3 {
+        margin-top: calc(#{$blockMargin} + 20px);
+    }
+
+    div.title {
+        @extend h3;
     }
 
     // Share style between quotes and verses
@@ -117,7 +122,7 @@
             @extend %attributions;
         }
     }
- 
+
     li {
         margin-bottom: 0.25em;
         margin: 0;
@@ -147,13 +152,11 @@
         counter-reset: mycounter;
     }
 
-
     ol > li {
         list-style-type: none;
         position: relative;
         padding-left: 0px;
         //margin-bottom: 10px;
-        
     }
 
     // Numbered lists are squares with numbers
