@@ -124,8 +124,11 @@
     }
 
     li {
-        margin-bottom: 0.25em;
         margin: 0;
+    }
+
+    li:not(:first-of-type) {
+        margin-top: 10px;
     }
 
     // Regular lists are squares
@@ -156,7 +159,6 @@
         list-style-type: none;
         position: relative;
         padding-left: 0px;
-        //margin-bottom: 10px;
     }
 
     // Numbered lists are squares with numbers
