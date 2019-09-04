@@ -17,6 +17,10 @@
                 width: 100% / 12 * $i;
                 margin: auto;
 
+                & > h3 {
+                    margin-top: 0;
+                }
+
                 // Fix for asciidoc generation
                 .content {
                     display: block;

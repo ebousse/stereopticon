@@ -44,9 +44,7 @@
     p,
     ul,
     ol,
-    div,
-    .columns,
-    .block {
+    div {
         margin-top: $blockMargin;
     }
 
@@ -209,6 +207,11 @@
             justify-content: center;
             flex-direction: column;
             padding-bottom: 0px;
+
+            img {
+                border-style: none;
+                box-shadow: unset;
+            }
         }
 
         // Regular slides
@@ -216,14 +219,12 @@
             background-color: $light;
             padding-left: $margin-left;
             padding-right: $margin-right;
-
             padding-top: $title-bar-offset; // half of the h2 bar height
 
             // Left alignment of slide content
             text-align: left;
 
             // Make sure "section" is the complete slide
-
             height: calc(100% - (#{$title-bar-offset}));
             width: calc(100% - (#{$margin-left} + #{$margin-right}));
 
