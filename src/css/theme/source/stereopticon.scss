@@ -66,6 +66,14 @@
         @extend h3;
     }
 
+    div.imageblock + div.title {
+        margin-top: unset;
+    }
+
+    div.imageblock.text-center + div.title {
+        text-align: center;
+    }
+
     // Share style between quotes and verses
     %citationArea {
         width: 90%;
@@ -199,6 +207,12 @@
      */
     .slides {
         top: 0px;
+
+        section {
+            img {
+                margin-bottom: 0
+            }
+        }
 
         // For all slides (regular, title, impact)
         section:not([class^="stack"]) {
