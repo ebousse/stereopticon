@@ -30,9 +30,15 @@
         }
     }
 
+    @for $i from 1 through 100 {
+        .width-#{$i} {
+            width: 1% * $i;
+        }
+    }
+
     // Vertical spacing
     @for $i from 1 through 200 {
-        .vspace-#{$i}::before {
+        .vspace-#{$i}::before, .vspace-after-#{$i}::after {
             content: "";
             display: block;
             padding-bottom: calc(#{$i}px);
@@ -45,6 +51,21 @@
         padding: 0.5cm;
         margin-right: 2cm;
     }
+
+    .huge, .huge p {
+        font-size: calc(#{$mainFontSize} * 1.5);
+    }
+
+    .bigger {
+        font-size: calc(#{$mainFontSize} * 1.2);
+    }
+
+    .center {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 
     // Title slide helpers
     .slides section.title {
