@@ -66,6 +66,24 @@
         margin-right: auto;
     }
 
+    div.slides {
+        counter-reset: references;
+    }
+    
+    .references {
+        position: absolute;
+        bottom: $margin-bottom;
+        margin-right: $margin-right;
+    }
+    
+    .reference {
+        font-size: calc(0.6 * #{$mainFontSize});
+        font-style: italic; 
+        &::before{
+            counter-increment: references; 
+            content: "[" counter(references) "] ";
+        }
+    }
 
     // Title slide helpers
     .slides section.title {
