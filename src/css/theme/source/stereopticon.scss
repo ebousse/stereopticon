@@ -51,7 +51,7 @@
     // When something is the first element, no upper margin
     // except for tables, with the current implem
     h2 + *:not(table),
-    *:not(table):first-child {
+    *:not(table):not(section):not(.slides):first-child {
         margin-top: 0;
         & > h3 {
             margin-top: 0;
