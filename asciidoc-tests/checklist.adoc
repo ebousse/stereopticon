@@ -35,3 +35,4 @@
 - page breaks
 - tables orientation
 - air quotes
+- footnotes
