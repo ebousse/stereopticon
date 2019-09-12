@@ -214,6 +214,20 @@
         color: $light;
     }
 
+    .slide-number {
+        bottom: 60px;
+        right: 80px;
+        font-size: 25pt;
+        background-color: $primary;
+        color: $text-on-dark;
+    }
+
+    aside.controls {
+        bottom: 50px;
+        right:200px;
+    }
+
+
     /*
      * Now we define things based on the type of slide (regular or impact, mostly)
      * For instance, everything color-related is defined in this part.
