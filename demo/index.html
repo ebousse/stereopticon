@@ -44,11 +44,24 @@
                     A reveal.js theme slightly inspired by LaTeX/Beamer.
                 </div>
 
-                <div class="author">
-                    Erwan Bousse
-                </div>
-                <div class="institution">
-                    University of Nantes − LS2N, France
+                <div class="authors">
+                    <div class="author">
+                        <div class="name">
+                            Erwan Bousse
+                        </div>
+                        <div class="institution">
+                            University of Nantes − LS2N, France
+                        </div>
+                    </div>
+
+                    <div class="author">
+                        <div class="name">
+                            An imaginary second author
+                        </div>
+                        <div class="institution">
+                            From somewhere
+                        </div>
+                    </div>
                 </div>
 
             </section>
@@ -84,9 +97,14 @@
                 <ul>
                     <li><code>title</code>, as a class for the reveal/js <code>section</code> (dark background etc.),</li>
                     <li><code>subtitle</code> for the subtitle element (header font, etc.),</li>
-                    <li><code>author</code> for an author (colored text),</li>
-                    <li><code>institution</code> to name the institution of the preceding author (smaller size),</li>
-                    <li><code>speaker</code> to tag an author as the speaker (dashed underline).</li>
+                    <li><code>authors</code> for the authors block, with inside:
+                        <ul>
+                            <li><code>author</code> to declare an author block,</li>
+                            <li><code>name</code> to name an author inside an <code>author</code> block,</li>
+                            <li><code>institution</code> to give the institution inside an <code>author</code> block,</li>
+                        </ul>
+                    </li>
+                    <li><code>speaker</code> to tag an author's name as the speaker (dashed underline).</li>
                 </ul>
             </section>
 
@@ -339,18 +357,18 @@ function Example() {
             </section>
 
             <section>
-                    <h2>References (2)</h2>
+                <h2>References (2)</h2>
 
-                    <p>The identifiers of references keep incrementing accross slides.</p>
-    
-                    <div class="references">
-                        <div class="reference">Andy Hunt & Dave Thomas. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley. 1999.</div>
-                        <div class="reference">Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. 1994.</div>
-                    </div>
-    
-    
-                </section>
-    
+                <p>The identifiers of references keep incrementing accross slides.</p>
+
+                <div class="references">
+                    <div class="reference">Andy Hunt & Dave Thomas. The Pragmatic Programmer: From Journeyman to Master. Addison-Wesley. 1999.</div>
+                    <div class="reference">Erich Gamma, Richard Helm, Ralph Johnson & John Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley. 1994.</div>
+                </div>
+
+
+            </section>
+
 
 
         </div>

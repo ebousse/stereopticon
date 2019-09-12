@@ -2,7 +2,7 @@
   "saveAndRun": {
     "commands": [
       {
-        "match": "\\.scss$|demo/index.hmtml",
+        "match": "\\.scss$|demo/index.html",
         "cmd": "bash ./compile.sh",
         "useShortcut": false,
         "silent": false

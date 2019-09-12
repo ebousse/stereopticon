@@ -38,7 +38,8 @@
 
     // Vertical spacing
     @for $i from 1 through 200 {
-        .vspace-#{$i}::before, .vspace-after-#{$i}::after {
+        .vspace-#{$i}::before,
+        .vspace-after-#{$i}::after {
             content: "";
             display: block;
             padding-bottom: calc(#{$i}px);
@@ -52,7 +53,8 @@
         margin-right: 2cm;
     }
 
-    .huge, .huge p {
+    .huge,
+    .huge p {
         font-size: calc(#{$mainFontSize} * 1.5);
     }
 
@@ -69,18 +71,18 @@
     div.slides {
         counter-reset: references;
     }
-    
+
     .references {
         position: absolute;
         bottom: $margin-bottom;
         margin-right: $margin-right;
     }
-    
+
     .reference {
         font-size: calc(0.6 * #{$mainFontSize});
-        font-style: italic; 
-        &::before{
-            counter-increment: references; 
+        font-style: italic;
+        &::before {
+            counter-increment: references;
             content: "[" counter(references) "] ";
         }
     }
@@ -95,6 +97,8 @@
         .subtitle > * {
             font-family: $headingFont;
             color: $text-on-dark;
+            margin-left: $margin-left;
+            margin-right: $margin-right;
         }
 
         .speaker,
@@ -102,12 +106,19 @@
             text-decoration: underline dashed// $colored-on-dark;
         }
 
-        .author {
+        .authors {
+            margin-left: $margin-left;
+            margin-right: $margin-right;
             margin-top: 50px;
         }
 
-        .author,
-        .author > * {
+        .author {
+            display: inline-grid; 
+            margin: 30px;
+        }
+
+        .name,
+        .name > * {
             font-weight: $font-weight-strong;
             font-family: $mainFont;
             color: $colored-on-dark;
