@@ -62,6 +62,10 @@
         font-size: calc(#{$mainFontSize} * 1.2);
     }
 
+    .smaller {
+        font-size: calc(#{$mainFontSize} * 0.9);
+    }
+
     .center {
         text-align: center;
         margin-left: auto;
