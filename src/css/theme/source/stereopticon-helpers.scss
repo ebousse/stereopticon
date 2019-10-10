@@ -80,14 +80,20 @@
         position: absolute;
         bottom: $margin-bottom;
         margin-right: $margin-right;
-    }
 
-    .reference {
-        font-size: calc(0.6 * #{$mainFontSize});
-        font-style: italic;
-        &::before {
-            counter-increment: references;
-            content: "[" counter(references) "] ";
+        .reference {
+            font-size: calc(0.6 * #{$mainFontSize});
+            font-style: italic;
+
+            &::before {
+                counter-increment: references;
+                content: "[" counter(references) "] ";
+            }
+
+            // To avoid a <p> to do a line break after the content of ::before
+            p {
+                display: inline-block;
+            }
         }
     }
 
@@ -117,7 +123,7 @@
         }
 
         .author {
-            display: inline-grid; 
+            display: inline-grid;
             margin: 30px;
         }
 
