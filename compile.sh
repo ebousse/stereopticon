@@ -3,7 +3,7 @@
 set -e
 set -x
 
-REVEALJSVERSION="3.8.0"
+REVEALJSVERSION="3.7.0"
 
 STARTFOLDER=${PWD}
 REVEALJSTAR="./revealjs.tar.gz"
