@@ -1335,3 +1335,13 @@ The Lumineers,Ho Hey,Folk Rock
 
 
 // TODO "summary" in the doc of tables, with lots of attributes
+
+
+== References (steteopticon specific)
+
+
+[.references]
+--
+[.reference] 
+E . J. Chikofsky and J. H. Cross. Reverse Engineering and Design Recovery: A Taxonomy. IEEE Software, 7(1):13–17, 1990
+--

@@ -3,3 +3,5 @@ reveal.js
 .bundle
 asciidoc-tests/index.html
 asciidoc-tests/Gemfile.lock
+node_modules
+package-lock.json
