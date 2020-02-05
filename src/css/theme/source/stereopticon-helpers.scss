@@ -66,6 +66,21 @@
         font-size: calc(#{$mainFontSize} * 0.9);
     }
 
+
+    
+
+    @for $i from 1 through 500 {
+        %customfontsize-#{$i} {
+            font-size: calc(#{$mainFontSize} * (#{$i}/100));
+        }
+        .font-size-#{$i} {
+            @extend %customfontsize-#{$i};
+            pre {
+                @extend %customfontsize-#{$i}
+            }
+        }
+    }
+
     .center {
         text-align: center;
         margin-left: auto;

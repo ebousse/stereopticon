@@ -13,6 +13,36 @@
 // ---------------------------------------------
 
 .reveal {
+
+    // Copy pasted from asciidoctor stylesheet
+    table.linenotable {
+        border-collapse: separate;
+        border: 0;
+        background: none;
+        margin: 0
+    }
+    table.linenotable td[class] {
+        color: inherit;
+        vertical-align: top;
+        padding: 0;
+        line-height: inherit;
+        white-space: normal;
+    }
+    table.linenotable td.code {
+        padding-left: 0.75em;
+    }
+    table.linenotable td.linenos {
+        border-right: 1px solid currentColor;
+        opacity: 0.35;
+        padding-right: 0.25em;
+    }
+    // End paste
+
+    // Remove constraint on code blocks height
+    pre code {
+        max-height: 5000px;
+    }
+
     font-weight: $font-weight;
     font-size: $mainFontSize;
 
@@ -190,13 +220,13 @@
         font-weight: $font-weight-strong;
     }
 
-    code:not(.hljs) {
-        font-size: calc(#{$mainFontSize} * 1.1 );
+    code:not(.hljs):not(.rouge) {
+        font-size: calc(#{$mainFontSize} * 0.9);
     }
 
-    pre:not(.content)
+    pre
     //,code:not(.hljs) 
- {
+    {
         font-size: $smallerFontSize;
         box-shadow: 0px 0px;
     }
@@ -224,9 +254,8 @@
 
     aside.controls {
         bottom: 50px;
-        right:200px;
+        right: 200px;
     }
-
 
     /*
      * Now we define things based on the type of slide (regular or impact, mostly)
@@ -286,10 +315,11 @@
             strong {
                 color: $colored-on-light;
             }
+            //.reveal pre code
 
             // Code blocks
             pre:not(.content) {
-                background: $block-color;
+                //background: $block-color;
                 code:not(.hljs) {
                     color: $text-on-light;
                 }
