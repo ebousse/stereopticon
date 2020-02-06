@@ -3,7 +3,7 @@
 set -e
 set -x
 
-REVEALJSVERSION="3.7.0"
+REVEALJSVERSION="3.8.0"
 
 STARTFOLDER=${PWD}
 REVEALJSTAR="./revealjs.tar.gz"
@@ -12,7 +12,7 @@ if [[ ! -d "./reveal.js" ]]; then
     wget "https://github.com/hakimel/reveal.js/tarball/$REVEALJSVERSION" --output-document="$REVEALJSTAR"
     tar -xf "$REVEALJSTAR"
     rm "$REVEALJSTAR"
-    REVEALJSEXTRACTED=`ls -1 | grep hakimel-reveal.js`
+    REVEALJSEXTRACTED=$(ls -1 | grep hakimel-reveal.js)
     mv "$REVEALJSEXTRACTED" reveal.js
     cd reveal.js
     npm install
