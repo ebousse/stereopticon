@@ -38,9 +38,9 @@
     }
     // End paste
 
-    // Remove constraint on code blocks height
+    // Better constraint on code blocks height
     pre code {
-        max-height: 5000px;
+        max-height: 800px;
     }
 
     font-weight: $font-weight;
