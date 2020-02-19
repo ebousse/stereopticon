@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# 💡 NOTE: this script always installs the latest _released_ version of stereopticon.
+#
+
 set -e
 
 function downloadAndErase() {
