@@ -24,6 +24,8 @@ build:
       - css/theme/stereopticon.css
 
 pages:
+  only: 
+    - master
   dependencies: 
     - build
   stage: deploy
