@@ -2,8 +2,9 @@
 
 == <next release>
 
-- Now aims compatibility with asciidoctor-revealjs 4.0.0.
-- Remove support of `columns` and `col-X`, as asciidoctor-revealjs now provides similar roles.
+- Now aims compatibility with asciidoctor-revealjs 4.0.0 and revealjs 3.9.2.
+- Rename class `columns` to 'cols' to be more distinct from the new `columns` role of asciidoctor-revealjs.
+- Cleaner produced `css` file, with version and less useless comments.
 
 == v2020-02-19
 
