@@ -1,6 +1,34 @@
 @import "./stereopticon-variables.scss";
 
 .reveal {
+    // Columns
+    .cols {
+        display: flex;
+        width: 100%;
+
+        // Fix for asciidoc generation
+        .content {
+            display: flex;
+            width: 100%;
+        }
+
+        @for $i from 1 through 12 {
+            .col-#{$i} {
+                width: 100% / 12 * $i;
+                margin: auto;
+
+                & > h3 {
+                    margin-top: 0;
+                }
+
+                // Fix for asciidoc generation
+                .content {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
 
     @for $i from 1 through 100 {
         .width-#{$i} {
