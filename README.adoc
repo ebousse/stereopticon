@@ -1,6 +1,6 @@
 = Stereopticon
 
-A *reveal.js theme* slightly inspired by LaTeX/Beamer.
+A *reveal.js theme* slightly inspired by LaTeX/Beamer and compatible with link:https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-revealjs].
 
 Demo available https://bousse-e.univ-nantes.io/stereopticon/demo[here].
 
