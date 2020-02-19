@@ -10,7 +10,7 @@ function downloadAndErase() {
 
 function downloadIfNotPresent() {
     if [[ ! -f "$1" ]]; then
-        downloadAndErase $1 $2
+        downloadAndErase "$1" "$2"
     fi
 }
 
