@@ -1,5 +1,10 @@
 = Changelog
 
+== <next release>
+
+- Now aims compatibility with asciidoctor-revealjs 4.0.0.
+- Remove support of `columns` and `col-X`, as asciidoctor-revealjs now provides similar roles.
+
 == v2020-02-19
 
 First official release of stereopticon! 🎉
