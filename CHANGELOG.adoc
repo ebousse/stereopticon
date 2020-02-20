@@ -1,6 +1,6 @@
 = Changelog
 
-== <next release>
+== v2020-02-20
 
 - *INFO*: Now aims compatibility with asciidoctor-revealjs 4.0.0 and revealjs 3.9.2.
 - *INFO*: Produced `css` file is now cleaner, with version and less useless comments.
