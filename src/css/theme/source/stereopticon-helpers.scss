@@ -75,7 +75,7 @@
         }
         .font-size-#{$i}  {
             @extend %customfontsize-#{$i} ;
-            * {
+            *:not(.title) {
                 @extend %customfontsize-#{$i} ;
             }
         }
