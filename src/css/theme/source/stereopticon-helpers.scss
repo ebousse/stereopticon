@@ -71,12 +71,12 @@
 
     @for $i from 1 through 500 {
         %customfontsize-#{$i} {
-            font-size: calc(#{$mainFontSize} * (#{$i}/100));
+            font-size: calc(#{$mainFontSize} * (#{$i}/100)) !important;
         }
-        .font-size-#{$i} {
-            @extend %customfontsize-#{$i};
-            pre {
-                @extend %customfontsize-#{$i}
+        .font-size-#{$i}  {
+            @extend %customfontsize-#{$i} ;
+            * {
+                @extend %customfontsize-#{$i} ;
             }
         }
     }
