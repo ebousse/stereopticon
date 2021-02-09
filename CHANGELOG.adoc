@@ -1,5 +1,9 @@
 = Changelog
 
+== v2021-02-09
+
+- *FIX*: Set highest priority to `.font-size-X` helper classes, to override any other font configuration from other classes.
+
 == v2020-02-20
 
 - *INFO*: Now aims compatibility with asciidoctor-revealjs 4.0.0 and revealjs 3.9.2.
