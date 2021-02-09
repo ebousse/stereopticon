@@ -10,11 +10,6 @@ stages:
   - deploy
 
 build:
-  # only:
-  #   changes:
-  #     - src/**
-  #     - demo/**
-  #     - compile.sh
   stage: build
   script:
    - bash ./compile.sh
@@ -28,13 +23,6 @@ build:
       - css/theme/stereopticon.css
 
 pages:
-  # only:
-  #   changes:
-  #     - src/**
-  #     - demo/**
-  #     - compile.sh
-    refs:
-      - master
   dependencies: 
     - build
   stage: deploy
