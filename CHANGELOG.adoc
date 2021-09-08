@@ -1,5 +1,9 @@
 = Changelog
 
+== v2021-09-08
+
+- *FIX*: Fix titles wrongly affected by `font-size-X`
+
 == v2021-02-09
 
 - *FIX*: Set highest priority to `.font-size-X` helper classes, to override any other font configuration from other classes.
