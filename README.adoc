@@ -19,15 +19,17 @@ sh -c "$(wget https://gitlab.univ-nantes.fr/bousse-e/stereopticon/raw/master/ins
 
 == Requirements
 
-For the theme to work correctly, the following reveal.js options *must* be set:
+- The supported *Reveal.js* version is 3.9.2 ;
+- For the theme to work correctly, the following reveal.js options must be set:
++
 ----
 center: false,
 display: 'flex',
 width: 1920,
 height: 1080,
 ----
-
-The option `margin: 0` is not mandatory but can be used to remove the dark gray frame around slides.
+- The option `margin: 0` is not mandatory but can be used to remove the dark gray frame around slides ;
+- If *asciidoctor-revealjs* is used, the supported version is 4.0.0.
 
 == Compilation
 
