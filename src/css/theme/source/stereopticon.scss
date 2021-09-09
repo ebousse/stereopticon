@@ -236,9 +236,10 @@
         font-weight: $font-weight-strong;
     }
 
-    code:not(.hljs):not(.rouge) {
-        font-size: calc(#{$mainFontSize} * 0.9);
-    }
+    // XXX What was that for?
+    // code:not(.hljs):not(.rouge) {
+    //     font-size: calc(#{$mainFontSize} * 0.9);
+    // }
 
     pre
     //,code:not(.hljs) 
