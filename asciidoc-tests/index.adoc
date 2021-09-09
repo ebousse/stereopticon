@@ -117,15 +117,20 @@ You can find image:https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg[L
 
 == Putting Images in Their Place (1)
 
-A block image pulled to the right and centered within the block
+A floating block image pulled to the right and centered within the block
 
 image::tiger.png[Tiger,200,200,float="right",align="center"]
+
+An image with just a caption:
+
+.A tiger!
+image::tiger.png[Tiger,200,200,align="center"]
 
 
 == Putting Images in Their Place (2)
 
 
-An inline image pulled to the right of the paragraph text
+A floating inline image pulled to the right of the paragraph text
 
 image:linux.svg[Linux,150,150,float="right"]
 You can find Linux everywhere these days!

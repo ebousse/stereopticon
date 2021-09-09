@@ -121,6 +121,12 @@
         text-align: center;
     }
 
+    div.imageblock[style='text-align: center'] + div.title {
+        text-align: center;
+    }
+
+
+
     // Share style between quotes and verses
     %citationArea {
         width: 90%;
