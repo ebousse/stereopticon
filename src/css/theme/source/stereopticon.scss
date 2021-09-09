@@ -92,9 +92,10 @@
     h2 + *:not(table),
     *:not(table):not(section):not(.slides):first-child {
         margin-top: 0;
-        & > h3 {
-            margin-top: 0;
-        }
+        // XXX: What was this for?
+        // & > h3 {
+        //     margin-top: 0;
+        // }
     }
 
     h3 {
@@ -271,6 +272,18 @@
         bottom: 50px;
         right: 200px;
     }
+
+    div.admonitionblock {
+        table {
+            tbody tr td.icon {
+                width:0px;
+            }
+            width: 100%;
+            text-align: left;
+            background-color: $block-color;
+        }
+    }
+
 
     /*
      * Now we define things based on the type of slide (regular or impact, mostly)

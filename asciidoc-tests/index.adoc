@@ -8,6 +8,7 @@
 :revealjs_history: true
 :revealjs_margin: 0.04
 :source-highlighter: highlightjs
+:icons: font
 
 = Title of the presentation: subtitle of the presentation
 Author1 <author1@domain.org>; Author2 <author2@domain.org>
@@ -478,7 +479,9 @@ This is an important admonition
 
 CAUTION: caution
 
-WARNING: warining
+WARNING: warning
+
+NOTE: note
 
 
 == Comment
