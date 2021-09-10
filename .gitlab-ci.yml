@@ -16,6 +16,7 @@ build:
    - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
    - cp -rv src/css .
    - cp -rv src/lib .
+   - rm -rf reveal.js/node_modules
   artifacts:
     name: "stereopticon-$CI_COMMIT_SHORT_SHA"
     paths:
