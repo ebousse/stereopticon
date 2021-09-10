@@ -1,5 +1,11 @@
 = Changelog
 
+== v2021-09-10
+
+- *FIX*: Remove buggy inline code size style  + remove other buggy SCSS rule.
+- *FEATURE*: Add style for asciidoctor's admonitions.
+- *FEATURE*: Add rule to center captions when image is centered using asciidoctor.
+
 == v2021-09-08
 
 - *FIX*: Fix titles wrongly affected by `font-size-X`
