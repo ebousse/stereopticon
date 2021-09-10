@@ -21,6 +21,7 @@ build:
     paths:
       - lib
       - css/theme/stereopticon.css
+      - reveal.js
 
 pages:
   dependencies: 
