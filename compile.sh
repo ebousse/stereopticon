@@ -14,8 +14,14 @@ if [[ ! -d "./reveal.js" ]]; then
     rm "$REVEALJSTAR"
     REVEALJSEXTRACTED=$(ls -1 | grep hakimel-reveal.js)
     mv "$REVEALJSEXTRACTED" reveal.js
-    cd reveal.js
-    npm install
+
+    if [[ -d "./node_modules" ]]; then
+        mv node_modules reveal.js
+    else
+        cd reveal.js
+        npm install
+    fi
+
 fi
 
 cd "${STARTFOLDER}"/reveal.js

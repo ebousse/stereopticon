@@ -8,7 +8,7 @@ build:
   cache:
     key: ${CI_COMMIT_REF_SLUG}-X
     paths:
-    - reveal.js
+    - node_modules
   script:
    - bash ./compile.sh
    - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
