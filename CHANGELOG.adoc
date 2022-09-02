@@ -1,5 +1,9 @@
 = Changelog
 
+== v2022-09-02
+
+- *CI*: Add separate `keep` job to only keep artifacts related to stereopticon.
+
 == v2021-09-10
 
 - *FIX*: Remove buggy inline code size style  + remove other buggy SCSS rule.
