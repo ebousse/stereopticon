@@ -1,4 +1,3 @@
-image: node:12
 
 cache:
   key: ${CI_COMMIT_REF_SLUG}-X
@@ -10,6 +9,7 @@ stages:
   - deploy
 
 build:
+  image: node:12
   stage: build
   script:
    - bash ./compile.sh
@@ -24,9 +24,16 @@ build:
       - css/theme/stereopticon.css
       - reveal.js
 
+keep:
+  stage: deploy
+  script:
+   - "Nothing to do"
+  artifacts:
+    paths:
+      - lib
+      - css/theme/stereopticon.css
+
 pages:
-  dependencies: 
-    - build
   stage: deploy
   script:
    - mkdir public
