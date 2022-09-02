@@ -27,7 +27,7 @@ build:
 keep:
   stage: deploy
   script:
-   - "Nothing to do"
+   - echo "Nothing to do"
   artifacts:
     paths:
       - lib
