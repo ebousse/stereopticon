@@ -29,3 +29,4 @@ ln -fs "${PWD}"/../src/css/theme/source/* ./css/theme/source/ # add our theme to
 ln -fs "${PWD}"/../src/lib/font/* ./lib/font/                 # add our fonts
 npm run build -- css-themes                                   # build all reveal.js themes, including ours
 cd "${STARTFOLDER}"
+mv reveal.js/node_modules .                                   # remove node_modules from reveal (to not overload gitlab)
