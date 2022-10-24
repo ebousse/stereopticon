@@ -5,3 +5,7 @@ asciidoc-tests/index.html
 asciidoc-tests/Gemfile.lock
 node_modules
 package-lock.json
+public
+lib
+css
+.gitlab-ci-local

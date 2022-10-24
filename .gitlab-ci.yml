@@ -33,11 +33,12 @@ keep:
 pages:
   stage: deploy
   script:
+   - rm -rf public
    - mkdir public
-   - cp -rv demo public
-   - cp -rvL reveal.js public
-   - cp -f css/theme/stereopticon.css public/reveal.js/css/theme
-   - cp -f lib/font/* public/reveal.js/lib/font
+   - rsync -av demo public
+   - rsync -av reveal.js public
+   - rsync -av css/theme/stereopticon.css public/reveal.js/css/theme
+   - rsync -av lib/font/* public/reveal.js/lib/font
    - rm -rf public/reveal.js/.git public/reveal.js/node_modules
   artifacts:
     paths:

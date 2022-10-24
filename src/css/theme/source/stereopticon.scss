@@ -285,7 +285,6 @@
         }
     }
 
-
     /*
      * Now we define things based on the type of slide (regular or impact, mostly)
      * For instance, everything color-related is defined in this part.
@@ -310,6 +309,8 @@
             img {
                 border-style: none;
                 box-shadow: unset;
+                background: none;
+                border: none;
             }
         }
 
