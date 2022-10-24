@@ -31,9 +31,10 @@ keep:
       - css/theme/stereopticon.css
 
 pages:
+  image: alpine
   stage: deploy
   script:
-   - rm -rf public
+   - apk add rsync --update-cache
    - mkdir public
    - rsync -av demo public
    - rsync -av reveal.js public
