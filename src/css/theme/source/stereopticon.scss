@@ -347,6 +347,10 @@
             }
             //.reveal pre code
 
+            code pre {
+                margin: 0px;
+            }
+
             // Code blocks
             pre:not(.content) {
                 //background: $block-color;
