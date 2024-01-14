@@ -1,5 +1,11 @@
 = Changelog
 
+== v2024-01-14
+
+- *INFO*: Now aims compatibility with asciidoctor-revealjs 5.1.0 and Reveal.js 4.5.0.
+- *INFO*: Fonts are now stored in `src/fonts`
+- *INFO*: The theme should should now be used from outside the `reveal.js` folder.
+
 == v2023-03-04
 
 - *FIX*: Avoid double margins when a `pre` block is within a `pre` block. 
