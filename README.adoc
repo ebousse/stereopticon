@@ -10,16 +10,19 @@ image::screenshots/title.png[Example of title slide., 100%]
 [role="thumb"]
 image::screenshots/slide.png[Example of slide., 100%]
 
-== Installation (or update)
+== Installation and usage
 
-Go into a reveal.js project folder and run:
-```
-sh -c "$(wget https://gitlab.univ-nantes.fr/bousse-e/stereopticon/raw/master/install-or-update-stereopticon.sh -O -)"
-```
+It is recommended to organise your presentation website as follows:
+
+- Prepare a folder called `stereopticon`.
+- Download the latest https://gitlab.univ-nantes.fr/bousse-e/stereopticon/-/tags:[stereopticon release], and extract it into the `stereopticon` folder.
+- Download https://github.com/hakimel/reveal.js/releases[the proper Reveal.js release] and extract it as a folder `reveal.js` next to the `stereopticon` folder.
+- Prepare your slides in a Reveal.js `index.html` file at the root of your website, and make sure to prefix all Reveal.js includes with `reveal.js`, and to include the stereopticon theme as `stereopticon/stereopticon.css`.
+As an example, look at our link:demo/index.html[demo source code].
 
 == Requirements
 
-- The supported *Reveal.js* version is 3.9.2 ;
+- The supported *Reveal.js* version is 4.5.0 ;
 - For the theme to work correctly, the following reveal.js options must be set:
 +
 ----
@@ -29,32 +32,32 @@ width: 1920,
 height: 1080,
 ----
 - The option `margin: 0` is not mandatory but can be used to remove the dark gray frame around slides ;
-- If *asciidoctor-revealjs* is used, the supported version is 4.1.0.
+- If *asciidoctor-revealjs* is used, the supported version is 5.1.0.
 
 == Compilation
 
-The theme is written in SCSS, and can be compiled into CSS using the setup that already exists for compiling the official reveal.js themes.
+The theme is written in SCSS, and can be compiled into CSS using the setup that already exists for compiling the official Reveal.js themes.
 
 *Instructions:*
 
 - Clone this repository.
-- Download reveal.js or use an existing reveal.js installation folder.
-- Copy the `src/css` and `src/lib` folders of the stereopticon repository inside the reveal.js installation folder, and say *yes* when asking to merge the folders.
+- Download https://github.com/hakimel/reveal.js/releases[the proper Reveal.js release] and extract it as `reveal.js`.
+- Copy the `src/css` folder of the stereopticon repository inside `reveal.js`, and say *yes* when asking to merge the folders.
 - Go in the reveal.js folder and run: `pass:[npm install && npm run build -- css-themes]`, which will produce `reveal.js/css/theme/stereopticon.css`.
 - Now this reveal.js folder has a new theme called `stereopticon` which can be used as any other theme.
 
 
-== Development and testing
+// == Development and testing
 
-To dev and test the theme:
+// To dev and test the theme:
 
-- Run `compile.sh` that will:
-    * clone reveal.js,
-    * add symbolic links into the cloned reveal.js pointing to the stereopticon files,
-    * compile all reveal.js themes (including ours).
-- Start a web server with `python -m SimpleHTTPServer 8080` or `ruby -run -e httpd . -p 8080 -b 127.0.0.1` or even better with https://github.com/tapio/live-server  to have live-reload each time files are modified.
-- Open `http://localhost:8080/demo` which should show the stereopticon demo.
-- Work on stereopticon files and see the results in the demo.
-- When happy with the changes, commit!
+// - Run `compile.sh` that will:
+//     * clone reveal.js,
+//     * add symbolic links into the cloned reveal.js pointing to the stereopticon files,
+//     * compile all reveal.js themes (including ours).
+// - Start a web server with `python -m SimpleHTTPServer 8080` or `ruby -run -e httpd . -p 8080 -b 127.0.0.1` or even better with https://github.com/tapio/live-server  to have live-reload each time files are modified.
+// - Open `http://localhost:8080/demo` which should show the stereopticon demo.
+// - Work on stereopticon files and see the results in the demo.
+// - When happy with the changes, commit!
 
-_Optional: if working in a VSCode environment, use the https://github.com/wk-j/vscode-save-and-run[Save and Run] extension to automatically run `compile.sh` after each SCSS file change. Combined with https://github.com/tapio/live-server[live server] this is amazing._
+// _Optional: if working in a VSCode environment, use the https://github.com/wk-j/vscode-save-and-run[Save and Run] extension to automatically run `compile.sh` after each SCSS file change. Combined with https://github.com/tapio/live-server[live server] this is amazing._
