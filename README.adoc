@@ -14,8 +14,7 @@ image::screenshots/slide.png[Example of slide., 100%]
 
 It is recommended to organise your presentation website as follows:
 
-- Prepare a folder called `stereopticon`.
-- Download the latest https://gitlab.univ-nantes.fr/bousse-e/stereopticon/-/tags:[stereopticon release], and extract it into the `stereopticon` folder.
+- Download the latest https://gitlab.univ-nantes.fr/bousse-e/stereopticon/-/tags:[stereopticon release], and extract it which will create a `stereopticon` folder.
 - Download https://github.com/hakimel/reveal.js/releases[the proper Reveal.js release] and extract it as a folder `reveal.js` next to the `stereopticon` folder.
 - Prepare your slides in a Reveal.js `index.html` file at the root of your website, and make sure to prefix all Reveal.js includes with `reveal.js`, and to include the stereopticon theme as `stereopticon/stereopticon.css`.
 As an example, look at our link:demo/index.html[demo source code].

@@ -23,10 +23,10 @@ build:
 keep:
   stage: deploy
   script:
-   - echo "Nothing to do"
+   - mv dist stereopticon
   artifacts:
     paths:
-      - dist/*
+      - stereopticon
 
 pages:
   image: docker.io/alpine
