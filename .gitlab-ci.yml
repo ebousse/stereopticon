@@ -26,7 +26,7 @@ keep:
    - echo "Nothing to do"
   artifacts:
     paths:
-      - dist
+      - dist/*
 
 pages:
   image: docker.io/alpine
