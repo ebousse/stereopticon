@@ -2,32 +2,24 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>stereopticon</title>
-
+    
     <meta name="description" content="A reveal.js theme slightly inspired by LaTeX/Beamer.">
     <meta name="author" content="Erwan Bousse">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../reveal.js/css/reset.css">
-    <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
 
     <!-- Here we setup the stereopticon theme-->
-    <link rel="stylesheet" href="../reveal.js/css/theme/stereopticon.css" id="theme">
+    <link rel="stylesheet" href="dist/theme/stereopticon.css">
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="../reveal.js/lib/css/monokai.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
 
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
-        document.getElementsByTagName('head')[0].appendChild(link);
-    </script>
 
 </head>
 
@@ -404,7 +396,13 @@ function Example() {
 
     </div>
 
-    <script src="../reveal.js/js/reveal.js"></script>
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
 
     <script>
 
@@ -421,15 +419,9 @@ function Example() {
 
             transition: 'none', // none/fade/slide/convex/concave/zoom
 
-            // More info https://github.com/hakimel/reveal.js#dependencies
-            dependencies: [
-                { src: '../reveal.js/plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                { src: '../reveal.js/plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-                { src: '../reveal.js/plugin/highlight/highlight.js', async: true },
-                { src: '../reveal.js/plugin/search/search.js', async: true },
-                { src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
-                { src: '../reveal.js/plugin/notes/notes.js', async: true }
-            ]
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealSearch ]
+
         });
 
     </script>

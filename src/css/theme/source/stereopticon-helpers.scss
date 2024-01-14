@@ -1,4 +1,6 @@
-@import "./stereopticon-variables.scss";
+@use "sass:math";
+
+@import "css/theme/source/stereopticon-variables.scss";
 
 .reveal {
     // Columns
@@ -14,7 +16,7 @@
 
         @for $i from 1 through 12 {
             .col-#{$i} {
-                width: 100% / 12 * $i;
+                width: math.div(100%, 12) * $i;
                 margin: auto;
 
                 & > h3 {

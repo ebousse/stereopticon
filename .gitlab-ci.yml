@@ -3,7 +3,7 @@ stages:
   - deploy
 
 build:
-  image: node:12
+  image: docker.io/node:21
   stage: build
   cache:
     key: ${CI_COMMIT_REF_SLUG}-X
@@ -11,14 +11,13 @@ build:
     - node_modules
   script:
    - bash ./compile.sh
-   - cp -v  reveal.js/css/theme/stereopticon.css src/css/theme
-   - cp -rv src/css .
-   - cp -rv src/lib .
+   - mkdir dist
+   - cp -v  reveal.js/dist/theme/stereopticon.css dist
+   - cp -rv src/lib dist
   artifacts:
     name: "stereopticon-$CI_COMMIT_SHORT_SHA"
     paths:
-      - lib
-      - css/theme/stereopticon.css
+      - dist
       - reveal.js
 
 keep:
@@ -27,20 +26,18 @@ keep:
    - echo "Nothing to do"
   artifacts:
     paths:
-      - lib
-      - css/theme/stereopticon.css
+      - dist
 
 pages:
-  image: alpine
+  image: docker.io/alpine
   stage: deploy
   script:
    - apk add rsync --update-cache
-   - mkdir public
-   - rsync -av demo public
-   - rsync -av reveal.js public
-   - rsync -av css/theme/stereopticon.css public/reveal.js/css/theme
-   - rsync -av lib/font/* public/reveal.js/lib/font
-   - rm -rf public/reveal.js/.git public/reveal.js/node_modules
+   - mkdir -p public/demo
+   - rm -rf public/demo/*
+   - cp -rv reveal.js public/demo
+   - rsync -av demo/* public/demo
+   - rsync -av dist/* public/demo/stereopticon
   artifacts:
     paths:
       - public

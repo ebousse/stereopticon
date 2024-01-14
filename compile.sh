@@ -3,7 +3,7 @@
 set -e
 set -x
 
-REVEALJSVERSION="3.9.2"
+REVEALJSVERSION="4.5.0"
 
 STARTFOLDER=${PWD}
 REVEALJSTAR="./revealjs.tar.gz"
@@ -20,13 +20,14 @@ if [[ ! -d "./reveal.js" ]]; then
     else
         cd reveal.js
         npm install
+        npm install gulp-cli
     fi
 
 fi
 
 cd "${STARTFOLDER}"/reveal.js
 ln -fs "${PWD}"/../src/css/theme/source/* ./css/theme/source/ # add our theme to reveal.js
-ln -fs "${PWD}"/../src/lib/font/* ./lib/font/                 # add our fonts
+ln -fs "${PWD}"/../src/lib/font/* ./dist/theme/fonts          # add our fonts
 npm run build -- css-themes                                   # build all reveal.js themes, including ours
 cd "${STARTFOLDER}"
 mv reveal.js/node_modules .                                   # remove node_modules from reveal (to not overload gitlab)
