@@ -7,7 +7,7 @@ node_modules
 package-lock.json
 public
 lib
-css
+./css
 .gitlab-ci-local
 dist
 stereopticon
