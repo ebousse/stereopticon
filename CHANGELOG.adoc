@@ -1,5 +1,9 @@
 = Changelog
 
+== v2024-09-04
+
+- *FEATURE*: Add the possibility to declare a subtitle inside a slide title (eg. `<h2>My title<div class="subtitle">My subtitle</div></h2>`).
+
 == v2024-01-14
 
 - *INFO*: Now aims compatibility with asciidoctor-revealjs 5.1.0 and Reveal.js 4.5.0.
