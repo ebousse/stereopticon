@@ -1,0 +1,3910 @@
+@charset "UTF-8";
+/*
+ *
+ * stereopticon 📽 reveal.js theme
+ *
+ */
+@font-face {
+  font-family: "Yanone Kaffeesatz";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../lib/font/yanone-kaffeesatz-latin-400.woff2) format("woff2"), url(https://fonts.gstatic.com/s/yanonekaffeesatz/v11/3y976aknfjLm_3lMKjiMgmUUYBs04Y8bH-o.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(../../lib/font/opensans-latin-300.woff2) format("woff2"), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhp.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: bold;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"), url(../../lib/font/opensans-latin-400.woff2) format("woff2"), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0b.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Ubuntu Mono"), local("UbuntuMono-Regular"), url(../../lib/font/ubuntu-mono-latin-400-normal.woff2) format("woff2"), url(https://fonts.gstatic.com/s/ubuntumono/v9/KFOjCneDtsqEr0keqCMhbCc6CsQ.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.reveal .cols {
+  display: flex;
+  width: 100%;
+}
+.reveal .cols .content {
+  display: flex;
+  width: 100%;
+}
+.reveal .cols .col-1 {
+  width: 8.3333333333%;
+  margin: auto;
+}
+.reveal .cols .col-1 > h3, .reveal .cols .col-1 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-1 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-2 {
+  width: 16.6666666667%;
+  margin: auto;
+}
+.reveal .cols .col-2 > h3, .reveal .cols .col-2 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-2 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-3 {
+  width: 25%;
+  margin: auto;
+}
+.reveal .cols .col-3 > h3, .reveal .cols .col-3 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-3 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-4 {
+  width: 33.3333333333%;
+  margin: auto;
+}
+.reveal .cols .col-4 > h3, .reveal .cols .col-4 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-4 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-5 {
+  width: 41.6666666667%;
+  margin: auto;
+}
+.reveal .cols .col-5 > h3, .reveal .cols .col-5 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-5 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-6 {
+  width: 50%;
+  margin: auto;
+}
+.reveal .cols .col-6 > h3, .reveal .cols .col-6 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-6 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-7 {
+  width: 58.3333333333%;
+  margin: auto;
+}
+.reveal .cols .col-7 > h3, .reveal .cols .col-7 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-7 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-8 {
+  width: 66.6666666667%;
+  margin: auto;
+}
+.reveal .cols .col-8 > h3, .reveal .cols .col-8 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-8 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-9 {
+  width: 75%;
+  margin: auto;
+}
+.reveal .cols .col-9 > h3, .reveal .cols .col-9 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-9 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-10 {
+  width: 83.3333333333%;
+  margin: auto;
+}
+.reveal .cols .col-10 > h3, .reveal .cols .col-10 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-10 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-11 {
+  width: 91.6666666667%;
+  margin: auto;
+}
+.reveal .cols .col-11 > h3, .reveal .cols .col-11 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-11 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .cols .col-12 {
+  width: 100%;
+  margin: auto;
+}
+.reveal .cols .col-12 > h3, .reveal .cols .col-12 > div.title {
+  margin-top: 0;
+}
+.reveal .cols .col-12 .content {
+  display: block;
+  width: 100%;
+}
+.reveal .width-1 {
+  width: 1%;
+}
+.reveal .width-2 {
+  width: 2%;
+}
+.reveal .width-3 {
+  width: 3%;
+}
+.reveal .width-4 {
+  width: 4%;
+}
+.reveal .width-5 {
+  width: 5%;
+}
+.reveal .width-6 {
+  width: 6%;
+}
+.reveal .width-7 {
+  width: 7%;
+}
+.reveal .width-8 {
+  width: 8%;
+}
+.reveal .width-9 {
+  width: 9%;
+}
+.reveal .width-10 {
+  width: 10%;
+}
+.reveal .width-11 {
+  width: 11%;
+}
+.reveal .width-12 {
+  width: 12%;
+}
+.reveal .width-13 {
+  width: 13%;
+}
+.reveal .width-14 {
+  width: 14%;
+}
+.reveal .width-15 {
+  width: 15%;
+}
+.reveal .width-16 {
+  width: 16%;
+}
+.reveal .width-17 {
+  width: 17%;
+}
+.reveal .width-18 {
+  width: 18%;
+}
+.reveal .width-19 {
+  width: 19%;
+}
+.reveal .width-20 {
+  width: 20%;
+}
+.reveal .width-21 {
+  width: 21%;
+}
+.reveal .width-22 {
+  width: 22%;
+}
+.reveal .width-23 {
+  width: 23%;
+}
+.reveal .width-24 {
+  width: 24%;
+}
+.reveal .width-25 {
+  width: 25%;
+}
+.reveal .width-26 {
+  width: 26%;
+}
+.reveal .width-27 {
+  width: 27%;
+}
+.reveal .width-28 {
+  width: 28%;
+}
+.reveal .width-29 {
+  width: 29%;
+}
+.reveal .width-30 {
+  width: 30%;
+}
+.reveal .width-31 {
+  width: 31%;
+}
+.reveal .width-32 {
+  width: 32%;
+}
+.reveal .width-33 {
+  width: 33%;
+}
+.reveal .width-34 {
+  width: 34%;
+}
+.reveal .width-35 {
+  width: 35%;
+}
+.reveal .width-36 {
+  width: 36%;
+}
+.reveal .width-37 {
+  width: 37%;
+}
+.reveal .width-38 {
+  width: 38%;
+}
+.reveal .width-39 {
+  width: 39%;
+}
+.reveal .width-40 {
+  width: 40%;
+}
+.reveal .width-41 {
+  width: 41%;
+}
+.reveal .width-42 {
+  width: 42%;
+}
+.reveal .width-43 {
+  width: 43%;
+}
+.reveal .width-44 {
+  width: 44%;
+}
+.reveal .width-45 {
+  width: 45%;
+}
+.reveal .width-46 {
+  width: 46%;
+}
+.reveal .width-47 {
+  width: 47%;
+}
+.reveal .width-48 {
+  width: 48%;
+}
+.reveal .width-49 {
+  width: 49%;
+}
+.reveal .width-50 {
+  width: 50%;
+}
+.reveal .width-51 {
+  width: 51%;
+}
+.reveal .width-52 {
+  width: 52%;
+}
+.reveal .width-53 {
+  width: 53%;
+}
+.reveal .width-54 {
+  width: 54%;
+}
+.reveal .width-55 {
+  width: 55%;
+}
+.reveal .width-56 {
+  width: 56%;
+}
+.reveal .width-57 {
+  width: 57%;
+}
+.reveal .width-58 {
+  width: 58%;
+}
+.reveal .width-59 {
+  width: 59%;
+}
+.reveal .width-60 {
+  width: 60%;
+}
+.reveal .width-61 {
+  width: 61%;
+}
+.reveal .width-62 {
+  width: 62%;
+}
+.reveal .width-63 {
+  width: 63%;
+}
+.reveal .width-64 {
+  width: 64%;
+}
+.reveal .width-65 {
+  width: 65%;
+}
+.reveal .width-66 {
+  width: 66%;
+}
+.reveal .width-67 {
+  width: 67%;
+}
+.reveal .width-68 {
+  width: 68%;
+}
+.reveal .width-69 {
+  width: 69%;
+}
+.reveal .width-70 {
+  width: 70%;
+}
+.reveal .width-71 {
+  width: 71%;
+}
+.reveal .width-72 {
+  width: 72%;
+}
+.reveal .width-73 {
+  width: 73%;
+}
+.reveal .width-74 {
+  width: 74%;
+}
+.reveal .width-75 {
+  width: 75%;
+}
+.reveal .width-76 {
+  width: 76%;
+}
+.reveal .width-77 {
+  width: 77%;
+}
+.reveal .width-78 {
+  width: 78%;
+}
+.reveal .width-79 {
+  width: 79%;
+}
+.reveal .width-80 {
+  width: 80%;
+}
+.reveal .width-81 {
+  width: 81%;
+}
+.reveal .width-82 {
+  width: 82%;
+}
+.reveal .width-83 {
+  width: 83%;
+}
+.reveal .width-84 {
+  width: 84%;
+}
+.reveal .width-85 {
+  width: 85%;
+}
+.reveal .width-86 {
+  width: 86%;
+}
+.reveal .width-87 {
+  width: 87%;
+}
+.reveal .width-88 {
+  width: 88%;
+}
+.reveal .width-89 {
+  width: 89%;
+}
+.reveal .width-90 {
+  width: 90%;
+}
+.reveal .width-91 {
+  width: 91%;
+}
+.reveal .width-92 {
+  width: 92%;
+}
+.reveal .width-93 {
+  width: 93%;
+}
+.reveal .width-94 {
+  width: 94%;
+}
+.reveal .width-95 {
+  width: 95%;
+}
+.reveal .width-96 {
+  width: 96%;
+}
+.reveal .width-97 {
+  width: 97%;
+}
+.reveal .width-98 {
+  width: 98%;
+}
+.reveal .width-99 {
+  width: 99%;
+}
+.reveal .width-100 {
+  width: 100%;
+}
+.reveal .vspace-1::before,
+.reveal .vspace-after-1::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(1px);
+}
+.reveal .vspace-2::before,
+.reveal .vspace-after-2::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(2px);
+}
+.reveal .vspace-3::before,
+.reveal .vspace-after-3::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(3px);
+}
+.reveal .vspace-4::before,
+.reveal .vspace-after-4::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(4px);
+}
+.reveal .vspace-5::before,
+.reveal .vspace-after-5::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(5px);
+}
+.reveal .vspace-6::before,
+.reveal .vspace-after-6::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(6px);
+}
+.reveal .vspace-7::before,
+.reveal .vspace-after-7::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(7px);
+}
+.reveal .vspace-8::before,
+.reveal .vspace-after-8::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(8px);
+}
+.reveal .vspace-9::before,
+.reveal .vspace-after-9::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(9px);
+}
+.reveal .vspace-10::before,
+.reveal .vspace-after-10::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(10px);
+}
+.reveal .vspace-11::before,
+.reveal .vspace-after-11::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(11px);
+}
+.reveal .vspace-12::before,
+.reveal .vspace-after-12::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(12px);
+}
+.reveal .vspace-13::before,
+.reveal .vspace-after-13::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(13px);
+}
+.reveal .vspace-14::before,
+.reveal .vspace-after-14::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(14px);
+}
+.reveal .vspace-15::before,
+.reveal .vspace-after-15::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(15px);
+}
+.reveal .vspace-16::before,
+.reveal .vspace-after-16::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(16px);
+}
+.reveal .vspace-17::before,
+.reveal .vspace-after-17::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(17px);
+}
+.reveal .vspace-18::before,
+.reveal .vspace-after-18::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(18px);
+}
+.reveal .vspace-19::before,
+.reveal .vspace-after-19::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(19px);
+}
+.reveal .vspace-20::before,
+.reveal .vspace-after-20::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(20px);
+}
+.reveal .vspace-21::before,
+.reveal .vspace-after-21::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(21px);
+}
+.reveal .vspace-22::before,
+.reveal .vspace-after-22::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(22px);
+}
+.reveal .vspace-23::before,
+.reveal .vspace-after-23::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(23px);
+}
+.reveal .vspace-24::before,
+.reveal .vspace-after-24::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(24px);
+}
+.reveal .vspace-25::before,
+.reveal .vspace-after-25::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(25px);
+}
+.reveal .vspace-26::before,
+.reveal .vspace-after-26::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(26px);
+}
+.reveal .vspace-27::before,
+.reveal .vspace-after-27::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(27px);
+}
+.reveal .vspace-28::before,
+.reveal .vspace-after-28::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(28px);
+}
+.reveal .vspace-29::before,
+.reveal .vspace-after-29::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(29px);
+}
+.reveal .vspace-30::before,
+.reveal .vspace-after-30::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(30px);
+}
+.reveal .vspace-31::before,
+.reveal .vspace-after-31::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(31px);
+}
+.reveal .vspace-32::before,
+.reveal .vspace-after-32::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(32px);
+}
+.reveal .vspace-33::before,
+.reveal .vspace-after-33::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(33px);
+}
+.reveal .vspace-34::before,
+.reveal .vspace-after-34::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(34px);
+}
+.reveal .vspace-35::before,
+.reveal .vspace-after-35::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(35px);
+}
+.reveal .vspace-36::before,
+.reveal .vspace-after-36::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(36px);
+}
+.reveal .vspace-37::before,
+.reveal .vspace-after-37::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(37px);
+}
+.reveal .vspace-38::before,
+.reveal .vspace-after-38::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(38px);
+}
+.reveal .vspace-39::before,
+.reveal .vspace-after-39::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(39px);
+}
+.reveal .vspace-40::before,
+.reveal .vspace-after-40::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(40px);
+}
+.reveal .vspace-41::before,
+.reveal .vspace-after-41::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(41px);
+}
+.reveal .vspace-42::before,
+.reveal .vspace-after-42::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(42px);
+}
+.reveal .vspace-43::before,
+.reveal .vspace-after-43::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(43px);
+}
+.reveal .vspace-44::before,
+.reveal .vspace-after-44::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(44px);
+}
+.reveal .vspace-45::before,
+.reveal .vspace-after-45::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(45px);
+}
+.reveal .vspace-46::before,
+.reveal .vspace-after-46::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(46px);
+}
+.reveal .vspace-47::before,
+.reveal .vspace-after-47::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(47px);
+}
+.reveal .vspace-48::before,
+.reveal .vspace-after-48::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(48px);
+}
+.reveal .vspace-49::before,
+.reveal .vspace-after-49::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(49px);
+}
+.reveal .vspace-50::before,
+.reveal .vspace-after-50::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(50px);
+}
+.reveal .vspace-51::before,
+.reveal .vspace-after-51::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(51px);
+}
+.reveal .vspace-52::before,
+.reveal .vspace-after-52::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(52px);
+}
+.reveal .vspace-53::before,
+.reveal .vspace-after-53::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(53px);
+}
+.reveal .vspace-54::before,
+.reveal .vspace-after-54::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(54px);
+}
+.reveal .vspace-55::before,
+.reveal .vspace-after-55::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(55px);
+}
+.reveal .vspace-56::before,
+.reveal .vspace-after-56::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(56px);
+}
+.reveal .vspace-57::before,
+.reveal .vspace-after-57::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(57px);
+}
+.reveal .vspace-58::before,
+.reveal .vspace-after-58::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(58px);
+}
+.reveal .vspace-59::before,
+.reveal .vspace-after-59::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(59px);
+}
+.reveal .vspace-60::before,
+.reveal .vspace-after-60::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(60px);
+}
+.reveal .vspace-61::before,
+.reveal .vspace-after-61::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(61px);
+}
+.reveal .vspace-62::before,
+.reveal .vspace-after-62::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(62px);
+}
+.reveal .vspace-63::before,
+.reveal .vspace-after-63::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(63px);
+}
+.reveal .vspace-64::before,
+.reveal .vspace-after-64::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(64px);
+}
+.reveal .vspace-65::before,
+.reveal .vspace-after-65::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(65px);
+}
+.reveal .vspace-66::before,
+.reveal .vspace-after-66::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(66px);
+}
+.reveal .vspace-67::before,
+.reveal .vspace-after-67::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(67px);
+}
+.reveal .vspace-68::before,
+.reveal .vspace-after-68::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(68px);
+}
+.reveal .vspace-69::before,
+.reveal .vspace-after-69::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(69px);
+}
+.reveal .vspace-70::before,
+.reveal .vspace-after-70::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(70px);
+}
+.reveal .vspace-71::before,
+.reveal .vspace-after-71::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(71px);
+}
+.reveal .vspace-72::before,
+.reveal .vspace-after-72::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(72px);
+}
+.reveal .vspace-73::before,
+.reveal .vspace-after-73::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(73px);
+}
+.reveal .vspace-74::before,
+.reveal .vspace-after-74::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(74px);
+}
+.reveal .vspace-75::before,
+.reveal .vspace-after-75::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(75px);
+}
+.reveal .vspace-76::before,
+.reveal .vspace-after-76::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(76px);
+}
+.reveal .vspace-77::before,
+.reveal .vspace-after-77::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(77px);
+}
+.reveal .vspace-78::before,
+.reveal .vspace-after-78::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(78px);
+}
+.reveal .vspace-79::before,
+.reveal .vspace-after-79::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(79px);
+}
+.reveal .vspace-80::before,
+.reveal .vspace-after-80::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(80px);
+}
+.reveal .vspace-81::before,
+.reveal .vspace-after-81::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(81px);
+}
+.reveal .vspace-82::before,
+.reveal .vspace-after-82::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(82px);
+}
+.reveal .vspace-83::before,
+.reveal .vspace-after-83::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(83px);
+}
+.reveal .vspace-84::before,
+.reveal .vspace-after-84::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(84px);
+}
+.reveal .vspace-85::before,
+.reveal .vspace-after-85::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(85px);
+}
+.reveal .vspace-86::before,
+.reveal .vspace-after-86::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(86px);
+}
+.reveal .vspace-87::before,
+.reveal .vspace-after-87::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(87px);
+}
+.reveal .vspace-88::before,
+.reveal .vspace-after-88::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(88px);
+}
+.reveal .vspace-89::before,
+.reveal .vspace-after-89::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(89px);
+}
+.reveal .vspace-90::before,
+.reveal .vspace-after-90::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(90px);
+}
+.reveal .vspace-91::before,
+.reveal .vspace-after-91::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(91px);
+}
+.reveal .vspace-92::before,
+.reveal .vspace-after-92::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(92px);
+}
+.reveal .vspace-93::before,
+.reveal .vspace-after-93::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(93px);
+}
+.reveal .vspace-94::before,
+.reveal .vspace-after-94::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(94px);
+}
+.reveal .vspace-95::before,
+.reveal .vspace-after-95::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(95px);
+}
+.reveal .vspace-96::before,
+.reveal .vspace-after-96::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(96px);
+}
+.reveal .vspace-97::before,
+.reveal .vspace-after-97::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(97px);
+}
+.reveal .vspace-98::before,
+.reveal .vspace-after-98::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(98px);
+}
+.reveal .vspace-99::before,
+.reveal .vspace-after-99::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(99px);
+}
+.reveal .vspace-100::before,
+.reveal .vspace-after-100::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(100px);
+}
+.reveal .vspace-101::before,
+.reveal .vspace-after-101::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(101px);
+}
+.reveal .vspace-102::before,
+.reveal .vspace-after-102::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(102px);
+}
+.reveal .vspace-103::before,
+.reveal .vspace-after-103::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(103px);
+}
+.reveal .vspace-104::before,
+.reveal .vspace-after-104::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(104px);
+}
+.reveal .vspace-105::before,
+.reveal .vspace-after-105::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(105px);
+}
+.reveal .vspace-106::before,
+.reveal .vspace-after-106::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(106px);
+}
+.reveal .vspace-107::before,
+.reveal .vspace-after-107::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(107px);
+}
+.reveal .vspace-108::before,
+.reveal .vspace-after-108::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(108px);
+}
+.reveal .vspace-109::before,
+.reveal .vspace-after-109::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(109px);
+}
+.reveal .vspace-110::before,
+.reveal .vspace-after-110::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(110px);
+}
+.reveal .vspace-111::before,
+.reveal .vspace-after-111::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(111px);
+}
+.reveal .vspace-112::before,
+.reveal .vspace-after-112::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(112px);
+}
+.reveal .vspace-113::before,
+.reveal .vspace-after-113::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(113px);
+}
+.reveal .vspace-114::before,
+.reveal .vspace-after-114::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(114px);
+}
+.reveal .vspace-115::before,
+.reveal .vspace-after-115::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(115px);
+}
+.reveal .vspace-116::before,
+.reveal .vspace-after-116::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(116px);
+}
+.reveal .vspace-117::before,
+.reveal .vspace-after-117::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(117px);
+}
+.reveal .vspace-118::before,
+.reveal .vspace-after-118::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(118px);
+}
+.reveal .vspace-119::before,
+.reveal .vspace-after-119::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(119px);
+}
+.reveal .vspace-120::before,
+.reveal .vspace-after-120::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(120px);
+}
+.reveal .vspace-121::before,
+.reveal .vspace-after-121::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(121px);
+}
+.reveal .vspace-122::before,
+.reveal .vspace-after-122::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(122px);
+}
+.reveal .vspace-123::before,
+.reveal .vspace-after-123::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(123px);
+}
+.reveal .vspace-124::before,
+.reveal .vspace-after-124::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(124px);
+}
+.reveal .vspace-125::before,
+.reveal .vspace-after-125::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(125px);
+}
+.reveal .vspace-126::before,
+.reveal .vspace-after-126::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(126px);
+}
+.reveal .vspace-127::before,
+.reveal .vspace-after-127::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(127px);
+}
+.reveal .vspace-128::before,
+.reveal .vspace-after-128::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(128px);
+}
+.reveal .vspace-129::before,
+.reveal .vspace-after-129::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(129px);
+}
+.reveal .vspace-130::before,
+.reveal .vspace-after-130::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(130px);
+}
+.reveal .vspace-131::before,
+.reveal .vspace-after-131::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(131px);
+}
+.reveal .vspace-132::before,
+.reveal .vspace-after-132::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(132px);
+}
+.reveal .vspace-133::before,
+.reveal .vspace-after-133::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(133px);
+}
+.reveal .vspace-134::before,
+.reveal .vspace-after-134::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(134px);
+}
+.reveal .vspace-135::before,
+.reveal .vspace-after-135::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(135px);
+}
+.reveal .vspace-136::before,
+.reveal .vspace-after-136::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(136px);
+}
+.reveal .vspace-137::before,
+.reveal .vspace-after-137::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(137px);
+}
+.reveal .vspace-138::before,
+.reveal .vspace-after-138::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(138px);
+}
+.reveal .vspace-139::before,
+.reveal .vspace-after-139::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(139px);
+}
+.reveal .vspace-140::before,
+.reveal .vspace-after-140::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(140px);
+}
+.reveal .vspace-141::before,
+.reveal .vspace-after-141::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(141px);
+}
+.reveal .vspace-142::before,
+.reveal .vspace-after-142::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(142px);
+}
+.reveal .vspace-143::before,
+.reveal .vspace-after-143::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(143px);
+}
+.reveal .vspace-144::before,
+.reveal .vspace-after-144::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(144px);
+}
+.reveal .vspace-145::before,
+.reveal .vspace-after-145::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(145px);
+}
+.reveal .vspace-146::before,
+.reveal .vspace-after-146::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(146px);
+}
+.reveal .vspace-147::before,
+.reveal .vspace-after-147::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(147px);
+}
+.reveal .vspace-148::before,
+.reveal .vspace-after-148::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(148px);
+}
+.reveal .vspace-149::before,
+.reveal .vspace-after-149::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(149px);
+}
+.reveal .vspace-150::before,
+.reveal .vspace-after-150::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(150px);
+}
+.reveal .vspace-151::before,
+.reveal .vspace-after-151::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(151px);
+}
+.reveal .vspace-152::before,
+.reveal .vspace-after-152::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(152px);
+}
+.reveal .vspace-153::before,
+.reveal .vspace-after-153::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(153px);
+}
+.reveal .vspace-154::before,
+.reveal .vspace-after-154::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(154px);
+}
+.reveal .vspace-155::before,
+.reveal .vspace-after-155::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(155px);
+}
+.reveal .vspace-156::before,
+.reveal .vspace-after-156::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(156px);
+}
+.reveal .vspace-157::before,
+.reveal .vspace-after-157::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(157px);
+}
+.reveal .vspace-158::before,
+.reveal .vspace-after-158::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(158px);
+}
+.reveal .vspace-159::before,
+.reveal .vspace-after-159::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(159px);
+}
+.reveal .vspace-160::before,
+.reveal .vspace-after-160::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(160px);
+}
+.reveal .vspace-161::before,
+.reveal .vspace-after-161::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(161px);
+}
+.reveal .vspace-162::before,
+.reveal .vspace-after-162::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(162px);
+}
+.reveal .vspace-163::before,
+.reveal .vspace-after-163::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(163px);
+}
+.reveal .vspace-164::before,
+.reveal .vspace-after-164::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(164px);
+}
+.reveal .vspace-165::before,
+.reveal .vspace-after-165::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(165px);
+}
+.reveal .vspace-166::before,
+.reveal .vspace-after-166::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(166px);
+}
+.reveal .vspace-167::before,
+.reveal .vspace-after-167::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(167px);
+}
+.reveal .vspace-168::before,
+.reveal .vspace-after-168::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(168px);
+}
+.reveal .vspace-169::before,
+.reveal .vspace-after-169::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(169px);
+}
+.reveal .vspace-170::before,
+.reveal .vspace-after-170::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(170px);
+}
+.reveal .vspace-171::before,
+.reveal .vspace-after-171::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(171px);
+}
+.reveal .vspace-172::before,
+.reveal .vspace-after-172::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(172px);
+}
+.reveal .vspace-173::before,
+.reveal .vspace-after-173::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(173px);
+}
+.reveal .vspace-174::before,
+.reveal .vspace-after-174::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(174px);
+}
+.reveal .vspace-175::before,
+.reveal .vspace-after-175::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(175px);
+}
+.reveal .vspace-176::before,
+.reveal .vspace-after-176::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(176px);
+}
+.reveal .vspace-177::before,
+.reveal .vspace-after-177::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(177px);
+}
+.reveal .vspace-178::before,
+.reveal .vspace-after-178::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(178px);
+}
+.reveal .vspace-179::before,
+.reveal .vspace-after-179::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(179px);
+}
+.reveal .vspace-180::before,
+.reveal .vspace-after-180::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(180px);
+}
+.reveal .vspace-181::before,
+.reveal .vspace-after-181::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(181px);
+}
+.reveal .vspace-182::before,
+.reveal .vspace-after-182::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(182px);
+}
+.reveal .vspace-183::before,
+.reveal .vspace-after-183::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(183px);
+}
+.reveal .vspace-184::before,
+.reveal .vspace-after-184::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(184px);
+}
+.reveal .vspace-185::before,
+.reveal .vspace-after-185::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(185px);
+}
+.reveal .vspace-186::before,
+.reveal .vspace-after-186::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(186px);
+}
+.reveal .vspace-187::before,
+.reveal .vspace-after-187::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(187px);
+}
+.reveal .vspace-188::before,
+.reveal .vspace-after-188::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(188px);
+}
+.reveal .vspace-189::before,
+.reveal .vspace-after-189::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(189px);
+}
+.reveal .vspace-190::before,
+.reveal .vspace-after-190::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(190px);
+}
+.reveal .vspace-191::before,
+.reveal .vspace-after-191::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(191px);
+}
+.reveal .vspace-192::before,
+.reveal .vspace-after-192::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(192px);
+}
+.reveal .vspace-193::before,
+.reveal .vspace-after-193::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(193px);
+}
+.reveal .vspace-194::before,
+.reveal .vspace-after-194::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(194px);
+}
+.reveal .vspace-195::before,
+.reveal .vspace-after-195::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(195px);
+}
+.reveal .vspace-196::before,
+.reveal .vspace-after-196::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(196px);
+}
+.reveal .vspace-197::before,
+.reveal .vspace-after-197::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(197px);
+}
+.reveal .vspace-198::before,
+.reveal .vspace-after-198::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(198px);
+}
+.reveal .vspace-199::before,
+.reveal .vspace-after-199::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(199px);
+}
+.reveal .vspace-200::before,
+.reveal .vspace-after-200::after {
+  content: "";
+  display: block;
+  padding-bottom: calc(200px);
+}
+.reveal .block {
+  background-color: #d9e0eb;
+  padding: 0.5cm;
+  margin-right: 2cm;
+}
+.reveal .huge,
+.reveal .huge p {
+  font-size: calc(44.8px * 1.5);
+}
+.reveal .bigger {
+  font-size: calc(44.8px * 1.2);
+}
+.reveal .smaller {
+  font-size: calc(44.8px * 0.9);
+}
+.reveal .font-size-1 *:not(.title), .reveal .font-size-1 {
+  font-size: calc(44.8px * (1/100)) !important;
+}
+.reveal .font-size-2 *:not(.title), .reveal .font-size-2 {
+  font-size: calc(44.8px * (2/100)) !important;
+}
+.reveal .font-size-3 *:not(.title), .reveal .font-size-3 {
+  font-size: calc(44.8px * (3/100)) !important;
+}
+.reveal .font-size-4 *:not(.title), .reveal .font-size-4 {
+  font-size: calc(44.8px * (4/100)) !important;
+}
+.reveal .font-size-5 *:not(.title), .reveal .font-size-5 {
+  font-size: calc(44.8px * (5/100)) !important;
+}
+.reveal .font-size-6 *:not(.title), .reveal .font-size-6 {
+  font-size: calc(44.8px * (6/100)) !important;
+}
+.reveal .font-size-7 *:not(.title), .reveal .font-size-7 {
+  font-size: calc(44.8px * (7/100)) !important;
+}
+.reveal .font-size-8 *:not(.title), .reveal .font-size-8 {
+  font-size: calc(44.8px * (8/100)) !important;
+}
+.reveal .font-size-9 *:not(.title), .reveal .font-size-9 {
+  font-size: calc(44.8px * (9/100)) !important;
+}
+.reveal .font-size-10 *:not(.title), .reveal .font-size-10 {
+  font-size: calc(44.8px * (10/100)) !important;
+}
+.reveal .font-size-11 *:not(.title), .reveal .font-size-11 {
+  font-size: calc(44.8px * (11/100)) !important;
+}
+.reveal .font-size-12 *:not(.title), .reveal .font-size-12 {
+  font-size: calc(44.8px * (12/100)) !important;
+}
+.reveal .font-size-13 *:not(.title), .reveal .font-size-13 {
+  font-size: calc(44.8px * (13/100)) !important;
+}
+.reveal .font-size-14 *:not(.title), .reveal .font-size-14 {
+  font-size: calc(44.8px * (14/100)) !important;
+}
+.reveal .font-size-15 *:not(.title), .reveal .font-size-15 {
+  font-size: calc(44.8px * (15/100)) !important;
+}
+.reveal .font-size-16 *:not(.title), .reveal .font-size-16 {
+  font-size: calc(44.8px * (16/100)) !important;
+}
+.reveal .font-size-17 *:not(.title), .reveal .font-size-17 {
+  font-size: calc(44.8px * (17/100)) !important;
+}
+.reveal .font-size-18 *:not(.title), .reveal .font-size-18 {
+  font-size: calc(44.8px * (18/100)) !important;
+}
+.reveal .font-size-19 *:not(.title), .reveal .font-size-19 {
+  font-size: calc(44.8px * (19/100)) !important;
+}
+.reveal .font-size-20 *:not(.title), .reveal .font-size-20 {
+  font-size: calc(44.8px * (20/100)) !important;
+}
+.reveal .font-size-21 *:not(.title), .reveal .font-size-21 {
+  font-size: calc(44.8px * (21/100)) !important;
+}
+.reveal .font-size-22 *:not(.title), .reveal .font-size-22 {
+  font-size: calc(44.8px * (22/100)) !important;
+}
+.reveal .font-size-23 *:not(.title), .reveal .font-size-23 {
+  font-size: calc(44.8px * (23/100)) !important;
+}
+.reveal .font-size-24 *:not(.title), .reveal .font-size-24 {
+  font-size: calc(44.8px * (24/100)) !important;
+}
+.reveal .font-size-25 *:not(.title), .reveal .font-size-25 {
+  font-size: calc(44.8px * (25/100)) !important;
+}
+.reveal .font-size-26 *:not(.title), .reveal .font-size-26 {
+  font-size: calc(44.8px * (26/100)) !important;
+}
+.reveal .font-size-27 *:not(.title), .reveal .font-size-27 {
+  font-size: calc(44.8px * (27/100)) !important;
+}
+.reveal .font-size-28 *:not(.title), .reveal .font-size-28 {
+  font-size: calc(44.8px * (28/100)) !important;
+}
+.reveal .font-size-29 *:not(.title), .reveal .font-size-29 {
+  font-size: calc(44.8px * (29/100)) !important;
+}
+.reveal .font-size-30 *:not(.title), .reveal .font-size-30 {
+  font-size: calc(44.8px * (30/100)) !important;
+}
+.reveal .font-size-31 *:not(.title), .reveal .font-size-31 {
+  font-size: calc(44.8px * (31/100)) !important;
+}
+.reveal .font-size-32 *:not(.title), .reveal .font-size-32 {
+  font-size: calc(44.8px * (32/100)) !important;
+}
+.reveal .font-size-33 *:not(.title), .reveal .font-size-33 {
+  font-size: calc(44.8px * (33/100)) !important;
+}
+.reveal .font-size-34 *:not(.title), .reveal .font-size-34 {
+  font-size: calc(44.8px * (34/100)) !important;
+}
+.reveal .font-size-35 *:not(.title), .reveal .font-size-35 {
+  font-size: calc(44.8px * (35/100)) !important;
+}
+.reveal .font-size-36 *:not(.title), .reveal .font-size-36 {
+  font-size: calc(44.8px * (36/100)) !important;
+}
+.reveal .font-size-37 *:not(.title), .reveal .font-size-37 {
+  font-size: calc(44.8px * (37/100)) !important;
+}
+.reveal .font-size-38 *:not(.title), .reveal .font-size-38 {
+  font-size: calc(44.8px * (38/100)) !important;
+}
+.reveal .font-size-39 *:not(.title), .reveal .font-size-39 {
+  font-size: calc(44.8px * (39/100)) !important;
+}
+.reveal .font-size-40 *:not(.title), .reveal .font-size-40 {
+  font-size: calc(44.8px * (40/100)) !important;
+}
+.reveal .font-size-41 *:not(.title), .reveal .font-size-41 {
+  font-size: calc(44.8px * (41/100)) !important;
+}
+.reveal .font-size-42 *:not(.title), .reveal .font-size-42 {
+  font-size: calc(44.8px * (42/100)) !important;
+}
+.reveal .font-size-43 *:not(.title), .reveal .font-size-43 {
+  font-size: calc(44.8px * (43/100)) !important;
+}
+.reveal .font-size-44 *:not(.title), .reveal .font-size-44 {
+  font-size: calc(44.8px * (44/100)) !important;
+}
+.reveal .font-size-45 *:not(.title), .reveal .font-size-45 {
+  font-size: calc(44.8px * (45/100)) !important;
+}
+.reveal .font-size-46 *:not(.title), .reveal .font-size-46 {
+  font-size: calc(44.8px * (46/100)) !important;
+}
+.reveal .font-size-47 *:not(.title), .reveal .font-size-47 {
+  font-size: calc(44.8px * (47/100)) !important;
+}
+.reveal .font-size-48 *:not(.title), .reveal .font-size-48 {
+  font-size: calc(44.8px * (48/100)) !important;
+}
+.reveal .font-size-49 *:not(.title), .reveal .font-size-49 {
+  font-size: calc(44.8px * (49/100)) !important;
+}
+.reveal .font-size-50 *:not(.title), .reveal .font-size-50 {
+  font-size: calc(44.8px * (50/100)) !important;
+}
+.reveal .font-size-51 *:not(.title), .reveal .font-size-51 {
+  font-size: calc(44.8px * (51/100)) !important;
+}
+.reveal .font-size-52 *:not(.title), .reveal .font-size-52 {
+  font-size: calc(44.8px * (52/100)) !important;
+}
+.reveal .font-size-53 *:not(.title), .reveal .font-size-53 {
+  font-size: calc(44.8px * (53/100)) !important;
+}
+.reveal .font-size-54 *:not(.title), .reveal .font-size-54 {
+  font-size: calc(44.8px * (54/100)) !important;
+}
+.reveal .font-size-55 *:not(.title), .reveal .font-size-55 {
+  font-size: calc(44.8px * (55/100)) !important;
+}
+.reveal .font-size-56 *:not(.title), .reveal .font-size-56 {
+  font-size: calc(44.8px * (56/100)) !important;
+}
+.reveal .font-size-57 *:not(.title), .reveal .font-size-57 {
+  font-size: calc(44.8px * (57/100)) !important;
+}
+.reveal .font-size-58 *:not(.title), .reveal .font-size-58 {
+  font-size: calc(44.8px * (58/100)) !important;
+}
+.reveal .font-size-59 *:not(.title), .reveal .font-size-59 {
+  font-size: calc(44.8px * (59/100)) !important;
+}
+.reveal .font-size-60 *:not(.title), .reveal .font-size-60 {
+  font-size: calc(44.8px * (60/100)) !important;
+}
+.reveal .font-size-61 *:not(.title), .reveal .font-size-61 {
+  font-size: calc(44.8px * (61/100)) !important;
+}
+.reveal .font-size-62 *:not(.title), .reveal .font-size-62 {
+  font-size: calc(44.8px * (62/100)) !important;
+}
+.reveal .font-size-63 *:not(.title), .reveal .font-size-63 {
+  font-size: calc(44.8px * (63/100)) !important;
+}
+.reveal .font-size-64 *:not(.title), .reveal .font-size-64 {
+  font-size: calc(44.8px * (64/100)) !important;
+}
+.reveal .font-size-65 *:not(.title), .reveal .font-size-65 {
+  font-size: calc(44.8px * (65/100)) !important;
+}
+.reveal .font-size-66 *:not(.title), .reveal .font-size-66 {
+  font-size: calc(44.8px * (66/100)) !important;
+}
+.reveal .font-size-67 *:not(.title), .reveal .font-size-67 {
+  font-size: calc(44.8px * (67/100)) !important;
+}
+.reveal .font-size-68 *:not(.title), .reveal .font-size-68 {
+  font-size: calc(44.8px * (68/100)) !important;
+}
+.reveal .font-size-69 *:not(.title), .reveal .font-size-69 {
+  font-size: calc(44.8px * (69/100)) !important;
+}
+.reveal .font-size-70 *:not(.title), .reveal .font-size-70 {
+  font-size: calc(44.8px * (70/100)) !important;
+}
+.reveal .font-size-71 *:not(.title), .reveal .font-size-71 {
+  font-size: calc(44.8px * (71/100)) !important;
+}
+.reveal .font-size-72 *:not(.title), .reveal .font-size-72 {
+  font-size: calc(44.8px * (72/100)) !important;
+}
+.reveal .font-size-73 *:not(.title), .reveal .font-size-73 {
+  font-size: calc(44.8px * (73/100)) !important;
+}
+.reveal .font-size-74 *:not(.title), .reveal .font-size-74 {
+  font-size: calc(44.8px * (74/100)) !important;
+}
+.reveal .font-size-75 *:not(.title), .reveal .font-size-75 {
+  font-size: calc(44.8px * (75/100)) !important;
+}
+.reveal .font-size-76 *:not(.title), .reveal .font-size-76 {
+  font-size: calc(44.8px * (76/100)) !important;
+}
+.reveal .font-size-77 *:not(.title), .reveal .font-size-77 {
+  font-size: calc(44.8px * (77/100)) !important;
+}
+.reveal .font-size-78 *:not(.title), .reveal .font-size-78 {
+  font-size: calc(44.8px * (78/100)) !important;
+}
+.reveal .font-size-79 *:not(.title), .reveal .font-size-79 {
+  font-size: calc(44.8px * (79/100)) !important;
+}
+.reveal .font-size-80 *:not(.title), .reveal .font-size-80 {
+  font-size: calc(44.8px * (80/100)) !important;
+}
+.reveal .font-size-81 *:not(.title), .reveal .font-size-81 {
+  font-size: calc(44.8px * (81/100)) !important;
+}
+.reveal .font-size-82 *:not(.title), .reveal .font-size-82 {
+  font-size: calc(44.8px * (82/100)) !important;
+}
+.reveal .font-size-83 *:not(.title), .reveal .font-size-83 {
+  font-size: calc(44.8px * (83/100)) !important;
+}
+.reveal .font-size-84 *:not(.title), .reveal .font-size-84 {
+  font-size: calc(44.8px * (84/100)) !important;
+}
+.reveal .font-size-85 *:not(.title), .reveal .font-size-85 {
+  font-size: calc(44.8px * (85/100)) !important;
+}
+.reveal .font-size-86 *:not(.title), .reveal .font-size-86 {
+  font-size: calc(44.8px * (86/100)) !important;
+}
+.reveal .font-size-87 *:not(.title), .reveal .font-size-87 {
+  font-size: calc(44.8px * (87/100)) !important;
+}
+.reveal .font-size-88 *:not(.title), .reveal .font-size-88 {
+  font-size: calc(44.8px * (88/100)) !important;
+}
+.reveal .font-size-89 *:not(.title), .reveal .font-size-89 {
+  font-size: calc(44.8px * (89/100)) !important;
+}
+.reveal .font-size-90 *:not(.title), .reveal .font-size-90 {
+  font-size: calc(44.8px * (90/100)) !important;
+}
+.reveal .font-size-91 *:not(.title), .reveal .font-size-91 {
+  font-size: calc(44.8px * (91/100)) !important;
+}
+.reveal .font-size-92 *:not(.title), .reveal .font-size-92 {
+  font-size: calc(44.8px * (92/100)) !important;
+}
+.reveal .font-size-93 *:not(.title), .reveal .font-size-93 {
+  font-size: calc(44.8px * (93/100)) !important;
+}
+.reveal .font-size-94 *:not(.title), .reveal .font-size-94 {
+  font-size: calc(44.8px * (94/100)) !important;
+}
+.reveal .font-size-95 *:not(.title), .reveal .font-size-95 {
+  font-size: calc(44.8px * (95/100)) !important;
+}
+.reveal .font-size-96 *:not(.title), .reveal .font-size-96 {
+  font-size: calc(44.8px * (96/100)) !important;
+}
+.reveal .font-size-97 *:not(.title), .reveal .font-size-97 {
+  font-size: calc(44.8px * (97/100)) !important;
+}
+.reveal .font-size-98 *:not(.title), .reveal .font-size-98 {
+  font-size: calc(44.8px * (98/100)) !important;
+}
+.reveal .font-size-99 *:not(.title), .reveal .font-size-99 {
+  font-size: calc(44.8px * (99/100)) !important;
+}
+.reveal .font-size-100 *:not(.title), .reveal .font-size-100 {
+  font-size: calc(44.8px * (100/100)) !important;
+}
+.reveal .font-size-101 *:not(.title), .reveal .font-size-101 {
+  font-size: calc(44.8px * (101/100)) !important;
+}
+.reveal .font-size-102 *:not(.title), .reveal .font-size-102 {
+  font-size: calc(44.8px * (102/100)) !important;
+}
+.reveal .font-size-103 *:not(.title), .reveal .font-size-103 {
+  font-size: calc(44.8px * (103/100)) !important;
+}
+.reveal .font-size-104 *:not(.title), .reveal .font-size-104 {
+  font-size: calc(44.8px * (104/100)) !important;
+}
+.reveal .font-size-105 *:not(.title), .reveal .font-size-105 {
+  font-size: calc(44.8px * (105/100)) !important;
+}
+.reveal .font-size-106 *:not(.title), .reveal .font-size-106 {
+  font-size: calc(44.8px * (106/100)) !important;
+}
+.reveal .font-size-107 *:not(.title), .reveal .font-size-107 {
+  font-size: calc(44.8px * (107/100)) !important;
+}
+.reveal .font-size-108 *:not(.title), .reveal .font-size-108 {
+  font-size: calc(44.8px * (108/100)) !important;
+}
+.reveal .font-size-109 *:not(.title), .reveal .font-size-109 {
+  font-size: calc(44.8px * (109/100)) !important;
+}
+.reveal .font-size-110 *:not(.title), .reveal .font-size-110 {
+  font-size: calc(44.8px * (110/100)) !important;
+}
+.reveal .font-size-111 *:not(.title), .reveal .font-size-111 {
+  font-size: calc(44.8px * (111/100)) !important;
+}
+.reveal .font-size-112 *:not(.title), .reveal .font-size-112 {
+  font-size: calc(44.8px * (112/100)) !important;
+}
+.reveal .font-size-113 *:not(.title), .reveal .font-size-113 {
+  font-size: calc(44.8px * (113/100)) !important;
+}
+.reveal .font-size-114 *:not(.title), .reveal .font-size-114 {
+  font-size: calc(44.8px * (114/100)) !important;
+}
+.reveal .font-size-115 *:not(.title), .reveal .font-size-115 {
+  font-size: calc(44.8px * (115/100)) !important;
+}
+.reveal .font-size-116 *:not(.title), .reveal .font-size-116 {
+  font-size: calc(44.8px * (116/100)) !important;
+}
+.reveal .font-size-117 *:not(.title), .reveal .font-size-117 {
+  font-size: calc(44.8px * (117/100)) !important;
+}
+.reveal .font-size-118 *:not(.title), .reveal .font-size-118 {
+  font-size: calc(44.8px * (118/100)) !important;
+}
+.reveal .font-size-119 *:not(.title), .reveal .font-size-119 {
+  font-size: calc(44.8px * (119/100)) !important;
+}
+.reveal .font-size-120 *:not(.title), .reveal .font-size-120 {
+  font-size: calc(44.8px * (120/100)) !important;
+}
+.reveal .font-size-121 *:not(.title), .reveal .font-size-121 {
+  font-size: calc(44.8px * (121/100)) !important;
+}
+.reveal .font-size-122 *:not(.title), .reveal .font-size-122 {
+  font-size: calc(44.8px * (122/100)) !important;
+}
+.reveal .font-size-123 *:not(.title), .reveal .font-size-123 {
+  font-size: calc(44.8px * (123/100)) !important;
+}
+.reveal .font-size-124 *:not(.title), .reveal .font-size-124 {
+  font-size: calc(44.8px * (124/100)) !important;
+}
+.reveal .font-size-125 *:not(.title), .reveal .font-size-125 {
+  font-size: calc(44.8px * (125/100)) !important;
+}
+.reveal .font-size-126 *:not(.title), .reveal .font-size-126 {
+  font-size: calc(44.8px * (126/100)) !important;
+}
+.reveal .font-size-127 *:not(.title), .reveal .font-size-127 {
+  font-size: calc(44.8px * (127/100)) !important;
+}
+.reveal .font-size-128 *:not(.title), .reveal .font-size-128 {
+  font-size: calc(44.8px * (128/100)) !important;
+}
+.reveal .font-size-129 *:not(.title), .reveal .font-size-129 {
+  font-size: calc(44.8px * (129/100)) !important;
+}
+.reveal .font-size-130 *:not(.title), .reveal .font-size-130 {
+  font-size: calc(44.8px * (130/100)) !important;
+}
+.reveal .font-size-131 *:not(.title), .reveal .font-size-131 {
+  font-size: calc(44.8px * (131/100)) !important;
+}
+.reveal .font-size-132 *:not(.title), .reveal .font-size-132 {
+  font-size: calc(44.8px * (132/100)) !important;
+}
+.reveal .font-size-133 *:not(.title), .reveal .font-size-133 {
+  font-size: calc(44.8px * (133/100)) !important;
+}
+.reveal .font-size-134 *:not(.title), .reveal .font-size-134 {
+  font-size: calc(44.8px * (134/100)) !important;
+}
+.reveal .font-size-135 *:not(.title), .reveal .font-size-135 {
+  font-size: calc(44.8px * (135/100)) !important;
+}
+.reveal .font-size-136 *:not(.title), .reveal .font-size-136 {
+  font-size: calc(44.8px * (136/100)) !important;
+}
+.reveal .font-size-137 *:not(.title), .reveal .font-size-137 {
+  font-size: calc(44.8px * (137/100)) !important;
+}
+.reveal .font-size-138 *:not(.title), .reveal .font-size-138 {
+  font-size: calc(44.8px * (138/100)) !important;
+}
+.reveal .font-size-139 *:not(.title), .reveal .font-size-139 {
+  font-size: calc(44.8px * (139/100)) !important;
+}
+.reveal .font-size-140 *:not(.title), .reveal .font-size-140 {
+  font-size: calc(44.8px * (140/100)) !important;
+}
+.reveal .font-size-141 *:not(.title), .reveal .font-size-141 {
+  font-size: calc(44.8px * (141/100)) !important;
+}
+.reveal .font-size-142 *:not(.title), .reveal .font-size-142 {
+  font-size: calc(44.8px * (142/100)) !important;
+}
+.reveal .font-size-143 *:not(.title), .reveal .font-size-143 {
+  font-size: calc(44.8px * (143/100)) !important;
+}
+.reveal .font-size-144 *:not(.title), .reveal .font-size-144 {
+  font-size: calc(44.8px * (144/100)) !important;
+}
+.reveal .font-size-145 *:not(.title), .reveal .font-size-145 {
+  font-size: calc(44.8px * (145/100)) !important;
+}
+.reveal .font-size-146 *:not(.title), .reveal .font-size-146 {
+  font-size: calc(44.8px * (146/100)) !important;
+}
+.reveal .font-size-147 *:not(.title), .reveal .font-size-147 {
+  font-size: calc(44.8px * (147/100)) !important;
+}
+.reveal .font-size-148 *:not(.title), .reveal .font-size-148 {
+  font-size: calc(44.8px * (148/100)) !important;
+}
+.reveal .font-size-149 *:not(.title), .reveal .font-size-149 {
+  font-size: calc(44.8px * (149/100)) !important;
+}
+.reveal .font-size-150 *:not(.title), .reveal .font-size-150 {
+  font-size: calc(44.8px * (150/100)) !important;
+}
+.reveal .font-size-151 *:not(.title), .reveal .font-size-151 {
+  font-size: calc(44.8px * (151/100)) !important;
+}
+.reveal .font-size-152 *:not(.title), .reveal .font-size-152 {
+  font-size: calc(44.8px * (152/100)) !important;
+}
+.reveal .font-size-153 *:not(.title), .reveal .font-size-153 {
+  font-size: calc(44.8px * (153/100)) !important;
+}
+.reveal .font-size-154 *:not(.title), .reveal .font-size-154 {
+  font-size: calc(44.8px * (154/100)) !important;
+}
+.reveal .font-size-155 *:not(.title), .reveal .font-size-155 {
+  font-size: calc(44.8px * (155/100)) !important;
+}
+.reveal .font-size-156 *:not(.title), .reveal .font-size-156 {
+  font-size: calc(44.8px * (156/100)) !important;
+}
+.reveal .font-size-157 *:not(.title), .reveal .font-size-157 {
+  font-size: calc(44.8px * (157/100)) !important;
+}
+.reveal .font-size-158 *:not(.title), .reveal .font-size-158 {
+  font-size: calc(44.8px * (158/100)) !important;
+}
+.reveal .font-size-159 *:not(.title), .reveal .font-size-159 {
+  font-size: calc(44.8px * (159/100)) !important;
+}
+.reveal .font-size-160 *:not(.title), .reveal .font-size-160 {
+  font-size: calc(44.8px * (160/100)) !important;
+}
+.reveal .font-size-161 *:not(.title), .reveal .font-size-161 {
+  font-size: calc(44.8px * (161/100)) !important;
+}
+.reveal .font-size-162 *:not(.title), .reveal .font-size-162 {
+  font-size: calc(44.8px * (162/100)) !important;
+}
+.reveal .font-size-163 *:not(.title), .reveal .font-size-163 {
+  font-size: calc(44.8px * (163/100)) !important;
+}
+.reveal .font-size-164 *:not(.title), .reveal .font-size-164 {
+  font-size: calc(44.8px * (164/100)) !important;
+}
+.reveal .font-size-165 *:not(.title), .reveal .font-size-165 {
+  font-size: calc(44.8px * (165/100)) !important;
+}
+.reveal .font-size-166 *:not(.title), .reveal .font-size-166 {
+  font-size: calc(44.8px * (166/100)) !important;
+}
+.reveal .font-size-167 *:not(.title), .reveal .font-size-167 {
+  font-size: calc(44.8px * (167/100)) !important;
+}
+.reveal .font-size-168 *:not(.title), .reveal .font-size-168 {
+  font-size: calc(44.8px * (168/100)) !important;
+}
+.reveal .font-size-169 *:not(.title), .reveal .font-size-169 {
+  font-size: calc(44.8px * (169/100)) !important;
+}
+.reveal .font-size-170 *:not(.title), .reveal .font-size-170 {
+  font-size: calc(44.8px * (170/100)) !important;
+}
+.reveal .font-size-171 *:not(.title), .reveal .font-size-171 {
+  font-size: calc(44.8px * (171/100)) !important;
+}
+.reveal .font-size-172 *:not(.title), .reveal .font-size-172 {
+  font-size: calc(44.8px * (172/100)) !important;
+}
+.reveal .font-size-173 *:not(.title), .reveal .font-size-173 {
+  font-size: calc(44.8px * (173/100)) !important;
+}
+.reveal .font-size-174 *:not(.title), .reveal .font-size-174 {
+  font-size: calc(44.8px * (174/100)) !important;
+}
+.reveal .font-size-175 *:not(.title), .reveal .font-size-175 {
+  font-size: calc(44.8px * (175/100)) !important;
+}
+.reveal .font-size-176 *:not(.title), .reveal .font-size-176 {
+  font-size: calc(44.8px * (176/100)) !important;
+}
+.reveal .font-size-177 *:not(.title), .reveal .font-size-177 {
+  font-size: calc(44.8px * (177/100)) !important;
+}
+.reveal .font-size-178 *:not(.title), .reveal .font-size-178 {
+  font-size: calc(44.8px * (178/100)) !important;
+}
+.reveal .font-size-179 *:not(.title), .reveal .font-size-179 {
+  font-size: calc(44.8px * (179/100)) !important;
+}
+.reveal .font-size-180 *:not(.title), .reveal .font-size-180 {
+  font-size: calc(44.8px * (180/100)) !important;
+}
+.reveal .font-size-181 *:not(.title), .reveal .font-size-181 {
+  font-size: calc(44.8px * (181/100)) !important;
+}
+.reveal .font-size-182 *:not(.title), .reveal .font-size-182 {
+  font-size: calc(44.8px * (182/100)) !important;
+}
+.reveal .font-size-183 *:not(.title), .reveal .font-size-183 {
+  font-size: calc(44.8px * (183/100)) !important;
+}
+.reveal .font-size-184 *:not(.title), .reveal .font-size-184 {
+  font-size: calc(44.8px * (184/100)) !important;
+}
+.reveal .font-size-185 *:not(.title), .reveal .font-size-185 {
+  font-size: calc(44.8px * (185/100)) !important;
+}
+.reveal .font-size-186 *:not(.title), .reveal .font-size-186 {
+  font-size: calc(44.8px * (186/100)) !important;
+}
+.reveal .font-size-187 *:not(.title), .reveal .font-size-187 {
+  font-size: calc(44.8px * (187/100)) !important;
+}
+.reveal .font-size-188 *:not(.title), .reveal .font-size-188 {
+  font-size: calc(44.8px * (188/100)) !important;
+}
+.reveal .font-size-189 *:not(.title), .reveal .font-size-189 {
+  font-size: calc(44.8px * (189/100)) !important;
+}
+.reveal .font-size-190 *:not(.title), .reveal .font-size-190 {
+  font-size: calc(44.8px * (190/100)) !important;
+}
+.reveal .font-size-191 *:not(.title), .reveal .font-size-191 {
+  font-size: calc(44.8px * (191/100)) !important;
+}
+.reveal .font-size-192 *:not(.title), .reveal .font-size-192 {
+  font-size: calc(44.8px * (192/100)) !important;
+}
+.reveal .font-size-193 *:not(.title), .reveal .font-size-193 {
+  font-size: calc(44.8px * (193/100)) !important;
+}
+.reveal .font-size-194 *:not(.title), .reveal .font-size-194 {
+  font-size: calc(44.8px * (194/100)) !important;
+}
+.reveal .font-size-195 *:not(.title), .reveal .font-size-195 {
+  font-size: calc(44.8px * (195/100)) !important;
+}
+.reveal .font-size-196 *:not(.title), .reveal .font-size-196 {
+  font-size: calc(44.8px * (196/100)) !important;
+}
+.reveal .font-size-197 *:not(.title), .reveal .font-size-197 {
+  font-size: calc(44.8px * (197/100)) !important;
+}
+.reveal .font-size-198 *:not(.title), .reveal .font-size-198 {
+  font-size: calc(44.8px * (198/100)) !important;
+}
+.reveal .font-size-199 *:not(.title), .reveal .font-size-199 {
+  font-size: calc(44.8px * (199/100)) !important;
+}
+.reveal .font-size-200 *:not(.title), .reveal .font-size-200 {
+  font-size: calc(44.8px * (200/100)) !important;
+}
+.reveal .font-size-201 *:not(.title), .reveal .font-size-201 {
+  font-size: calc(44.8px * (201/100)) !important;
+}
+.reveal .font-size-202 *:not(.title), .reveal .font-size-202 {
+  font-size: calc(44.8px * (202/100)) !important;
+}
+.reveal .font-size-203 *:not(.title), .reveal .font-size-203 {
+  font-size: calc(44.8px * (203/100)) !important;
+}
+.reveal .font-size-204 *:not(.title), .reveal .font-size-204 {
+  font-size: calc(44.8px * (204/100)) !important;
+}
+.reveal .font-size-205 *:not(.title), .reveal .font-size-205 {
+  font-size: calc(44.8px * (205/100)) !important;
+}
+.reveal .font-size-206 *:not(.title), .reveal .font-size-206 {
+  font-size: calc(44.8px * (206/100)) !important;
+}
+.reveal .font-size-207 *:not(.title), .reveal .font-size-207 {
+  font-size: calc(44.8px * (207/100)) !important;
+}
+.reveal .font-size-208 *:not(.title), .reveal .font-size-208 {
+  font-size: calc(44.8px * (208/100)) !important;
+}
+.reveal .font-size-209 *:not(.title), .reveal .font-size-209 {
+  font-size: calc(44.8px * (209/100)) !important;
+}
+.reveal .font-size-210 *:not(.title), .reveal .font-size-210 {
+  font-size: calc(44.8px * (210/100)) !important;
+}
+.reveal .font-size-211 *:not(.title), .reveal .font-size-211 {
+  font-size: calc(44.8px * (211/100)) !important;
+}
+.reveal .font-size-212 *:not(.title), .reveal .font-size-212 {
+  font-size: calc(44.8px * (212/100)) !important;
+}
+.reveal .font-size-213 *:not(.title), .reveal .font-size-213 {
+  font-size: calc(44.8px * (213/100)) !important;
+}
+.reveal .font-size-214 *:not(.title), .reveal .font-size-214 {
+  font-size: calc(44.8px * (214/100)) !important;
+}
+.reveal .font-size-215 *:not(.title), .reveal .font-size-215 {
+  font-size: calc(44.8px * (215/100)) !important;
+}
+.reveal .font-size-216 *:not(.title), .reveal .font-size-216 {
+  font-size: calc(44.8px * (216/100)) !important;
+}
+.reveal .font-size-217 *:not(.title), .reveal .font-size-217 {
+  font-size: calc(44.8px * (217/100)) !important;
+}
+.reveal .font-size-218 *:not(.title), .reveal .font-size-218 {
+  font-size: calc(44.8px * (218/100)) !important;
+}
+.reveal .font-size-219 *:not(.title), .reveal .font-size-219 {
+  font-size: calc(44.8px * (219/100)) !important;
+}
+.reveal .font-size-220 *:not(.title), .reveal .font-size-220 {
+  font-size: calc(44.8px * (220/100)) !important;
+}
+.reveal .font-size-221 *:not(.title), .reveal .font-size-221 {
+  font-size: calc(44.8px * (221/100)) !important;
+}
+.reveal .font-size-222 *:not(.title), .reveal .font-size-222 {
+  font-size: calc(44.8px * (222/100)) !important;
+}
+.reveal .font-size-223 *:not(.title), .reveal .font-size-223 {
+  font-size: calc(44.8px * (223/100)) !important;
+}
+.reveal .font-size-224 *:not(.title), .reveal .font-size-224 {
+  font-size: calc(44.8px * (224/100)) !important;
+}
+.reveal .font-size-225 *:not(.title), .reveal .font-size-225 {
+  font-size: calc(44.8px * (225/100)) !important;
+}
+.reveal .font-size-226 *:not(.title), .reveal .font-size-226 {
+  font-size: calc(44.8px * (226/100)) !important;
+}
+.reveal .font-size-227 *:not(.title), .reveal .font-size-227 {
+  font-size: calc(44.8px * (227/100)) !important;
+}
+.reveal .font-size-228 *:not(.title), .reveal .font-size-228 {
+  font-size: calc(44.8px * (228/100)) !important;
+}
+.reveal .font-size-229 *:not(.title), .reveal .font-size-229 {
+  font-size: calc(44.8px * (229/100)) !important;
+}
+.reveal .font-size-230 *:not(.title), .reveal .font-size-230 {
+  font-size: calc(44.8px * (230/100)) !important;
+}
+.reveal .font-size-231 *:not(.title), .reveal .font-size-231 {
+  font-size: calc(44.8px * (231/100)) !important;
+}
+.reveal .font-size-232 *:not(.title), .reveal .font-size-232 {
+  font-size: calc(44.8px * (232/100)) !important;
+}
+.reveal .font-size-233 *:not(.title), .reveal .font-size-233 {
+  font-size: calc(44.8px * (233/100)) !important;
+}
+.reveal .font-size-234 *:not(.title), .reveal .font-size-234 {
+  font-size: calc(44.8px * (234/100)) !important;
+}
+.reveal .font-size-235 *:not(.title), .reveal .font-size-235 {
+  font-size: calc(44.8px * (235/100)) !important;
+}
+.reveal .font-size-236 *:not(.title), .reveal .font-size-236 {
+  font-size: calc(44.8px * (236/100)) !important;
+}
+.reveal .font-size-237 *:not(.title), .reveal .font-size-237 {
+  font-size: calc(44.8px * (237/100)) !important;
+}
+.reveal .font-size-238 *:not(.title), .reveal .font-size-238 {
+  font-size: calc(44.8px * (238/100)) !important;
+}
+.reveal .font-size-239 *:not(.title), .reveal .font-size-239 {
+  font-size: calc(44.8px * (239/100)) !important;
+}
+.reveal .font-size-240 *:not(.title), .reveal .font-size-240 {
+  font-size: calc(44.8px * (240/100)) !important;
+}
+.reveal .font-size-241 *:not(.title), .reveal .font-size-241 {
+  font-size: calc(44.8px * (241/100)) !important;
+}
+.reveal .font-size-242 *:not(.title), .reveal .font-size-242 {
+  font-size: calc(44.8px * (242/100)) !important;
+}
+.reveal .font-size-243 *:not(.title), .reveal .font-size-243 {
+  font-size: calc(44.8px * (243/100)) !important;
+}
+.reveal .font-size-244 *:not(.title), .reveal .font-size-244 {
+  font-size: calc(44.8px * (244/100)) !important;
+}
+.reveal .font-size-245 *:not(.title), .reveal .font-size-245 {
+  font-size: calc(44.8px * (245/100)) !important;
+}
+.reveal .font-size-246 *:not(.title), .reveal .font-size-246 {
+  font-size: calc(44.8px * (246/100)) !important;
+}
+.reveal .font-size-247 *:not(.title), .reveal .font-size-247 {
+  font-size: calc(44.8px * (247/100)) !important;
+}
+.reveal .font-size-248 *:not(.title), .reveal .font-size-248 {
+  font-size: calc(44.8px * (248/100)) !important;
+}
+.reveal .font-size-249 *:not(.title), .reveal .font-size-249 {
+  font-size: calc(44.8px * (249/100)) !important;
+}
+.reveal .font-size-250 *:not(.title), .reveal .font-size-250 {
+  font-size: calc(44.8px * (250/100)) !important;
+}
+.reveal .font-size-251 *:not(.title), .reveal .font-size-251 {
+  font-size: calc(44.8px * (251/100)) !important;
+}
+.reveal .font-size-252 *:not(.title), .reveal .font-size-252 {
+  font-size: calc(44.8px * (252/100)) !important;
+}
+.reveal .font-size-253 *:not(.title), .reveal .font-size-253 {
+  font-size: calc(44.8px * (253/100)) !important;
+}
+.reveal .font-size-254 *:not(.title), .reveal .font-size-254 {
+  font-size: calc(44.8px * (254/100)) !important;
+}
+.reveal .font-size-255 *:not(.title), .reveal .font-size-255 {
+  font-size: calc(44.8px * (255/100)) !important;
+}
+.reveal .font-size-256 *:not(.title), .reveal .font-size-256 {
+  font-size: calc(44.8px * (256/100)) !important;
+}
+.reveal .font-size-257 *:not(.title), .reveal .font-size-257 {
+  font-size: calc(44.8px * (257/100)) !important;
+}
+.reveal .font-size-258 *:not(.title), .reveal .font-size-258 {
+  font-size: calc(44.8px * (258/100)) !important;
+}
+.reveal .font-size-259 *:not(.title), .reveal .font-size-259 {
+  font-size: calc(44.8px * (259/100)) !important;
+}
+.reveal .font-size-260 *:not(.title), .reveal .font-size-260 {
+  font-size: calc(44.8px * (260/100)) !important;
+}
+.reveal .font-size-261 *:not(.title), .reveal .font-size-261 {
+  font-size: calc(44.8px * (261/100)) !important;
+}
+.reveal .font-size-262 *:not(.title), .reveal .font-size-262 {
+  font-size: calc(44.8px * (262/100)) !important;
+}
+.reveal .font-size-263 *:not(.title), .reveal .font-size-263 {
+  font-size: calc(44.8px * (263/100)) !important;
+}
+.reveal .font-size-264 *:not(.title), .reveal .font-size-264 {
+  font-size: calc(44.8px * (264/100)) !important;
+}
+.reveal .font-size-265 *:not(.title), .reveal .font-size-265 {
+  font-size: calc(44.8px * (265/100)) !important;
+}
+.reveal .font-size-266 *:not(.title), .reveal .font-size-266 {
+  font-size: calc(44.8px * (266/100)) !important;
+}
+.reveal .font-size-267 *:not(.title), .reveal .font-size-267 {
+  font-size: calc(44.8px * (267/100)) !important;
+}
+.reveal .font-size-268 *:not(.title), .reveal .font-size-268 {
+  font-size: calc(44.8px * (268/100)) !important;
+}
+.reveal .font-size-269 *:not(.title), .reveal .font-size-269 {
+  font-size: calc(44.8px * (269/100)) !important;
+}
+.reveal .font-size-270 *:not(.title), .reveal .font-size-270 {
+  font-size: calc(44.8px * (270/100)) !important;
+}
+.reveal .font-size-271 *:not(.title), .reveal .font-size-271 {
+  font-size: calc(44.8px * (271/100)) !important;
+}
+.reveal .font-size-272 *:not(.title), .reveal .font-size-272 {
+  font-size: calc(44.8px * (272/100)) !important;
+}
+.reveal .font-size-273 *:not(.title), .reveal .font-size-273 {
+  font-size: calc(44.8px * (273/100)) !important;
+}
+.reveal .font-size-274 *:not(.title), .reveal .font-size-274 {
+  font-size: calc(44.8px * (274/100)) !important;
+}
+.reveal .font-size-275 *:not(.title), .reveal .font-size-275 {
+  font-size: calc(44.8px * (275/100)) !important;
+}
+.reveal .font-size-276 *:not(.title), .reveal .font-size-276 {
+  font-size: calc(44.8px * (276/100)) !important;
+}
+.reveal .font-size-277 *:not(.title), .reveal .font-size-277 {
+  font-size: calc(44.8px * (277/100)) !important;
+}
+.reveal .font-size-278 *:not(.title), .reveal .font-size-278 {
+  font-size: calc(44.8px * (278/100)) !important;
+}
+.reveal .font-size-279 *:not(.title), .reveal .font-size-279 {
+  font-size: calc(44.8px * (279/100)) !important;
+}
+.reveal .font-size-280 *:not(.title), .reveal .font-size-280 {
+  font-size: calc(44.8px * (280/100)) !important;
+}
+.reveal .font-size-281 *:not(.title), .reveal .font-size-281 {
+  font-size: calc(44.8px * (281/100)) !important;
+}
+.reveal .font-size-282 *:not(.title), .reveal .font-size-282 {
+  font-size: calc(44.8px * (282/100)) !important;
+}
+.reveal .font-size-283 *:not(.title), .reveal .font-size-283 {
+  font-size: calc(44.8px * (283/100)) !important;
+}
+.reveal .font-size-284 *:not(.title), .reveal .font-size-284 {
+  font-size: calc(44.8px * (284/100)) !important;
+}
+.reveal .font-size-285 *:not(.title), .reveal .font-size-285 {
+  font-size: calc(44.8px * (285/100)) !important;
+}
+.reveal .font-size-286 *:not(.title), .reveal .font-size-286 {
+  font-size: calc(44.8px * (286/100)) !important;
+}
+.reveal .font-size-287 *:not(.title), .reveal .font-size-287 {
+  font-size: calc(44.8px * (287/100)) !important;
+}
+.reveal .font-size-288 *:not(.title), .reveal .font-size-288 {
+  font-size: calc(44.8px * (288/100)) !important;
+}
+.reveal .font-size-289 *:not(.title), .reveal .font-size-289 {
+  font-size: calc(44.8px * (289/100)) !important;
+}
+.reveal .font-size-290 *:not(.title), .reveal .font-size-290 {
+  font-size: calc(44.8px * (290/100)) !important;
+}
+.reveal .font-size-291 *:not(.title), .reveal .font-size-291 {
+  font-size: calc(44.8px * (291/100)) !important;
+}
+.reveal .font-size-292 *:not(.title), .reveal .font-size-292 {
+  font-size: calc(44.8px * (292/100)) !important;
+}
+.reveal .font-size-293 *:not(.title), .reveal .font-size-293 {
+  font-size: calc(44.8px * (293/100)) !important;
+}
+.reveal .font-size-294 *:not(.title), .reveal .font-size-294 {
+  font-size: calc(44.8px * (294/100)) !important;
+}
+.reveal .font-size-295 *:not(.title), .reveal .font-size-295 {
+  font-size: calc(44.8px * (295/100)) !important;
+}
+.reveal .font-size-296 *:not(.title), .reveal .font-size-296 {
+  font-size: calc(44.8px * (296/100)) !important;
+}
+.reveal .font-size-297 *:not(.title), .reveal .font-size-297 {
+  font-size: calc(44.8px * (297/100)) !important;
+}
+.reveal .font-size-298 *:not(.title), .reveal .font-size-298 {
+  font-size: calc(44.8px * (298/100)) !important;
+}
+.reveal .font-size-299 *:not(.title), .reveal .font-size-299 {
+  font-size: calc(44.8px * (299/100)) !important;
+}
+.reveal .font-size-300 *:not(.title), .reveal .font-size-300 {
+  font-size: calc(44.8px * (300/100)) !important;
+}
+.reveal .font-size-301 *:not(.title), .reveal .font-size-301 {
+  font-size: calc(44.8px * (301/100)) !important;
+}
+.reveal .font-size-302 *:not(.title), .reveal .font-size-302 {
+  font-size: calc(44.8px * (302/100)) !important;
+}
+.reveal .font-size-303 *:not(.title), .reveal .font-size-303 {
+  font-size: calc(44.8px * (303/100)) !important;
+}
+.reveal .font-size-304 *:not(.title), .reveal .font-size-304 {
+  font-size: calc(44.8px * (304/100)) !important;
+}
+.reveal .font-size-305 *:not(.title), .reveal .font-size-305 {
+  font-size: calc(44.8px * (305/100)) !important;
+}
+.reveal .font-size-306 *:not(.title), .reveal .font-size-306 {
+  font-size: calc(44.8px * (306/100)) !important;
+}
+.reveal .font-size-307 *:not(.title), .reveal .font-size-307 {
+  font-size: calc(44.8px * (307/100)) !important;
+}
+.reveal .font-size-308 *:not(.title), .reveal .font-size-308 {
+  font-size: calc(44.8px * (308/100)) !important;
+}
+.reveal .font-size-309 *:not(.title), .reveal .font-size-309 {
+  font-size: calc(44.8px * (309/100)) !important;
+}
+.reveal .font-size-310 *:not(.title), .reveal .font-size-310 {
+  font-size: calc(44.8px * (310/100)) !important;
+}
+.reveal .font-size-311 *:not(.title), .reveal .font-size-311 {
+  font-size: calc(44.8px * (311/100)) !important;
+}
+.reveal .font-size-312 *:not(.title), .reveal .font-size-312 {
+  font-size: calc(44.8px * (312/100)) !important;
+}
+.reveal .font-size-313 *:not(.title), .reveal .font-size-313 {
+  font-size: calc(44.8px * (313/100)) !important;
+}
+.reveal .font-size-314 *:not(.title), .reveal .font-size-314 {
+  font-size: calc(44.8px * (314/100)) !important;
+}
+.reveal .font-size-315 *:not(.title), .reveal .font-size-315 {
+  font-size: calc(44.8px * (315/100)) !important;
+}
+.reveal .font-size-316 *:not(.title), .reveal .font-size-316 {
+  font-size: calc(44.8px * (316/100)) !important;
+}
+.reveal .font-size-317 *:not(.title), .reveal .font-size-317 {
+  font-size: calc(44.8px * (317/100)) !important;
+}
+.reveal .font-size-318 *:not(.title), .reveal .font-size-318 {
+  font-size: calc(44.8px * (318/100)) !important;
+}
+.reveal .font-size-319 *:not(.title), .reveal .font-size-319 {
+  font-size: calc(44.8px * (319/100)) !important;
+}
+.reveal .font-size-320 *:not(.title), .reveal .font-size-320 {
+  font-size: calc(44.8px * (320/100)) !important;
+}
+.reveal .font-size-321 *:not(.title), .reveal .font-size-321 {
+  font-size: calc(44.8px * (321/100)) !important;
+}
+.reveal .font-size-322 *:not(.title), .reveal .font-size-322 {
+  font-size: calc(44.8px * (322/100)) !important;
+}
+.reveal .font-size-323 *:not(.title), .reveal .font-size-323 {
+  font-size: calc(44.8px * (323/100)) !important;
+}
+.reveal .font-size-324 *:not(.title), .reveal .font-size-324 {
+  font-size: calc(44.8px * (324/100)) !important;
+}
+.reveal .font-size-325 *:not(.title), .reveal .font-size-325 {
+  font-size: calc(44.8px * (325/100)) !important;
+}
+.reveal .font-size-326 *:not(.title), .reveal .font-size-326 {
+  font-size: calc(44.8px * (326/100)) !important;
+}
+.reveal .font-size-327 *:not(.title), .reveal .font-size-327 {
+  font-size: calc(44.8px * (327/100)) !important;
+}
+.reveal .font-size-328 *:not(.title), .reveal .font-size-328 {
+  font-size: calc(44.8px * (328/100)) !important;
+}
+.reveal .font-size-329 *:not(.title), .reveal .font-size-329 {
+  font-size: calc(44.8px * (329/100)) !important;
+}
+.reveal .font-size-330 *:not(.title), .reveal .font-size-330 {
+  font-size: calc(44.8px * (330/100)) !important;
+}
+.reveal .font-size-331 *:not(.title), .reveal .font-size-331 {
+  font-size: calc(44.8px * (331/100)) !important;
+}
+.reveal .font-size-332 *:not(.title), .reveal .font-size-332 {
+  font-size: calc(44.8px * (332/100)) !important;
+}
+.reveal .font-size-333 *:not(.title), .reveal .font-size-333 {
+  font-size: calc(44.8px * (333/100)) !important;
+}
+.reveal .font-size-334 *:not(.title), .reveal .font-size-334 {
+  font-size: calc(44.8px * (334/100)) !important;
+}
+.reveal .font-size-335 *:not(.title), .reveal .font-size-335 {
+  font-size: calc(44.8px * (335/100)) !important;
+}
+.reveal .font-size-336 *:not(.title), .reveal .font-size-336 {
+  font-size: calc(44.8px * (336/100)) !important;
+}
+.reveal .font-size-337 *:not(.title), .reveal .font-size-337 {
+  font-size: calc(44.8px * (337/100)) !important;
+}
+.reveal .font-size-338 *:not(.title), .reveal .font-size-338 {
+  font-size: calc(44.8px * (338/100)) !important;
+}
+.reveal .font-size-339 *:not(.title), .reveal .font-size-339 {
+  font-size: calc(44.8px * (339/100)) !important;
+}
+.reveal .font-size-340 *:not(.title), .reveal .font-size-340 {
+  font-size: calc(44.8px * (340/100)) !important;
+}
+.reveal .font-size-341 *:not(.title), .reveal .font-size-341 {
+  font-size: calc(44.8px * (341/100)) !important;
+}
+.reveal .font-size-342 *:not(.title), .reveal .font-size-342 {
+  font-size: calc(44.8px * (342/100)) !important;
+}
+.reveal .font-size-343 *:not(.title), .reveal .font-size-343 {
+  font-size: calc(44.8px * (343/100)) !important;
+}
+.reveal .font-size-344 *:not(.title), .reveal .font-size-344 {
+  font-size: calc(44.8px * (344/100)) !important;
+}
+.reveal .font-size-345 *:not(.title), .reveal .font-size-345 {
+  font-size: calc(44.8px * (345/100)) !important;
+}
+.reveal .font-size-346 *:not(.title), .reveal .font-size-346 {
+  font-size: calc(44.8px * (346/100)) !important;
+}
+.reveal .font-size-347 *:not(.title), .reveal .font-size-347 {
+  font-size: calc(44.8px * (347/100)) !important;
+}
+.reveal .font-size-348 *:not(.title), .reveal .font-size-348 {
+  font-size: calc(44.8px * (348/100)) !important;
+}
+.reveal .font-size-349 *:not(.title), .reveal .font-size-349 {
+  font-size: calc(44.8px * (349/100)) !important;
+}
+.reveal .font-size-350 *:not(.title), .reveal .font-size-350 {
+  font-size: calc(44.8px * (350/100)) !important;
+}
+.reveal .font-size-351 *:not(.title), .reveal .font-size-351 {
+  font-size: calc(44.8px * (351/100)) !important;
+}
+.reveal .font-size-352 *:not(.title), .reveal .font-size-352 {
+  font-size: calc(44.8px * (352/100)) !important;
+}
+.reveal .font-size-353 *:not(.title), .reveal .font-size-353 {
+  font-size: calc(44.8px * (353/100)) !important;
+}
+.reveal .font-size-354 *:not(.title), .reveal .font-size-354 {
+  font-size: calc(44.8px * (354/100)) !important;
+}
+.reveal .font-size-355 *:not(.title), .reveal .font-size-355 {
+  font-size: calc(44.8px * (355/100)) !important;
+}
+.reveal .font-size-356 *:not(.title), .reveal .font-size-356 {
+  font-size: calc(44.8px * (356/100)) !important;
+}
+.reveal .font-size-357 *:not(.title), .reveal .font-size-357 {
+  font-size: calc(44.8px * (357/100)) !important;
+}
+.reveal .font-size-358 *:not(.title), .reveal .font-size-358 {
+  font-size: calc(44.8px * (358/100)) !important;
+}
+.reveal .font-size-359 *:not(.title), .reveal .font-size-359 {
+  font-size: calc(44.8px * (359/100)) !important;
+}
+.reveal .font-size-360 *:not(.title), .reveal .font-size-360 {
+  font-size: calc(44.8px * (360/100)) !important;
+}
+.reveal .font-size-361 *:not(.title), .reveal .font-size-361 {
+  font-size: calc(44.8px * (361/100)) !important;
+}
+.reveal .font-size-362 *:not(.title), .reveal .font-size-362 {
+  font-size: calc(44.8px * (362/100)) !important;
+}
+.reveal .font-size-363 *:not(.title), .reveal .font-size-363 {
+  font-size: calc(44.8px * (363/100)) !important;
+}
+.reveal .font-size-364 *:not(.title), .reveal .font-size-364 {
+  font-size: calc(44.8px * (364/100)) !important;
+}
+.reveal .font-size-365 *:not(.title), .reveal .font-size-365 {
+  font-size: calc(44.8px * (365/100)) !important;
+}
+.reveal .font-size-366 *:not(.title), .reveal .font-size-366 {
+  font-size: calc(44.8px * (366/100)) !important;
+}
+.reveal .font-size-367 *:not(.title), .reveal .font-size-367 {
+  font-size: calc(44.8px * (367/100)) !important;
+}
+.reveal .font-size-368 *:not(.title), .reveal .font-size-368 {
+  font-size: calc(44.8px * (368/100)) !important;
+}
+.reveal .font-size-369 *:not(.title), .reveal .font-size-369 {
+  font-size: calc(44.8px * (369/100)) !important;
+}
+.reveal .font-size-370 *:not(.title), .reveal .font-size-370 {
+  font-size: calc(44.8px * (370/100)) !important;
+}
+.reveal .font-size-371 *:not(.title), .reveal .font-size-371 {
+  font-size: calc(44.8px * (371/100)) !important;
+}
+.reveal .font-size-372 *:not(.title), .reveal .font-size-372 {
+  font-size: calc(44.8px * (372/100)) !important;
+}
+.reveal .font-size-373 *:not(.title), .reveal .font-size-373 {
+  font-size: calc(44.8px * (373/100)) !important;
+}
+.reveal .font-size-374 *:not(.title), .reveal .font-size-374 {
+  font-size: calc(44.8px * (374/100)) !important;
+}
+.reveal .font-size-375 *:not(.title), .reveal .font-size-375 {
+  font-size: calc(44.8px * (375/100)) !important;
+}
+.reveal .font-size-376 *:not(.title), .reveal .font-size-376 {
+  font-size: calc(44.8px * (376/100)) !important;
+}
+.reveal .font-size-377 *:not(.title), .reveal .font-size-377 {
+  font-size: calc(44.8px * (377/100)) !important;
+}
+.reveal .font-size-378 *:not(.title), .reveal .font-size-378 {
+  font-size: calc(44.8px * (378/100)) !important;
+}
+.reveal .font-size-379 *:not(.title), .reveal .font-size-379 {
+  font-size: calc(44.8px * (379/100)) !important;
+}
+.reveal .font-size-380 *:not(.title), .reveal .font-size-380 {
+  font-size: calc(44.8px * (380/100)) !important;
+}
+.reveal .font-size-381 *:not(.title), .reveal .font-size-381 {
+  font-size: calc(44.8px * (381/100)) !important;
+}
+.reveal .font-size-382 *:not(.title), .reveal .font-size-382 {
+  font-size: calc(44.8px * (382/100)) !important;
+}
+.reveal .font-size-383 *:not(.title), .reveal .font-size-383 {
+  font-size: calc(44.8px * (383/100)) !important;
+}
+.reveal .font-size-384 *:not(.title), .reveal .font-size-384 {
+  font-size: calc(44.8px * (384/100)) !important;
+}
+.reveal .font-size-385 *:not(.title), .reveal .font-size-385 {
+  font-size: calc(44.8px * (385/100)) !important;
+}
+.reveal .font-size-386 *:not(.title), .reveal .font-size-386 {
+  font-size: calc(44.8px * (386/100)) !important;
+}
+.reveal .font-size-387 *:not(.title), .reveal .font-size-387 {
+  font-size: calc(44.8px * (387/100)) !important;
+}
+.reveal .font-size-388 *:not(.title), .reveal .font-size-388 {
+  font-size: calc(44.8px * (388/100)) !important;
+}
+.reveal .font-size-389 *:not(.title), .reveal .font-size-389 {
+  font-size: calc(44.8px * (389/100)) !important;
+}
+.reveal .font-size-390 *:not(.title), .reveal .font-size-390 {
+  font-size: calc(44.8px * (390/100)) !important;
+}
+.reveal .font-size-391 *:not(.title), .reveal .font-size-391 {
+  font-size: calc(44.8px * (391/100)) !important;
+}
+.reveal .font-size-392 *:not(.title), .reveal .font-size-392 {
+  font-size: calc(44.8px * (392/100)) !important;
+}
+.reveal .font-size-393 *:not(.title), .reveal .font-size-393 {
+  font-size: calc(44.8px * (393/100)) !important;
+}
+.reveal .font-size-394 *:not(.title), .reveal .font-size-394 {
+  font-size: calc(44.8px * (394/100)) !important;
+}
+.reveal .font-size-395 *:not(.title), .reveal .font-size-395 {
+  font-size: calc(44.8px * (395/100)) !important;
+}
+.reveal .font-size-396 *:not(.title), .reveal .font-size-396 {
+  font-size: calc(44.8px * (396/100)) !important;
+}
+.reveal .font-size-397 *:not(.title), .reveal .font-size-397 {
+  font-size: calc(44.8px * (397/100)) !important;
+}
+.reveal .font-size-398 *:not(.title), .reveal .font-size-398 {
+  font-size: calc(44.8px * (398/100)) !important;
+}
+.reveal .font-size-399 *:not(.title), .reveal .font-size-399 {
+  font-size: calc(44.8px * (399/100)) !important;
+}
+.reveal .font-size-400 *:not(.title), .reveal .font-size-400 {
+  font-size: calc(44.8px * (400/100)) !important;
+}
+.reveal .font-size-401 *:not(.title), .reveal .font-size-401 {
+  font-size: calc(44.8px * (401/100)) !important;
+}
+.reveal .font-size-402 *:not(.title), .reveal .font-size-402 {
+  font-size: calc(44.8px * (402/100)) !important;
+}
+.reveal .font-size-403 *:not(.title), .reveal .font-size-403 {
+  font-size: calc(44.8px * (403/100)) !important;
+}
+.reveal .font-size-404 *:not(.title), .reveal .font-size-404 {
+  font-size: calc(44.8px * (404/100)) !important;
+}
+.reveal .font-size-405 *:not(.title), .reveal .font-size-405 {
+  font-size: calc(44.8px * (405/100)) !important;
+}
+.reveal .font-size-406 *:not(.title), .reveal .font-size-406 {
+  font-size: calc(44.8px * (406/100)) !important;
+}
+.reveal .font-size-407 *:not(.title), .reveal .font-size-407 {
+  font-size: calc(44.8px * (407/100)) !important;
+}
+.reveal .font-size-408 *:not(.title), .reveal .font-size-408 {
+  font-size: calc(44.8px * (408/100)) !important;
+}
+.reveal .font-size-409 *:not(.title), .reveal .font-size-409 {
+  font-size: calc(44.8px * (409/100)) !important;
+}
+.reveal .font-size-410 *:not(.title), .reveal .font-size-410 {
+  font-size: calc(44.8px * (410/100)) !important;
+}
+.reveal .font-size-411 *:not(.title), .reveal .font-size-411 {
+  font-size: calc(44.8px * (411/100)) !important;
+}
+.reveal .font-size-412 *:not(.title), .reveal .font-size-412 {
+  font-size: calc(44.8px * (412/100)) !important;
+}
+.reveal .font-size-413 *:not(.title), .reveal .font-size-413 {
+  font-size: calc(44.8px * (413/100)) !important;
+}
+.reveal .font-size-414 *:not(.title), .reveal .font-size-414 {
+  font-size: calc(44.8px * (414/100)) !important;
+}
+.reveal .font-size-415 *:not(.title), .reveal .font-size-415 {
+  font-size: calc(44.8px * (415/100)) !important;
+}
+.reveal .font-size-416 *:not(.title), .reveal .font-size-416 {
+  font-size: calc(44.8px * (416/100)) !important;
+}
+.reveal .font-size-417 *:not(.title), .reveal .font-size-417 {
+  font-size: calc(44.8px * (417/100)) !important;
+}
+.reveal .font-size-418 *:not(.title), .reveal .font-size-418 {
+  font-size: calc(44.8px * (418/100)) !important;
+}
+.reveal .font-size-419 *:not(.title), .reveal .font-size-419 {
+  font-size: calc(44.8px * (419/100)) !important;
+}
+.reveal .font-size-420 *:not(.title), .reveal .font-size-420 {
+  font-size: calc(44.8px * (420/100)) !important;
+}
+.reveal .font-size-421 *:not(.title), .reveal .font-size-421 {
+  font-size: calc(44.8px * (421/100)) !important;
+}
+.reveal .font-size-422 *:not(.title), .reveal .font-size-422 {
+  font-size: calc(44.8px * (422/100)) !important;
+}
+.reveal .font-size-423 *:not(.title), .reveal .font-size-423 {
+  font-size: calc(44.8px * (423/100)) !important;
+}
+.reveal .font-size-424 *:not(.title), .reveal .font-size-424 {
+  font-size: calc(44.8px * (424/100)) !important;
+}
+.reveal .font-size-425 *:not(.title), .reveal .font-size-425 {
+  font-size: calc(44.8px * (425/100)) !important;
+}
+.reveal .font-size-426 *:not(.title), .reveal .font-size-426 {
+  font-size: calc(44.8px * (426/100)) !important;
+}
+.reveal .font-size-427 *:not(.title), .reveal .font-size-427 {
+  font-size: calc(44.8px * (427/100)) !important;
+}
+.reveal .font-size-428 *:not(.title), .reveal .font-size-428 {
+  font-size: calc(44.8px * (428/100)) !important;
+}
+.reveal .font-size-429 *:not(.title), .reveal .font-size-429 {
+  font-size: calc(44.8px * (429/100)) !important;
+}
+.reveal .font-size-430 *:not(.title), .reveal .font-size-430 {
+  font-size: calc(44.8px * (430/100)) !important;
+}
+.reveal .font-size-431 *:not(.title), .reveal .font-size-431 {
+  font-size: calc(44.8px * (431/100)) !important;
+}
+.reveal .font-size-432 *:not(.title), .reveal .font-size-432 {
+  font-size: calc(44.8px * (432/100)) !important;
+}
+.reveal .font-size-433 *:not(.title), .reveal .font-size-433 {
+  font-size: calc(44.8px * (433/100)) !important;
+}
+.reveal .font-size-434 *:not(.title), .reveal .font-size-434 {
+  font-size: calc(44.8px * (434/100)) !important;
+}
+.reveal .font-size-435 *:not(.title), .reveal .font-size-435 {
+  font-size: calc(44.8px * (435/100)) !important;
+}
+.reveal .font-size-436 *:not(.title), .reveal .font-size-436 {
+  font-size: calc(44.8px * (436/100)) !important;
+}
+.reveal .font-size-437 *:not(.title), .reveal .font-size-437 {
+  font-size: calc(44.8px * (437/100)) !important;
+}
+.reveal .font-size-438 *:not(.title), .reveal .font-size-438 {
+  font-size: calc(44.8px * (438/100)) !important;
+}
+.reveal .font-size-439 *:not(.title), .reveal .font-size-439 {
+  font-size: calc(44.8px * (439/100)) !important;
+}
+.reveal .font-size-440 *:not(.title), .reveal .font-size-440 {
+  font-size: calc(44.8px * (440/100)) !important;
+}
+.reveal .font-size-441 *:not(.title), .reveal .font-size-441 {
+  font-size: calc(44.8px * (441/100)) !important;
+}
+.reveal .font-size-442 *:not(.title), .reveal .font-size-442 {
+  font-size: calc(44.8px * (442/100)) !important;
+}
+.reveal .font-size-443 *:not(.title), .reveal .font-size-443 {
+  font-size: calc(44.8px * (443/100)) !important;
+}
+.reveal .font-size-444 *:not(.title), .reveal .font-size-444 {
+  font-size: calc(44.8px * (444/100)) !important;
+}
+.reveal .font-size-445 *:not(.title), .reveal .font-size-445 {
+  font-size: calc(44.8px * (445/100)) !important;
+}
+.reveal .font-size-446 *:not(.title), .reveal .font-size-446 {
+  font-size: calc(44.8px * (446/100)) !important;
+}
+.reveal .font-size-447 *:not(.title), .reveal .font-size-447 {
+  font-size: calc(44.8px * (447/100)) !important;
+}
+.reveal .font-size-448 *:not(.title), .reveal .font-size-448 {
+  font-size: calc(44.8px * (448/100)) !important;
+}
+.reveal .font-size-449 *:not(.title), .reveal .font-size-449 {
+  font-size: calc(44.8px * (449/100)) !important;
+}
+.reveal .font-size-450 *:not(.title), .reveal .font-size-450 {
+  font-size: calc(44.8px * (450/100)) !important;
+}
+.reveal .font-size-451 *:not(.title), .reveal .font-size-451 {
+  font-size: calc(44.8px * (451/100)) !important;
+}
+.reveal .font-size-452 *:not(.title), .reveal .font-size-452 {
+  font-size: calc(44.8px * (452/100)) !important;
+}
+.reveal .font-size-453 *:not(.title), .reveal .font-size-453 {
+  font-size: calc(44.8px * (453/100)) !important;
+}
+.reveal .font-size-454 *:not(.title), .reveal .font-size-454 {
+  font-size: calc(44.8px * (454/100)) !important;
+}
+.reveal .font-size-455 *:not(.title), .reveal .font-size-455 {
+  font-size: calc(44.8px * (455/100)) !important;
+}
+.reveal .font-size-456 *:not(.title), .reveal .font-size-456 {
+  font-size: calc(44.8px * (456/100)) !important;
+}
+.reveal .font-size-457 *:not(.title), .reveal .font-size-457 {
+  font-size: calc(44.8px * (457/100)) !important;
+}
+.reveal .font-size-458 *:not(.title), .reveal .font-size-458 {
+  font-size: calc(44.8px * (458/100)) !important;
+}
+.reveal .font-size-459 *:not(.title), .reveal .font-size-459 {
+  font-size: calc(44.8px * (459/100)) !important;
+}
+.reveal .font-size-460 *:not(.title), .reveal .font-size-460 {
+  font-size: calc(44.8px * (460/100)) !important;
+}
+.reveal .font-size-461 *:not(.title), .reveal .font-size-461 {
+  font-size: calc(44.8px * (461/100)) !important;
+}
+.reveal .font-size-462 *:not(.title), .reveal .font-size-462 {
+  font-size: calc(44.8px * (462/100)) !important;
+}
+.reveal .font-size-463 *:not(.title), .reveal .font-size-463 {
+  font-size: calc(44.8px * (463/100)) !important;
+}
+.reveal .font-size-464 *:not(.title), .reveal .font-size-464 {
+  font-size: calc(44.8px * (464/100)) !important;
+}
+.reveal .font-size-465 *:not(.title), .reveal .font-size-465 {
+  font-size: calc(44.8px * (465/100)) !important;
+}
+.reveal .font-size-466 *:not(.title), .reveal .font-size-466 {
+  font-size: calc(44.8px * (466/100)) !important;
+}
+.reveal .font-size-467 *:not(.title), .reveal .font-size-467 {
+  font-size: calc(44.8px * (467/100)) !important;
+}
+.reveal .font-size-468 *:not(.title), .reveal .font-size-468 {
+  font-size: calc(44.8px * (468/100)) !important;
+}
+.reveal .font-size-469 *:not(.title), .reveal .font-size-469 {
+  font-size: calc(44.8px * (469/100)) !important;
+}
+.reveal .font-size-470 *:not(.title), .reveal .font-size-470 {
+  font-size: calc(44.8px * (470/100)) !important;
+}
+.reveal .font-size-471 *:not(.title), .reveal .font-size-471 {
+  font-size: calc(44.8px * (471/100)) !important;
+}
+.reveal .font-size-472 *:not(.title), .reveal .font-size-472 {
+  font-size: calc(44.8px * (472/100)) !important;
+}
+.reveal .font-size-473 *:not(.title), .reveal .font-size-473 {
+  font-size: calc(44.8px * (473/100)) !important;
+}
+.reveal .font-size-474 *:not(.title), .reveal .font-size-474 {
+  font-size: calc(44.8px * (474/100)) !important;
+}
+.reveal .font-size-475 *:not(.title), .reveal .font-size-475 {
+  font-size: calc(44.8px * (475/100)) !important;
+}
+.reveal .font-size-476 *:not(.title), .reveal .font-size-476 {
+  font-size: calc(44.8px * (476/100)) !important;
+}
+.reveal .font-size-477 *:not(.title), .reveal .font-size-477 {
+  font-size: calc(44.8px * (477/100)) !important;
+}
+.reveal .font-size-478 *:not(.title), .reveal .font-size-478 {
+  font-size: calc(44.8px * (478/100)) !important;
+}
+.reveal .font-size-479 *:not(.title), .reveal .font-size-479 {
+  font-size: calc(44.8px * (479/100)) !important;
+}
+.reveal .font-size-480 *:not(.title), .reveal .font-size-480 {
+  font-size: calc(44.8px * (480/100)) !important;
+}
+.reveal .font-size-481 *:not(.title), .reveal .font-size-481 {
+  font-size: calc(44.8px * (481/100)) !important;
+}
+.reveal .font-size-482 *:not(.title), .reveal .font-size-482 {
+  font-size: calc(44.8px * (482/100)) !important;
+}
+.reveal .font-size-483 *:not(.title), .reveal .font-size-483 {
+  font-size: calc(44.8px * (483/100)) !important;
+}
+.reveal .font-size-484 *:not(.title), .reveal .font-size-484 {
+  font-size: calc(44.8px * (484/100)) !important;
+}
+.reveal .font-size-485 *:not(.title), .reveal .font-size-485 {
+  font-size: calc(44.8px * (485/100)) !important;
+}
+.reveal .font-size-486 *:not(.title), .reveal .font-size-486 {
+  font-size: calc(44.8px * (486/100)) !important;
+}
+.reveal .font-size-487 *:not(.title), .reveal .font-size-487 {
+  font-size: calc(44.8px * (487/100)) !important;
+}
+.reveal .font-size-488 *:not(.title), .reveal .font-size-488 {
+  font-size: calc(44.8px * (488/100)) !important;
+}
+.reveal .font-size-489 *:not(.title), .reveal .font-size-489 {
+  font-size: calc(44.8px * (489/100)) !important;
+}
+.reveal .font-size-490 *:not(.title), .reveal .font-size-490 {
+  font-size: calc(44.8px * (490/100)) !important;
+}
+.reveal .font-size-491 *:not(.title), .reveal .font-size-491 {
+  font-size: calc(44.8px * (491/100)) !important;
+}
+.reveal .font-size-492 *:not(.title), .reveal .font-size-492 {
+  font-size: calc(44.8px * (492/100)) !important;
+}
+.reveal .font-size-493 *:not(.title), .reveal .font-size-493 {
+  font-size: calc(44.8px * (493/100)) !important;
+}
+.reveal .font-size-494 *:not(.title), .reveal .font-size-494 {
+  font-size: calc(44.8px * (494/100)) !important;
+}
+.reveal .font-size-495 *:not(.title), .reveal .font-size-495 {
+  font-size: calc(44.8px * (495/100)) !important;
+}
+.reveal .font-size-496 *:not(.title), .reveal .font-size-496 {
+  font-size: calc(44.8px * (496/100)) !important;
+}
+.reveal .font-size-497 *:not(.title), .reveal .font-size-497 {
+  font-size: calc(44.8px * (497/100)) !important;
+}
+.reveal .font-size-498 *:not(.title), .reveal .font-size-498 {
+  font-size: calc(44.8px * (498/100)) !important;
+}
+.reveal .font-size-499 *:not(.title), .reveal .font-size-499 {
+  font-size: calc(44.8px * (499/100)) !important;
+}
+.reveal .font-size-500 *:not(.title), .reveal .font-size-500 {
+  font-size: calc(44.8px * (500/100)) !important;
+}
+.reveal .center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reveal div.slides {
+  counter-reset: references;
+}
+.reveal .references {
+  position: absolute;
+  bottom: 50px;
+  margin-right: 89px;
+}
+.reveal .references .reference {
+  font-size: calc(0.6 * 44.8px);
+  font-style: italic;
+}
+.reveal .references .reference::before {
+  counter-increment: references;
+  content: "[" counter(references) "] ";
+}
+.reveal .references .reference p {
+  display: inline-block;
+}
+.reveal .slides section.title .subtitle {
+  margin-top: 20px;
+  font-size: 1.3em;
+}
+.reveal .slides section.title .subtitle,
+.reveal .slides section.title .subtitle > * {
+  font-family: "Yanone Kaffeesatz", "Source Sans Pro", Helvetica, sans-serif;
+  color: #fff;
+  margin-left: 89px;
+  margin-right: 89px;
+}
+.reveal .slides section.title .speaker,
+.reveal .slides section.title .speaker > * {
+  text-decoration: underline dashed;
+}
+.reveal .slides section.title .authors {
+  margin-left: 89px;
+  margin-right: 89px;
+  margin-top: 50px;
+}
+.reveal .slides section.title .author {
+  display: inline-grid;
+  margin: 30px;
+}
+.reveal .slides section.title .name,
+.reveal .slides section.title .name > * {
+  font-weight: 400;
+  font-family: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
+  color: #5fb86b;
+}
+.reveal .slides section.title .institution,
+.reveal .slides section.title .institution > * {
+  font-size: 90%;
+  color: #fff;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+:root {
+  --r-background-color: #2b2b2b;
+  --r-main-font: Open Sans, Source Sans Pro, Helvetica, sans-serif;
+  --r-main-font-size: 44.8px;
+  --r-main-color: #1c232e;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 20px 0;
+  --r-heading-font: Yanone Kaffeesatz, Source Sans Pro, Helvetica, sans-serif;
+  --r-heading-color: #eee;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: none;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: normal;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 112px;
+  --r-heading2-size: 89.6px;
+  --r-heading3-size: 58.2333px;
+  --r-heading4-size: 1em;
+  --r-code-font: Ubuntu Mono;
+  --r-link-color: #008748;
+  --r-link-color-dark: #003b1f;
+  --r-link-color-hover: #71e9f4;
+  --r-selection-background-color: #FF5E99;
+  --r-selection-color: #fff;
+}
+
+.reveal-viewport {
+  background: #2b2b2b;
+  background-color: var(--r-background-color);
+}
+
+.reveal {
+  font-family: var(--r-main-font);
+  font-size: var(--r-main-font-size);
+  font-weight: normal;
+  color: var(--r-main-color);
+}
+
+.reveal ::selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal ::-moz-selection {
+  color: var(--r-selection-color);
+  background: var(--r-selection-background-color);
+  text-shadow: none;
+}
+
+.reveal .slides section,
+.reveal .slides section > section {
+  line-height: 1.3;
+  font-weight: inherit;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal div.title,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: var(--r-heading-margin);
+  color: var(--r-heading-color);
+  font-family: var(--r-heading-font);
+  font-weight: var(--r-heading-font-weight);
+  line-height: var(--r-heading-line-height);
+  letter-spacing: var(--r-heading-letter-spacing);
+  text-transform: var(--r-heading-text-transform);
+  text-shadow: var(--r-heading-text-shadow);
+  word-wrap: break-word;
+}
+
+.reveal h1 {
+  font-size: var(--r-heading1-size);
+}
+
+.reveal h2 {
+  font-size: var(--r-heading2-size);
+}
+
+.reveal h3, .reveal div.title {
+  font-size: var(--r-heading3-size);
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
+}
+
+.reveal h1 {
+  text-shadow: var(--r-heading1-text-shadow);
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: var(--r-block-margin) 0;
+  line-height: 1.3;
+}
+
+/* Remove trailing margins after titles */
+.reveal h1:last-child,
+.reveal h2:last-child,
+.reveal h3:last-child,
+.reveal div.title:last-child,
+.reveal h4:last-child,
+.reveal h5:last-child,
+.reveal h6:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal video,
+.reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal em {
+  font-style: italic;
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ol,
+.reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: var(--r-block-margin) auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child,
+.reveal blockquote p:last-child {
+  display: inline-block;
+}
+
+.reveal q {
+  font-style: italic;
+}
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: var(--r-block-margin) auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: var(--r-code-font);
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal code {
+  font-family: var(--r-code-font);
+  text-transform: none;
+  tab-size: 2;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+}
+
+.reveal .code-wrapper {
+  white-space: normal;
+}
+
+.reveal .code-wrapper code {
+  white-space: pre;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align=center],
+.reveal table td[align=center] {
+  text-align: center;
+}
+
+.reveal table th[align=right],
+.reveal table td[align=right] {
+  text-align: right;
+}
+
+.reveal table tbody tr:last-child th,
+.reveal table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.reveal sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+.reveal img {
+  margin: var(--r-block-margin) 0;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: var(--r-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: var(--r-link-color-hover);
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: var(--r-link-color-dark);
+}
+
+/*********************************************
+ * Frame helper
+ *********************************************/
+.reveal .r-frame {
+  border: 4px solid var(--r-main-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a .r-frame {
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover .r-frame {
+  border-color: var(--r-link-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--r-link-color);
+}
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+  .backgrounds {
+    background-color: var(--r-background-color);
+  }
+}
+.reveal {
+  font-weight: 300;
+  font-size: 44.8px;
+  /*
+   * Now we define things based on the type of slide (regular or impact, mostly)
+   * For instance, everything color-related is defined in this part.
+   */
+}
+.reveal table.linenotable {
+  border-collapse: separate;
+  border: 0;
+  background: none;
+  margin: 0;
+}
+.reveal table.linenotable td[class] {
+  color: inherit;
+  vertical-align: top;
+  padding: 0;
+  line-height: inherit;
+  white-space: normal;
+}
+.reveal table.linenotable td.code {
+  padding-left: 0.75em;
+}
+.reveal table.linenotable td.linenos {
+  border-right: 1px solid currentColor;
+  opacity: 0.35;
+  padding-right: 0.25em;
+}
+.reveal pre code {
+  max-height: 800px;
+}
+.reveal strong,
+.reveal b {
+  font-weight: 400;
+}
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal div.title {
+  font-weight: normal;
+}
+.reveal h1,
+.reveal h3,
+.reveal div.title,
+.reveal p,
+.reveal ul,
+.reveal ol,
+.reveal table {
+  margin-bottom: 0;
+}
+.reveal h3, .reveal div.title,
+.reveal p {
+  margin-left: 0;
+  margin-right: 0;
+}
+.reveal p,
+.reveal ul,
+.reveal ol,
+.reveal div,
+.reveal table {
+  margin-top: 20px;
+}
+.reveal h2 + *:not(table),
+.reveal *:not(table):not(section):not(.slides):first-child {
+  margin-top: 0;
+}
+.reveal h3, .reveal div.title {
+  margin-top: calc(20px + 20px);
+}
+.reveal div.block > div.title {
+  margin-top: unset;
+}
+.reveal div.imageblock + div.title {
+  margin-top: unset;
+}
+.reveal div.imageblock.text-center + div.title {
+  text-align: center;
+}
+.reveal div.imageblock.center + div.title {
+  text-align: center;
+}
+.reveal div.imageblock[style="text-align: center"] + div.title {
+  text-align: center;
+}
+.reveal .verseblock .attribution, .reveal .quoteblock .attribution, .reveal .verseblock pre, .reveal blockquote {
+  width: 90%;
+  margin: 20px auto;
+}
+.reveal .verseblock pre, .reveal blockquote {
+  border-left: 5px solid;
+  padding-left: 20px;
+  text-align: left;
+  font-family: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
+}
+.reveal .verseblock pre > p, .reveal blockquote > p {
+  margin: 0;
+}
+.reveal .verseblock .attribution, .reveal .quoteblock .attribution {
+  font-size: calc(44.8px * 0.8);
+}
+.reveal blockquote {
+  padding-left: 50px;
+}
+.reveal blockquote::before {
+  content: "«";
+  position: absolute;
+  left: 7px;
+  line-height: 40px;
+  font-size: calc(44.8px * 1.2);
+  font-weight: 400;
+}
+.reveal .quoteblock .attribution {
+  text-align: right;
+}
+.reveal .verseblock pre {
+  box-shadow: 0px 0px;
+  font-size: 44.8px;
+}
+.reveal li {
+  margin: 0;
+}
+.reveal li:not(:first-of-type) {
+  margin-top: 10px;
+}
+.reveal ul {
+  list-style-type: square;
+}
+.reveal ul ul,
+.reveal ul ol,
+.reveal ol ul,
+.reveal ol ol {
+  margin-top: 0;
+}
+.reveal ul ul,
+.reveal ol ul {
+  list-style-type: circle;
+}
+.reveal ol {
+  list-style: none;
+  counter-reset: mycounter;
+}
+.reveal ol > li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 0px;
+}
+.reveal ol > li:before {
+  content: counter(mycounter);
+  counter-increment: mycounter;
+  position: absolute;
+  top: 13px;
+  left: -50px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+.reveal pre {
+  font-size: calc(44.8px * 0.8);
+  box-shadow: 0px 0px;
+}
+.reveal code.hljs b {
+  font-family: "Open Sans", "Source Sans Pro", Helvetica, sans-serif;
+  font-weight: 400;
+}
+.reveal ::selection {
+  background: #03484c;
+  color: #fff;
+}
+.reveal .slide-number {
+  bottom: 60px;
+  right: 80px;
+  font-size: 25pt;
+  background-color: #1c232ed3;
+  color: #fff;
+}
+.reveal aside.controls {
+  bottom: 50px;
+  right: 200px;
+}
+.reveal div.admonitionblock table {
+  width: 100%;
+  text-align: left;
+  background-color: #d9e0eb;
+}
+.reveal div.admonitionblock table tbody tr td.icon {
+  width: 0px;
+}
+.reveal .slides {
+  top: 0px;
+}
+.reveal .slides section img {
+  margin-bottom: 0;
+}
+.reveal .slides section:not([class^=stack]) {
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 0px;
+}
+.reveal .slides section:not([class^=stack]) img {
+  border-style: none;
+  box-shadow: unset;
+  background: none;
+  border: none;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) {
+  background-color: #fff;
+  padding-left: 89px;
+  padding-right: 89px;
+  padding-top: 160px;
+  text-align: left;
+  height: calc(100% - (160px));
+  width: calc(100% - (89px + 89px));
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) h2 {
+  background-color: #1c232e;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  padding-bottom: 20px;
+  text-align: left;
+  z-index: 1;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) b,
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) strong {
+  color: #008748;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) code pre {
+  margin: 0px;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) pre:not(.content) code:not(.hljs) {
+  color: #1c232e;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) pre:not(.highlight) {
+  padding: 5px;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) code:not(.hljs) {
+  color: #03484c;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) code.hljs b {
+  color: #5fb86b;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) code.hljs b .hljs-number {
+  color: #5fb86b;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) a {
+  color: #008748;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) a:hover {
+  color: #00ba63;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) h3, .reveal .slides section:not([class^=stack]):not(.impact):not(.title) div.title,
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) p,
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) ul,
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) ol,
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) blockquote {
+  color: #1c232e;
+}
+.reveal .slides section:not([class^=stack]):not(.impact):not(.title) ol > li:before {
+  color: #fff;
+  background: #1c232e;
+}
+.reveal .slides section.title,
+.reveal .slides section.impact {
+  background-color: #1c232e;
+  height: 100%;
+  padding-top: 0px;
+  vertical-align: middle;
+  text-align: center;
+}
+.reveal .slides section.title h1,
+.reveal .slides section.title h2,
+.reveal .slides section.title h3,
+.reveal .slides section.title div.title,
+.reveal .slides section.title p,
+.reveal .slides section.title ul,
+.reveal .slides section.title ol,
+.reveal .slides section.impact h1,
+.reveal .slides section.impact h2,
+.reveal .slides section.impact h3,
+.reveal .slides section.impact div.title,
+.reveal .slides section.impact p,
+.reveal .slides section.impact ul,
+.reveal .slides section.impact ol {
+  color: #fff;
+}
+.reveal .slides section.title strong,
+.reveal .slides section.title b,
+.reveal .slides section.title a,
+.reveal .slides section.title pre,
+.reveal .slides section.title code,
+.reveal .slides section.impact strong,
+.reveal .slides section.impact b,
+.reveal .slides section.impact a,
+.reveal .slides section.impact pre,
+.reveal .slides section.impact code {
+  color: #5fb86b;
+}
+.reveal .slides section.title a:hover,
+.reveal .slides section.impact a:hover {
+  color: #94d09c;
+}
+.reveal .slides section.title ol > li:before,
+.reveal .slides section.impact ol > li:before {
+  color: #1c232e;
+  background: #fff;
+}
