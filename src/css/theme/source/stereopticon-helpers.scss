@@ -157,4 +157,17 @@
             color: $text-on-dark;
         }
     }
+
+    h2 .subtitle::before {
+        content: ' '; 
+        display: block; 
+      }
+      
+      h2 .subtitle {
+        font-style: normal;
+        font-size: 60%;
+        font-weight: 300;
+        display: block;
+      }
+
 }
