@@ -23,6 +23,7 @@ build:
 keep:
   stage: deploy
   script:
+   - rm -rf stereopticon
    - mv dist stereopticon
   artifacts:
     paths:
