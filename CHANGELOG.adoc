@@ -1,5 +1,9 @@
 = Changelog
 
+== v2024-09-05.2
+
+- *FIX*: Reduce `code` size in title part of the slide.
+
 == v2024-09-05
 
 - *FIX*: Make sure all dark backgrounds cases share the same CSS (eg. the slide title).
