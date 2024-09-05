@@ -21,6 +21,7 @@ $colored-on-light: $secondary;
 // Dark background colors
 $dark: $primary;
 $text-on-dark: $light;
+$text-on-dark2: lighten($tertiary, 15%);
 $colored-on-dark: $tertiary;
 
 // Block color (only for light background for now)

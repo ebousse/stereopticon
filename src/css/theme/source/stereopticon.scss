@@ -290,6 +290,35 @@
         }
     }
 
+
+    // Share some style for all dark background cases
+    %commondarkbackground {
+        background-color: $dark;
+        p,
+        ul,
+        ol {
+            color: $text-on-dark;
+        }
+        strong,
+        b,
+        a {
+            color: $colored-on-dark;
+        }
+        pre,
+        code:not(.hljs) {
+            color: $text-on-dark2;
+        }
+        a:hover {
+            color: lighten($colored-on-dark, 15%);
+        }
+        // Items of ordered lists are numbers in squares,
+        // hence we invert colors
+        ol > li:before {
+            color: $text-on-light;
+            background: $light;
+        }
+    }
+
     /*
      * Now we define things based on the type of slide (regular or impact, mostly)
      * For instance, everything color-related is defined in this part.
@@ -333,9 +362,9 @@
             height: calc(100% - (#{$title-bar-offset}));
             width: calc(100% - (#{$margin-left} + #{$margin-right}));
 
+            // Slide title, which is with dark background
             h2 {
-                background-color: $dark;
-                color: $text-on-dark;
+                @extend %commondarkbackground;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -410,38 +439,15 @@
         // Title and impact slides (dark background, so we adapt everything)
         section.title,
         section.impact {
-            background-color: $dark;
+            @extend %commondarkbackground;
             height: 100%;
             padding-top: 0px;
             vertical-align: middle;
             text-align: center;
-
             h1,
             h2,
-            h3,
-            p,
-            ul,
-            ol {
+            h3 {
                 color: $text-on-dark;
-            }
-
-            strong,
-            b,
-            a,
-            pre,
-            code {
-                color: $colored-on-dark;
-            }
-
-            a:hover {
-                color: lighten($colored-on-dark, 15%);
-            }
-
-            // Items of ordered lists are numbers in squares,
-            // hence we invert colors
-            ol > li:before {
-                color: $text-on-light;
-                background: $light;
             }
         }
     }
