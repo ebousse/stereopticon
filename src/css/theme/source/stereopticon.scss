@@ -30,6 +30,7 @@
         background: none;
         margin: 0
     }
+
     table.linenotable td[class] {
         color: inherit;
         vertical-align: top;
@@ -37,14 +38,17 @@
         line-height: inherit;
         white-space: normal;
     }
+
     table.linenotable td.code {
         padding-left: 0.75em;
     }
+
     table.linenotable td.linenos {
         border-right: 1px solid currentColor;
         opacity: 0.35;
         padding-right: 0.25em;
     }
+
     // End paste
 
     // Better constraint on code blocks height
@@ -96,7 +100,7 @@
 
     // When something is the first element, no upper margin
     // except for tables, with the current implem
-    h2 + *:not(table),
+    h2+*:not(table),
     *:not(table):not(section):not(.slides):first-child {
         margin-top: 0;
         // XXX: What was this for?
@@ -113,23 +117,23 @@
         @extend h3;
     }
 
-    div.block > div.title {
+    div.block>div.title {
         margin-top: unset;
     }
 
-    div.imageblock + div.title {
+    div.imageblock+div.title {
         margin-top: unset;
     }
 
-    div.imageblock.text-center + div.title {
+    div.imageblock.text-center+div.title {
         text-align: center;
     }
 
-    div.imageblock.center + div.title {
+    div.imageblock.center+div.title {
         text-align: center;
     }
 
-    div.imageblock[style='text-align: center'] + div.title {
+    div.imageblock[style='text-align: center']+div.title {
         text-align: center;
     }
 
@@ -140,16 +144,19 @@
         width: 90%;
         margin: $blockMargin auto;
     }
+
     %citations {
         @extend %citationArea;
         border-left: 5px solid;
         padding-left: 20px;
         text-align: left;
         font-family: $mainFont;
-        & > p {
+
+        &>p {
             margin: 0;
         }
     }
+
     %attributions {
         @extend %citationArea;
         font-size: $smallerFontSize;
@@ -178,6 +185,7 @@
 
     // Asciidoc verse block
     .verseblock {
+
         // Override default "pre" style in case of adoc verse
         pre {
             @extend %citations;
@@ -205,6 +213,7 @@
 
     ul,
     ol {
+
         // No top margin when a list is inside a list
         ul,
         ol {
@@ -222,14 +231,14 @@
         counter-reset: mycounter;
     }
 
-    ol > li {
+    ol>li {
         list-style-type: none;
         position: relative;
         padding-left: 0px;
     }
 
     // Numbered lists are squares with numbers
-    ol > li:before {
+    ol>li:before {
         //line-height: 28px; //required?
         content: counter(mycounter);
         counter-increment: mycounter;
@@ -248,9 +257,9 @@
     //     font-size: calc(#{$mainFontSize} * 0.9);
     // }
 
-    pre
-    //,code:not(.hljs) 
-    {
+    pre //,code:not(.hljs) 
+
+        {
         font-size: $smallerFontSize;
         box-shadow: 0px 0px;
     }
@@ -284,8 +293,9 @@
     div.admonitionblock {
         table {
             tbody tr td.icon {
-                width:0px;
+                width: 0px;
             }
+
             width: 100%;
             text-align: left;
             background-color: $block-color;
@@ -351,6 +361,7 @@
             strong {
                 color: $colored-on-light;
             }
+
             //.reveal pre code
 
             code pre {
@@ -359,6 +370,7 @@
 
             // Code blocks
             pre:not(.content) {
+
                 //background: $block-color;
                 code:not(.hljs) {
                     color: $text-on-light;
@@ -378,6 +390,7 @@
             code.hljs {
                 b {
                     color: $colored-on-dark;
+
                     .hljs-number {
                         color: $colored-on-dark;
                     }
@@ -402,7 +415,7 @@
 
             // Items of ordered lists are numbers in squares,
             // hence we invert colors
-            ol > li:before {
+            ol>li:before {
                 color: $text-on-dark;
                 background: $dark;
             }
@@ -416,6 +429,7 @@
             padding-top: 0px;
             vertical-align: middle;
             text-align: center;
+
             h1,
             h2,
             h3 {
@@ -423,4 +437,6 @@
             }
         }
     }
-} // end .reveal
+}
+
+// end .reveal
