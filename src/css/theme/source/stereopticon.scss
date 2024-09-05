@@ -337,6 +337,7 @@
         // Regular slides
         section:not([class^="stack"]):not(.impact):not(.title) {
             background-color: $light;
+            color: $text-on-light;
             padding-left: $margin-left;
             padding-right: $margin-right;
             padding-top: $title-bar-offset; // half of the h2 bar height
@@ -405,11 +406,7 @@
                 color: lighten($colored-on-light2, 10%);
             }
 
-            h3,
-            p,
-            ul,
-            ol,
-            blockquote {
+            h3 {
                 color: $text-on-light;
             }
 
