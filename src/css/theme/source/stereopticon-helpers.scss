@@ -5,170 +5,174 @@
 
 .reveal {
 
-    // Columns
-    .cols {
-        display: flex;
-        width: 100%;
+    .slides {
 
-        // Fix for asciidoc generation
-        .content {
+        // Columns
+        .cols {
             display: flex;
             width: 100%;
-        }
 
-        @for $i from 1 through 12 {
-            .col-#{$i} {
-                width: math.div(100%, 12) * $i;
-                margin: auto;
+            // Fix for asciidoc generation
+            .content {
+                display: flex;
+                width: 100%;
+            }
 
-                &>h3 {
-                    margin-top: 0;
-                }
+            @for $i from 1 through 12 {
+                .col-#{$i} {
+                    width: math.div(100%, 12) * $i;
+                    margin: auto;
 
-                // Fix for asciidoc generation
-                .content {
-                    display: block;
-                    width: 100%;
+                    &>h3 {
+                        margin-top: 0;
+                    }
+
+                    // Fix for asciidoc generation
+                    .content {
+                        display: block;
+                        width: 100%;
+                    }
                 }
             }
         }
-    }
 
-    @for $i from 1 through 100 {
-        .width-#{$i} {
-            width: 1% * $i;
-        }
-    }
-
-    // Vertical spacing
-    @for $i from 1 through 200 {
-
-        .vspace-#{$i}::before,
-        .vspace-after-#{$i}::after {
-            content: "";
-            display: block;
-            padding-bottom: calc(#{$i}px);
-        }
-    }
-
-    // Blocks (only used in regular slides)
-    .block {
-        background-color: $block-color;
-        padding: 0.5cm;
-        margin-right: 2cm;
-    }
-
-    .huge,
-    .huge p {
-        font-size: calc(#{$mainFontSize} * 1.5);
-    }
-
-    .bigger {
-        font-size: calc(#{$mainFontSize} * 1.2);
-    }
-
-    .smaller {
-        font-size: calc(#{$mainFontSize} * 0.9);
-    }
-
-
-
-
-    @for $i from 1 through 500 {
-        %customfontsize-#{$i} {
-            font-size: calc(#{$mainFontSize} * (#{$i}/100)) !important;
+        @for $i from 1 through 100 {
+            .width-#{$i} {
+                width: 1% * $i;
+            }
         }
 
-        .font-size-#{$i} {
-            @extend %customfontsize-#{$i};
+        // Vertical spacing
+        @for $i from 1 through 200 {
 
-            *:not(.title) {
+            .vspace-#{$i}::before,
+            .vspace-after-#{$i}::after {
+                content: "";
+                display: block;
+                padding-bottom: calc(#{$i}px);
+            }
+        }
+
+        // Blocks (only used in regular slides)
+        .block {
+            background-color: $block-color;
+            padding: 0.5cm;
+            margin-right: 2cm;
+        }
+
+        .huge,
+        .huge p {
+            font-size: calc(#{$mainFontSize} * 1.5);
+        }
+
+        .bigger {
+            font-size: calc(#{$mainFontSize} * 1.2);
+        }
+
+        .smaller {
+            font-size: calc(#{$mainFontSize} * 0.9);
+        }
+
+
+
+
+        @for $i from 1 through 500 {
+            %customfontsize-#{$i} {
+                font-size: calc(#{$mainFontSize} * (#{$i}/100)) !important;
+            }
+
+            .font-size-#{$i} {
                 @extend %customfontsize-#{$i};
+
+                *:not(.title) {
+                    @extend %customfontsize-#{$i};
+                }
             }
         }
-    }
 
-    .center {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    div.slides {
-        counter-reset: references;
-    }
-
-    .references {
-        position: absolute;
-        bottom: $margin-bottom;
-        margin-right: $margin-right;
-
-        .reference {
-            font-size: calc(0.6 * #{$mainFontSize});
-            font-style: italic;
-
-            &::before {
-                counter-increment: references;
-                content: "[" counter(references) "] ";
-            }
-
-            // To avoid a <p> to do a line break after the content of ::before
-            p {
-                display: inline-block;
-            }
-        }
-    }
-
-    // Title slide helpers
-    .slides section.title {
-        .subtitle {
-            margin-top: 20px;
-            font-size: 1.3em;
+        .center {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .subtitle,
-        .subtitle>* {
-            font-family: $headingFont;
-            color: $text-on-dark;
-            margin-left: $margin-left;
+        div.slides {
+            counter-reset: references;
+        }
+
+        .references {
+            position: absolute;
+            bottom: $margin-bottom;
             margin-right: $margin-right;
+
+            .reference {
+                font-size: calc(0.6 * #{$mainFontSize});
+                font-style: italic;
+
+                &::before {
+                    counter-increment: references;
+                    content: "[" counter(references) "] ";
+                }
+
+                // To avoid a <p> to do a line break after the content of ::before
+                p {
+                    display: inline-block;
+                }
+            }
         }
 
-        .speaker,
-        .speaker>* {
-            text-decoration: underline dashed // $colored-on-dark;
+        // Title slide helpers
+        section.title {
+            .subtitle {
+                margin-top: 20px;
+                font-size: 1.3em;
+            }
+
+            .subtitle,
+            .subtitle>* {
+                font-family: $headingFont;
+                color: $text-on-dark;
+                margin-left: $margin-left;
+                margin-right: $margin-right;
+            }
+
+            .speaker,
+            .speaker>* {
+                text-decoration: underline dashed // $colored-on-dark;
+            }
+
+            .authors {
+                margin-left: $margin-left;
+                margin-right: $margin-right;
+                margin-top: 50px;
+            }
+
+            .author {
+                display: inline-grid;
+                margin: 30px;
+            }
+
+            .name,
+            .name>* {
+                font-weight: $font-weight-strong;
+                font-family: $mainFont;
+                color: $colored-on-dark;
+            }
+
+            .institution,
+            .institution>* {
+                font-size: 90%;
+                color: $text-on-dark;
+            }
         }
 
-        .authors {
-            margin-left: $margin-left;
-            margin-right: $margin-right;
-            margin-top: 50px;
+        section:not([class^="stack"]):not(.impact):not(.title) .subtitle {
+            @extend %commonslidetitle;
+            top: 130px;
+            padding: 0.4em;
+            padding-left: 1em;
+            z-index: 1;
         }
 
-        .author {
-            display: inline-grid;
-            margin: 30px;
-        }
-
-        .name,
-        .name>* {
-            font-weight: $font-weight-strong;
-            font-family: $mainFont;
-            color: $colored-on-dark;
-        }
-
-        .institution,
-        .institution>* {
-            font-size: 90%;
-            color: $text-on-dark;
-        }
-    }
-
-    section:not([class^="stack"]):not(.impact):not(.title) .subtitle {
-        @extend %commonslidetitle;
-        top: 130px;
-        padding: 0.4em;
-        padding-left: 1em;
-        z-index: 1;
     }
 }
