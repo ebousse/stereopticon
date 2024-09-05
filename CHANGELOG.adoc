@@ -1,5 +1,9 @@
 = Changelog
 
+== v2024-09-05.3
+
+- *FEATURE*: Change how to declare a subtitle inside a slide title: now the `subtitle` element must be right after the `h2`.
+
 == v2024-09-05.2
 
 - *FIX*: Reduce `code` size in title part of the slide.
