@@ -4,12 +4,7 @@
 // Share some style for all dark background cases
 %commondarkbackground {
     background-color: $dark;
-
-    p,
-    ul,
-    ol {
-        color: $text-on-dark;
-    }
+    color: $text-on-dark;
 
     strong,
     b,
@@ -40,6 +35,7 @@
     left: 0;
     right: 0;
     text-align: left;
+    font-family: $headingFont;
     code {
         font-size: 90%;
     }
