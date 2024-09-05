@@ -164,7 +164,7 @@
         }
     }
 
-    section:not([class^="stack"]):not(.impact):not(.title) h2+.subtitle {
+    section:not([class^="stack"]):not(.impact):not(.title) .subtitle {
         @extend %commonslidetitle;
         top: 130px;
         padding: 0.4em;
