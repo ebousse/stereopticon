@@ -1,0 +1,46 @@
+@import "css/theme/source/stereopticon-variables.scss";
+
+
+// Share some style for all dark background cases
+%commondarkbackground {
+    background-color: $dark;
+
+    p,
+    ul,
+    ol {
+        color: $text-on-dark;
+    }
+
+    strong,
+    b,
+    a {
+        color: $colored-on-dark;
+    }
+
+    pre,
+    code:not(.hljs) {
+        color: $text-on-dark2;
+    }
+
+    a:hover {
+        color: lighten($colored-on-dark, 15%);
+    }
+
+    // Items of ordered lists are numbers in squares,
+    // hence we invert colors
+    ol>li:before {
+        color: $text-on-light;
+        background: $light;
+    }
+}
+
+%commonslidetitle {
+    @extend %commondarkbackground;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: left;
+    code {
+        font-size: 90%;
+    }
+}

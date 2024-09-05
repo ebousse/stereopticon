@@ -1,8 +1,10 @@
 @use "sass:math";
 
 @import "css/theme/source/stereopticon-variables.scss";
+@import "css/theme/source/stereopticon-commons.scss";
 
 .reveal {
+
     // Columns
     .cols {
         display: flex;
@@ -19,7 +21,7 @@
                 width: math.div(100%, 12) * $i;
                 margin: auto;
 
-                & > h3 {
+                &>h3 {
                     margin-top: 0;
                 }
 
@@ -40,6 +42,7 @@
 
     // Vertical spacing
     @for $i from 1 through 200 {
+
         .vspace-#{$i}::before,
         .vspace-after-#{$i}::after {
             content: "";
@@ -69,16 +72,18 @@
     }
 
 
-    
+
 
     @for $i from 1 through 500 {
         %customfontsize-#{$i} {
             font-size: calc(#{$mainFontSize} * (#{$i}/100)) !important;
         }
-        .font-size-#{$i}  {
-            @extend %customfontsize-#{$i} ;
+
+        .font-size-#{$i} {
+            @extend %customfontsize-#{$i};
+
             *:not(.title) {
-                @extend %customfontsize-#{$i} ;
+                @extend %customfontsize-#{$i};
             }
         }
     }
@@ -120,8 +125,9 @@
             margin-top: 20px;
             font-size: 1.3em;
         }
+
         .subtitle,
-        .subtitle > * {
+        .subtitle>* {
             font-family: $headingFont;
             color: $text-on-dark;
             margin-left: $margin-left;
@@ -129,8 +135,8 @@
         }
 
         .speaker,
-        .speaker > * {
-            text-decoration: underline dashed// $colored-on-dark;
+        .speaker>* {
+            text-decoration: underline dashed // $colored-on-dark;
         }
 
         .authors {
@@ -145,29 +151,24 @@
         }
 
         .name,
-        .name > * {
+        .name>* {
             font-weight: $font-weight-strong;
             font-family: $mainFont;
             color: $colored-on-dark;
         }
 
         .institution,
-        .institution > * {
+        .institution>* {
             font-size: 90%;
             color: $text-on-dark;
         }
     }
 
-    h2 .subtitle::before {
-        content: ' '; 
-        display: block; 
-      }
-      
-      h2 .subtitle {
-        font-style: normal;
-        font-size: 60%;
-        font-weight: 300;
-        display: block;
-      }
-
+    section:not([class^="stack"]):not(.impact):not(.title) h2+.subtitle {
+        @extend %commonslidetitle;
+        top: 130px;
+        padding: 0.4em;
+        padding-left: 1em;
+        z-index: 1;
+    }
 }
