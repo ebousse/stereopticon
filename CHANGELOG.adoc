@@ -1,5 +1,9 @@
 = Changelog
 
+== v2024-09-05
+
+- *FIX*: Make sure all dark backgrounds cases share the same CSS (eg. the slide title).
+
 == v2024-09-04
 
 - *FEATURE*: Add the possibility to declare a subtitle inside a slide title (eg. `<h2>My title<div class="subtitle">My subtitle</div></h2>`).
