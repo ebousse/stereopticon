@@ -121,7 +121,7 @@
             }
         }
 
-        // Title slide helpers
+        // Opening slide helpers
         section.title {
             .subtitle {
                 margin-top: 20px;
@@ -166,10 +166,12 @@
             }
         }
 
+        // Regular slide subtitle helper (different from opening slide subtitle helper)
         section:not([class^="stack"]):not(.impact):not(.title) .subtitle {
             @extend %commonslidetitle;
-            top: 130px;
-            padding: 0.4em;
+            top: 145px;
+            padding-top: 0;
+            padding-bottom: 0.3em;
             padding-left: 1em;
             z-index: 1;
         }
