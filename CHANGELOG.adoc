@@ -1,5 +1,9 @@
 = Changelog
 
+== v2024-09-06
+
+- *FIX*: Avoid subtitles overlapping titles
+
 == v2024-09-05.3
 
 - *FEATURE*: Change how to declare a subtitle inside a slide title: now the `subtitle` element must be right after the `h2`.
