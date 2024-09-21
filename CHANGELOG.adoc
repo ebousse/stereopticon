@@ -1,5 +1,10 @@
 = Changelog
 
+== v2024-09-21
+
+- *FIX*: Increase size of slide subtitle
+- *FEATURE*: new helper class `centernomargins`, to be applied on the container of an `img`, which centers the image and allows it to overlap the margins.
+
 == v2024-09-06
 
 - *FIX*: Avoid subtitles overlapping titles
