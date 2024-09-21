@@ -9,6 +9,7 @@ build:
     key: ${CI_COMMIT_REF_SLUG}-X
     paths:
     - node_modules
+    - reveal.js
   script:
    - bash ./compile.sh
    - mkdir dist
