@@ -354,6 +354,7 @@
                 @extend %commonslidetitle;
                 top: 0;
                 padding: 0.5em;
+                padding-left: $margin-title-left;
                 padding-bottom: 20px;
                 z-index: 1;
             }
