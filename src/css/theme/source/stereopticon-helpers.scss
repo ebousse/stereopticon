@@ -172,8 +172,17 @@
             top: 145px;
             padding-top: 0;
             padding-bottom: 0.3em;
-            padding-left: 1em;
+            padding-left: $margin-title-left;
             z-index: 1;
+            font-size: larger;
+        }
+
+        .centernomargins img  {
+            position: absolute;
+            top:  57%;
+            left: 50%;
+            transform: translate(-50%,-50%);  
+            max-width: 100%;
         }
 
     }
