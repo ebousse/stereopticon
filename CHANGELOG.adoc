@@ -1,5 +1,9 @@
 = Changelog
 
+== v2024-12-15
+
+- *FEATURE*: when using `%step`, make hidden elements slightly visible with a `0.1` opacity
+
 == v2024-09-21
 
 - *FIX*: Increase size of slide subtitle
