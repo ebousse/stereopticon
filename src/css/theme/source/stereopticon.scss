@@ -435,6 +435,13 @@
             }
         }
     }
+
+    // Make parts hidden by %step a little visible with limited opacity
+    .fragment:not(.custom):not(.visible) {
+        opacity: 0.1;
+        visibility: unset;
+    }
+
 }
 
 // end .reveal
