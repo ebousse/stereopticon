@@ -1,5 +1,9 @@
 = Changelog
 
+== v2025-07-04
+
+- *FEATURE*: new helper class `compact` to reduce the top margin of children elements (eg. to make a list more compact)
+
 == v2024-12-15
 
 - *FEATURE*: when using `%step`, make hidden elements slightly visible with a `0.1` opacity
