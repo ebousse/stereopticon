@@ -177,13 +177,16 @@
             font-size: larger;
         }
 
-        .centernomargins img  {
+        .centernomargins img {
             position: absolute;
-            top:  57%;
+            top: 57%;
             left: 50%;
-            transform: translate(-50%,-50%);  
+            transform: translate(-50%, -50%);
             max-width: 100%;
         }
 
+        .compact * {
+            margin-top: 0;
+        }
     }
 }
